@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minor Injury Log | FVSRA</title>
+    <link rel="icon" type="image/png" href="../images/icons/FVSRA_ICON.png"/>
+    <link rel="stylesheet" href="../css/MinorInjuryLogCSS.css">
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+
+    </script>
+    <script src="../js/MinorInjuryLog.js"></script>
+    <meta name = "viewport" content="width=device-width">
+</head>
+<body>
+
+
+<img class="FVSRA" src="PDRMA%20Form%2003%20Property%20Loss%20Report_files/Image_001.jpg">
+
+<table class="shift-down">
+    <col width="120">
+    <col width="110">
+    <col width="220">
+    <col width="130">
+    <col width="150">
+    <col width="350">
+    <col width="200">
+    <col width="140">
+    <thead>
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Name of Injury</th>
+        <th>Injury Location</th>
+        <th>Treatment</th>
+        <th>How injury occurred</th>
+        <th>Facility/Location where injury occurred</th>
+        <th>Full Name of staff who noticed guardian</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><input type="date" name="date" id="date"></td>
+        <td><input type="time" name="time" id="time"></td>
+        <td><input type="text" placeholder="i.e Incision" name="injury" id="injury" required></td>
+        <td><input type="text" placeholder="i.e Right Leg" name="injury-location" id="injury-location" required></td>
+        <td><input type="text" placeholder="i.e Bandage" name="treatment" id="treatment" required></td>
+        <td><input type="text" placeholder="i.e Slipped on wet floor" name="injury-occur" id="injury-occur" required></td>
+        <td><input type="text" placeholder="i.e Food Court" name="facility" id="facility" required></td>
+        <td><input type="text" placeholder="John Doe" name="staff-name" id="staff-name" required></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+<footer class="bottom">
+    <button class="submit" onclick="submitBtn()">Submit</button>
+</footer>
+</html>
