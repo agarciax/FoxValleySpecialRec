@@ -1,9 +1,11 @@
 import "./css/employee.css";
 import background from "./images/bg-01.jpg";
+
+
 const Employee = () => {
     return ( 
         <div className="limiter">
-        <div className="container-login100" style={{backgroundImage: {background}}}>
+        <div className="container-login100" style={{backgroundImage: `url(${background})`}}>
           <div className="wrap-login100_2">
             <div className="login100-form validate-form">
               <span className="login100-form-title p-b-34 p-t-27">
