@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+}
+.entire-page{
+    width: 724px;
+    justify-content: center;
+    margin: auto;
+}
+.page-head{
+
+}
+h1 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 26pt;
+}
+
+.s1 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 9pt;
+}
+
+p {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 11pt;
+    margin: 0pt;
+}
+
+h3 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15pt;
+}
+
+h2 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 24pt;
+}
+
+.s2 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 10pt;
+}
+
+.s3 {
+    color: #231F20;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 9pt;
+}
+
+.s4 {
+    color: black;
+    font-family: Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 8pt;
+}
+
+.s5 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 11pt;
+}
+
+.s6 {
+    color: black;
+    font-family: Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 8pt;
+}
+
+.s7 {
+    color: #231F20;
+    font-family: Arial-BoldItalicMT, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 9pt;
+}
+
+.s8 {
+    color: black;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 10pt;
+}
+
+.s9 {
+    color: #231F20;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 9pt;
+}
+
+h4 {
+    color: #231F20;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 9pt;
+}
+
+table, tbody {
+    vertical-align: top;
+    overflow: visible;
+}
+
+.head-text1 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 12pt;
+}
+
+.head-text2 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15pt;
+}
+
+.head-text3 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 21pt;
+}
+
+.head-text4 {
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 26pt;
+}
+
+.page-head-grid {
+    display: grid;
+    grid-template-columns: auto auto ;
+    /*grid-template-rows: 100px;*/
+    /*color: #333333;*/
+}
+.page-head-grid > div {
+    /*text-align: center;*/
+    /*padding: 20px 0;*/
+    /*font-size: 25px;*/
+    /*background-color: #F8EDEB;*/
+}
+.bottom-space{
+   margin-bottom: 100px;
+}
+.top-space{
+    margin-bottom: 25px;
+}
+.header-body-space{
+    margin-bottom: 8px;
+}
+table.form-table{
+    border-collapse: collapse;
+}
+.blue-boxes{
+    padding-top: 1pt;
+    text-indent: 0pt;
+    text-align: center;
+    width: 14pt;
+    background-color: #24418E;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 10pt;
+}
+.blue-boxes-top{
+    border-top: 2px solid #24418E;
+    padding-top: 1pt;
+    text-indent: 0pt;
+    text-align: center;
+    width: 14pt;
+    background-color: #24418E;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 10pt;
+}
+.blue-boxes-bottom{
+    border-bottom: 2px solid #24418E;
+    padding-top: 1pt;
+    text-indent: 0pt;
+    text-align: center;
+    width: 14pt;
+    background-color: #24418E;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 10pt;
+}
+.submit-button{
+    text-align: center;
+}
+#Agency_Name, #Name_of_person_completing_the_report, #Title_of_person_completing_report, #Business_email,
+#How_did_the_incident_occur_and_what_property_was_damaged, #HowDidIncidentOccur2, #HowDidIncidentOccur3, #NameOfLocation,
+#StreetAddressIncidentLocation, #CityStateIncidentLocation, #LocationSpecify, #PrimaryLocation, #EstimateOfLoss, #ContactPersonFacility,
+#ContactPersonEmail, #PersonResponsible, #PersonResponsibleName,
+#PersonResponsibleStreetAddress, #WhatPoliceAgency, #PoliceReportNumber,
+#WereCriminalCharges, #Employee_Name, #Reported_to {
+    width: 100%;
+}
+.endInput {
+    padding-right: 15px;
+}
+.inputGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.s3-right {
+    color: #231F20;
+    font-family: Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 9pt;
+    text-align: right;
+}
+.center-text{
+    text-align: center;
+}
+input {
+    background-color: #E8E8E8;
+}
