@@ -91,9 +91,6 @@ h2{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
-.shift-down td{
-    text-align: center;
-}
-input{
+.shift-down td, .shift-down tbody, .shift-down td, .shift-down input{
     text-align: center;
 }

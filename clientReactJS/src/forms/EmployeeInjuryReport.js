@@ -390,7 +390,7 @@ const  EmployeeInjury = () => {
           <div className="page-head">
             <div className="page-head-grid">
               <div>
-                <p style={{textIndent: '0pt', textAlign: 'left'}}><span><img alt="image" height={68} src="PDRMA%20Form%2003%20Property%20Loss%20Report_files/Image_001.jpg" width={222} /></span>
+                <p style={{textIndent: '0pt', textAlign: 'left'}}><span><img alt="image" height={68} src={logo} width={222} /></span>
                 </p>
               </div>
               <div>

@@ -1,11 +1,12 @@
 import Employee from './Employee';
+import LoginPage from './IMSindex';
 import MinorInjury from './forms/MinorInjuryLog';
 import AccidentReport from './forms/AccidentIncidentReport';
 import EmployeeInjury from './forms/EmployeeInjuryReport';
 import NotificationReport from './forms/NotificationOfInjuryReport';
 import PropertyReport from './forms/PropertyLossReport';
 import VehicleReport from './forms/VehicleAccidentReport';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
           <Switch>
             <Route path="/Employee">
               <Employee />
+            </Route>
+            <Route path="/login">
+              <LoginPage />
             </Route>
             <Route path="/form/AccidentReport">
               <AccidentReport />
@@ -36,6 +40,7 @@ function App() {
             <Route path="/form/VehicleReport">
               <VehicleReport />
             </Route>
+            
 
           </Switch>
         </div>
