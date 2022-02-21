@@ -1,6 +1,17 @@
 import "../css/MinorInjuryLogCSS.css"
 import "../images/icons/FVSRA_ICON.png"
 import logo from ".//PDRMA Form 03 Property Loss Report_files/Image_001.jpg"
+import {useState} from "react";
+
+// const [date, setDate] = useState('');
+// const [time, setTime] = useState('');
+  //const [injury, setInjury] = useState('');
+// const [injuryLocation, setInjuryLocation] = useState('');
+// const [treatment, setTreatment] = useState('');
+// const [injuryOccur, setInjuryOccur] = useState('');
+// const [facility, setFacility] = useState('');
+// const [staffName, setStaffName] = useState('');
+
 
 const MinorInjury = () => {
     return (  
@@ -31,7 +42,7 @@ const MinorInjury = () => {
             <tr>
               <td><input type="date" name="date" id="date" /></td>
               <td><input type="time" name="time" id="time" /></td>
-              <td><input type="text" placeholder="i.e Incision" name="injury" id="injury" required /></td>
+              <td><input type="text" placeholder="i.e Incision" name="injury" id="injury"  required /></td>
               <td><input type="text" placeholder="i.e Right Leg" name="injury-location" id="injury-location" required /></td>
               <td><input type="text" placeholder="i.e Bandage" name="treatment" id="treatment" required /></td>
               <td><input type="text" placeholder="i.e Slipped on wet floor" name="injury-occur" id="injury-occur" required /></td>

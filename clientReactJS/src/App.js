@@ -6,47 +6,42 @@ import EmployeeInjury from './forms/EmployeeInjuryReport';
 import NotificationReport from './forms/NotificationOfInjuryReport';
 import PropertyReport from './forms/PropertyLossReport';
 import VehicleReport from './forms/VehicleAccidentReport';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
    <div>
-     <Router>
+     <BrowserRouter>
       <div className="App">
         <div className="content">
-          <Switch>
-            <Route path="/Employee">
-              <Employee />
-            </Route>
-            <Route path="/login">
-              <LoginPage />
-            </Route>
-            <Route path="/form/AccidentReport">
-              <AccidentReport />
-            </Route>
-            <Route path="/form/MinorInjury">
-              <MinorInjury />
-            </Route>
-            <Route path="/form/EmployeeInjury">
-              <EmployeeInjury />
-            </Route>
-            <Route path="/form/NotificationReport">
-              <NotificationReport />
-            </Route>
-            <Route path="/form/PropertyReport">
-              <PropertyReport />
-            </Route>
-            <Route path="/form/VehicleReport">
-              <VehicleReport />
-            </Route>
-            
-
-          </Switch>
+          <Routes>
+            <Route path="/Employee" element={<Employee />} />
+          </Routes>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+          </Routes>
+          <Routes>
+            <Route path="/form/AccidentReport" element={<AccidentReport />} />
+          </Routes>
+          <Routes>
+            <Route path="/form/MinorInjury" element={<MinorInjury />} />
+          </Routes>
+          <Routes>
+            <Route path="/form/EmployeeInjury" element={<EmployeeInjury />} />
+          </Routes>
+          <Routes>
+            <Route path="/form/NotificationReport" element={<NotificationReport />} />
+          </Routes>
+          <Routes>
+            <Route path="/form/PropertyReport" element={<PropertyReport />} />
+          </Routes>
+          <Routes>
+            <Route path="/form/VehicleReport" element={<VehicleReport />} />
+          </Routes>
         </div>
       </div>
-    </Router>
-
+    </BrowserRouter>
     </div>
   );
 }
