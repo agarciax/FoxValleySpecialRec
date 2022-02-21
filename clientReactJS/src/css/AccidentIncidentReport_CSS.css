@@ -1,14 +1,17 @@
-* {
+
+
+
+.ARF_entire-page {
     margin: 0;
     padding: 0;
     text-indent: 0;
 }
-.entire-page{
+.ARF_entire-page{
     width: 724px;
     justify-content: center;
     margin: auto;
 }
-.page-head{
+.ARF_page-head{
 
 }
 h1 {
@@ -20,7 +23,7 @@ h1 {
     font-size: 26pt;
 }
 
-.s1 {
+.ARF_s1 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -57,7 +60,7 @@ h2 {
     font-size: 24pt;
 }
 
-.s2 {
+.ARF_s2 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -66,7 +69,7 @@ h2 {
     font-size: 10pt;
 }
 
-.s3 {
+.ARF_s3 {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -75,7 +78,7 @@ h2 {
     font-size: 9pt;
 }
 
-.s4 {
+.ARF_s4 {
     color: black;
     font-family: Helvetica, sans-serif;
     font-style: normal;
@@ -84,7 +87,7 @@ h2 {
     font-size: 8pt;
 }
 
-.s5 {
+.ARF_s5 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -93,7 +96,7 @@ h2 {
     font-size: 11pt;
 }
 
-.s6 {
+.ARF_s6 {
     color: black;
     font-family: Helvetica, sans-serif;
     font-style: normal;
@@ -102,7 +105,7 @@ h2 {
     font-size: 8pt;
 }
 
-.s7 {
+.ARF_s7 {
     color: #231F20;
     font-family: Arial-BoldItalicMT, sans-serif;
     font-style: italic;
@@ -111,7 +114,7 @@ h2 {
     font-size: 9pt;
 }
 
-.s8 {
+.ARF_s8 {
     color: black;
     font-family: "Times New Roman", serif;
     font-style: normal;
@@ -120,7 +123,7 @@ h2 {
     font-size: 10pt;
 }
 
-.s9 {
+.ARF_s9 {
     color: #231F20;
     font-family: "Times New Roman", serif;
     font-style: normal;
@@ -143,7 +146,7 @@ table, tbody {
     overflow: visible;
 }
 
-.head-text1 {
+.ARF_head-text1 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -152,7 +155,7 @@ table, tbody {
     font-size: 12pt;
 }
 
-.head-text2 {
+.ARF_head-text2 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -161,7 +164,7 @@ table, tbody {
     font-size: 15pt;
 }
 
-.head-text3 {
+.ARF_head-text3 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -170,7 +173,7 @@ table, tbody {
     font-size: 21pt;
 }
 
-.head-text4 {
+.ARF_head-text4 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -179,7 +182,7 @@ table, tbody {
     font-size: 26pt;
 }
 
-.page-head-grid {
+.ARF_page-head-grid {
     display: grid;
     grid-template-columns: auto auto ;
     /*grid-template-rows: 100px;*/
@@ -191,19 +194,19 @@ table, tbody {
     /*font-size: 25px;*/
     /*background-color: #F8EDEB;*/
 }
-.bottom-space{
+.ARF_bottom-space{
    margin-bottom: 100px;
 }
-.top-space{
+.ARF_top-space{
     margin-bottom: 25px;
 }
-.header-body-space{
+.ARF_header-body-space{
     margin-bottom: 8px;
 }
-table.form-table{
+table.ARF_form-table{
     border-collapse: collapse;
 }
-.blue-boxes{
+.ARF_blue-boxes{
     padding-top: 1pt;
     text-indent: 0pt;
     text-align: center;
@@ -216,7 +219,7 @@ table.form-table{
     text-decoration: none;
     font-size: 10pt;
 }
-.blue-boxes-top{
+.ARF_blue-boxes-top{
     border-top: 2px solid #24418E;
     padding-top: 1pt;
     text-indent: 0pt;
@@ -230,7 +233,7 @@ table.form-table{
     text-decoration: none;
     font-size: 10pt;
 }
-.blue-boxes-bottom{
+.ARF_blue-boxes-bottom{
     border-bottom: 2px solid #24418E;
     padding-top: 1pt;
     text-indent: 0pt;
@@ -244,7 +247,7 @@ table.form-table{
     text-decoration: none;
     font-size: 10pt;
 }
-.submit-button{
+.ARF_submit-button{
     text-align: center;
 }
 #Agency_Name, #Name_of_person_completing_the_report, #Title_of_person_completing_report, #Business_email,
@@ -255,14 +258,14 @@ table.form-table{
 #WereCriminalCharges {
     width: 100%;
 }
-.endInput {
+.ARF_endInput {
     padding-right: 15px;
 }
-.inputGrid {
+.ARF_inputGrid {
     display: grid;
     grid-template-columns: auto auto;
 }
-.input-right {
+.ARF_input-right {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -271,7 +274,7 @@ table.form-table{
     font-size: 9pt;
     text-align: right;
 }
-.s3-right {
+.ARF_s3-right {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -280,7 +283,7 @@ table.form-table{
     font-size: 9pt;
     text-align: right;
 }
-.s3-left {
+.ARF_s3-left {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -289,17 +292,17 @@ table.form-table{
     font-size: 9pt;
     text-align: left;
 }
-.center-text{
+.ARF_center-text{
     text-align: center;
 }
-.text-left{
+.ARF_text-left{
     text-align: left;
     padding-left: 5px;
 }
-input {
+.ARF_Input{
     background-color: #E8E8E8;
 }
-.white-boxes-red-text{
+.ARF_white-boxes-red-text{
     padding-top: 1pt;
     text-indent: 0pt;
     text-align: center;
@@ -312,15 +315,15 @@ input {
     text-decoration: none;
     font-size: 10pt;
 }
-.inputGrid3 {
+.ARF_inputGrid3 {
     display: grid;
     grid-template-columns: auto auto auto;
 }
-.inputGrid4 {
+.ARF_inputGrid4 {
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
-.s5-center {
+.ARF_s5-center {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -328,3 +331,4 @@ input {
     font-size: 12pt;
     text-align: center;
 }
+

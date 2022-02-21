@@ -1,9 +1,9 @@
 import Logo from "./images/SpecialRecLogo.png";
 import background from "./images/bg-01.jpg";
-import "./css/util.css"
-import "./css/index.css"
-import "./fonts/font-awesome-4.7.0/css/font-awesome.min.css"
-import "./fonts/iconic/css/material-design-iconic-font.min.css"
+ import "./css/util.css"
+ import "./css/index.css"
+ import "./fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+ import "./fonts/iconic/css/material-design-iconic-font.min.css"
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {
@@ -27,17 +27,22 @@ const LoginPage = () => {
                 <span className="focus-input100" data-placeholder="&#xf191;" />
               </div>
               <div className="container-login100-form-btn">
+
                 <Link to="/Employee"> 
                 <button className="custombutton" onclick="window.location.href='/page2'">
                   Login
-
                 </button>
                 </Link>
+                
               </div>
               <div className="container-login100-form-btn">
+
+              <Link to="/Employee"> 
                 <button className="custombutton" onclick="window.location.href = 'admin.html';">
                   (Temp) Admin
                 </button>
+                </Link>
+
               </div>
             </div>
           </div>

@@ -1,15 +1,15 @@
-body{
+.MLF_shift-down tbody{
     width:100%;
     height: 100%;
 }
 
-.shift-down th,
-.shift-down td{
+.MLF_shift-down th,
+.MLF_shift-down td{
     border: 1px solid black;
    height: 80px;
 }
 
-.shift-down{
+.MLF_shift-down{
  width:100%;
     width: 1300px;
      
@@ -19,35 +19,35 @@ body{
     /* table-layout: fixed; */
 }
 
-thead{
+.MLF_shift-down thead{
     background-color: lightgrey;
 }
-th{
+.MLF_shift-down th{
     color: steelblue;
 }
-h1{
+.MLF_shift-down h1{
     font-size: 15pt;
     color: #4B6D90;
     text-align: center;
     padding-top: 20px;
 }
-h2{
+.MLF_shift-down h2{
     color: #4B6D90;
 }
-.double-space{
-    line-height: 1.5;
+.MLF_double-space{
+    line-height: 1.MLF_5;
 }
-.shift-right{
+.MLF_shift-right{
     margin-left: 80px;
 }
-.float-right{
+.MLF_float-right{
     float: right;
     clear: right;
     padding-right: 190px;
     font-size: 13pt;
 
 }
-.FVSRA{
+.MLF_FVSRA{
 
     width: 250px;
     position: absolute;
@@ -55,18 +55,18 @@ h2{
     top: 90px;
 
 }
-.shift-down{
+.MLF_shift-down{
     position: relative;
     top: 190px;
 }
-.bottom{
+.MLF_bottom{
     position: relative;
     left: 0;
     bottom: -300px;
     width: 100%;
     text-align: center;
 }
-.submit{
+.MLF_submit{
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     width: 300px;
@@ -78,19 +78,19 @@ h2{
     background-color: lightgrey;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.MLF_1);
+    -webkit-transition-duration: 0.MLF_3s;
+    transition-duration: 0.MLF_3s;
     -webkit-transition-property: box-shadow, transfrom;
     transition-property: box-shodow, transform;
 }
-.submit:hover, .submit:focus, .submit:active{
+.MLF_submit:hover, .MLF_submit:focus, .MLF_submit:active{
     color: white;
     background-color: #4B6D90;
     border: 1px solid black;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.MLF_1);
+    transform: scale(1.MLF_1);
 }
-.shift-down td, .shift-down tbody, .shift-down td, .shift-down input{
+.MLF_shift-down td, .MLF_shift-down tbody, .MLF_shift-down td, .MLF_shift-down input{
     text-align: center;
 }

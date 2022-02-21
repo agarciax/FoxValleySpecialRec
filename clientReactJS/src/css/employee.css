@@ -39,7 +39,7 @@
   padding: 0px 4px 0px 4px;
 }
 
-* {
+ * {
 	margin: 0px; 
 	padding: 0px; 
 	box-sizing: border-box;
@@ -52,8 +52,8 @@
   color: black;
 }
 
-body, html {
-	height: 100%;
+.tempNote {
+
 	font-family: Poppins-Regular, sans-serif;
 }
 
@@ -62,7 +62,7 @@ a {
 	font-family: Poppins-Regular;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color: rgba(182,199,226,0.80);
 	margin: 0px;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
@@ -76,7 +76,6 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #fff;
 }
 
 /*---------------------------------------------*/
@@ -84,13 +83,6 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
 
-p {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-}
 
 ul, li {
 	margin: 0px;
@@ -99,10 +91,6 @@ ul, li {
 
 
 /*---------------------------------------------*/
-input {
-	outline: none;
-	
-}
 
 textarea {
   outline: none;
@@ -165,14 +153,14 @@ iframe {
 
 
 /*//////////////////////////////////////////////////////////////////
-[ login ]*/
+[ employee ]*/
 
 .limiter {
   width: 100%;
   margin: 0 auto;
 }
 
-.container-login100 {
+.container-employee100 {
   width: 100%;  
   min-height: 100vh;
   display: -webkit-box;
@@ -192,7 +180,7 @@ iframe {
   z-index: 1;  
 }
 
-.container-login100::before {
+.container-employee100::before {
   content: "";
   display: block;
   position: absolute;
@@ -225,7 +213,7 @@ iframe {
   font-size: 25px;
 }
 
-.wrap-login100 {
+.wrap-employee100 {
   width: 352px;
   border-radius: 10px;
   overflow: hidden;
@@ -235,7 +223,7 @@ iframe {
 
 }
 
-.wrap-login100_2 {
+.wrap-employee100_2 {
   width: 500px;
   border-radius: 10px;
   overflow: hidden;
@@ -247,11 +235,11 @@ iframe {
 /*------------------------------------------------------------------
 [ Form ]*/
 
-.login100-form {
+.employee100-form {
   width: 100%;
 }
 
-.login100-form-logo {
+.employee100-form-logo {
   font-size: 60px; 
   color: #333333;
 
@@ -269,7 +257,7 @@ iframe {
   margin: 0 auto;
 }
 
-.login100-form-title {
+.employee100-form-title {
   font-family: Poppins-Medium;
   font-size: 30px;
   color: #fff;
@@ -437,7 +425,7 @@ iframe {
 
 /*------------------------------------------------------------------
 [ Button ]*/
-.container-login100-form-btn {
+.container-employee100-form-btn {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -448,7 +436,7 @@ iframe {
   justify-content: center;
 }
 
-.login100-form-btn {
+.employee100-form-btn {
   font-family: Poppins-Medium;
   font-size: 16px;
   color: #555555;
@@ -480,7 +468,7 @@ iframe {
   transition: all 0.4s;
 }
 
-.login100-form-btn::before {
+.employee100-form-btn::before {
   content: "";
   display: block;
   position: absolute;
@@ -499,11 +487,11 @@ iframe {
   transition: all 0.4s;
 }
 
-.login100-form-btn:hover {
+.employee100-form-btn:hover {
   color: #fff;
 }
 
-.login100-form-btn:hover:before {
+.employee100-form-btn:hover:before {
   opacity: 0;
 }
 
@@ -512,7 +500,7 @@ iframe {
 [ Responsive ]*/
 
 @media (max-width: 576px) {
-  .wrap-login100 {
+  .wrap-employee100 {
     padding: 55px 15px 37px 15px;
   }
 }

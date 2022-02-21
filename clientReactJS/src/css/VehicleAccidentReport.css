@@ -1,14 +1,14 @@
-* {
+.VARF_entire-page {
     margin: 0;
     padding: 0;
     text-indent: 0;
 }
-.entire-page{
+.VARF_entire-page{
     width: 724px;
     justify-content: center;
     margin: auto;
 }
-.page-head{
+.VARF_page-head{
 
 }
 h1 {
@@ -20,7 +20,7 @@ h1 {
     font-size: 26pt;
 }
 
-.s1 {
+.VARF_s1 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -29,7 +29,7 @@ h1 {
     font-size: 9pt;
 }
 
-p {
+.VARF_pText {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -57,7 +57,7 @@ h2 {
     font-size: 24pt;
 }
 
-.s2 {
+.VARF_s2 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -66,7 +66,7 @@ h2 {
     font-size: 10pt;
 }
 
-.s3 {
+.VARF_s3 {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -75,7 +75,7 @@ h2 {
     font-size: 9pt;
 }
 
-.s4 {
+.VARF_s4 {
     color: black;
     font-family: Helvetica, sans-serif;
     font-style: normal;
@@ -84,7 +84,7 @@ h2 {
     font-size: 8pt;
 }
 
-.s5 {
+.VARF_s5 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -93,7 +93,7 @@ h2 {
     font-size: 11pt;
 }
 
-.s6 {
+.VARF_s6 {
     color: black;
     font-family: Helvetica, sans-serif;
     font-style: normal;
@@ -102,7 +102,7 @@ h2 {
     font-size: 8pt;
 }
 
-.s7 {
+.VARF_s7 {
     color: #231F20;
     font-family: Arial-BoldItalicMT, sans-serif;
     font-style: italic;
@@ -111,7 +111,7 @@ h2 {
     font-size: 9pt;
 }
 
-.s8 {
+.VARF_s8 {
     color: black;
     font-family: "Times New Roman", serif;
     font-style: normal;
@@ -120,7 +120,7 @@ h2 {
     font-size: 10pt;
 }
 
-.s9 {
+.VARF_s9 {
     color: #231F20;
     font-family: "Times New Roman", serif;
     font-style: normal;
@@ -143,7 +143,7 @@ table, tbody {
     overflow: visible;
 }
 
-.head-text1 {
+.VARF_head-text1 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -152,7 +152,7 @@ table, tbody {
     font-size: 12pt;
 }
 
-.head-text2 {
+.VARF_head-text2 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -161,7 +161,7 @@ table, tbody {
     font-size: 15pt;
 }
 
-.head-text3 {
+.VARF_head-text3 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -170,7 +170,7 @@ table, tbody {
     font-size: 21pt;
 }
 
-.head-text4 {
+.VARF_head-text4 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -179,31 +179,31 @@ table, tbody {
     font-size: 26pt;
 }
 
-.page-head-grid {
+.VARF_page-head-grid {
     display: grid;
     grid-template-columns: auto auto ;
     /*grid-template-rows: 100px;*/
     /*color: #333333;*/
 }
-.page-head-grid > div {
+.VARF_page-head-grid > div {
     /*text-align: center;*/
     /*padding: 20px 0;*/
     /*font-size: 25px;*/
     /*background-color: #F8EDEB;*/
 }
-.bottom-space{
+.VARF_bottom-space{
    margin-bottom: 100px;
 }
-.top-space{
+.VARF_top-space{
     margin-bottom: 25px;
 }
-.header-body-space{
+.VARF_header-body-space{
     margin-bottom: 8px;
 }
-table.form-table{
+table.VARF_form-table{
     border-collapse: collapse;
 }
-.blue-boxes{
+.VARF_blue-boxes{
     padding-top: 1pt;
     text-indent: 0pt;
     text-align: center;
@@ -216,7 +216,7 @@ table.form-table{
     text-decoration: none;
     font-size: 10pt;
 }
-.blue-boxes-top{
+.VARF_blue-boxes-top{
     border-top: 2px solid #24418E;
     padding-top: 1pt;
     text-indent: 0pt;
@@ -230,7 +230,7 @@ table.form-table{
     text-decoration: none;
     font-size: 10pt;
 }
-.blue-boxes-bottom{
+.VARF_blue-boxes-bottom{
     border-bottom: 2px solid #24418E;
     padding-top: 1pt;
     text-indent: 0pt;
@@ -244,7 +244,7 @@ table.form-table{
     text-decoration: none;
     font-size: 10pt;
 }
-.submit-button{
+.VARF_submit-button{
     text-align: center;
 }
 #Agency_Name, #Name_of_person_completing_the_report, #Title_of_person_completing_report, #Business_email,
@@ -255,14 +255,14 @@ table.form-table{
 #WereCriminalCharges {
     width: 100%;
 }
-.endInput {
+.VARF_endInput {
     padding-right: 15px;
 }
-.inputGrid {
+.VARF_inputGrid {
     display: grid;
     grid-template-columns: auto auto;
 }
-.input-right {
+.VARF_input-right {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -271,7 +271,7 @@ table.form-table{
     font-size: 9pt;
     text-align: right;
 }
-.s3-right {
+.VARF_s3-right {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -280,7 +280,7 @@ table.form-table{
     font-size: 9pt;
     text-align: right;
 }
-.s3-left {
+.VARF_s3-left {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -289,17 +289,17 @@ table.form-table{
     font-size: 9pt;
     text-align: left;
 }
-.center-text{
+.VARF_center-text{
     text-align: center;
 }
-.text-left{
+.VARF_text-left{
     text-align: left;
     padding-left: 5px;
 }
-input {
+.VARF_Input {
     background-color: #E8E8E8;
 }
-.white-boxes-red-text{
+.VARF_white-boxes-red-text{
     padding-top: 1pt;
     text-indent: 0pt;
     text-align: center;
@@ -312,15 +312,15 @@ input {
     text-decoration: none;
     font-size: 10pt;
 }
-.inputGrid3 {
+.VARF_inputGrid3 {
     display: grid;
     grid-template-columns: auto auto auto;
 }
-.inputGrid4 {
+.VARF_inputGrid4 {
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
-.s5-center {
+.VARF_s5-center {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;

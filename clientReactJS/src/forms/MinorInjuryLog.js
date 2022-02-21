@@ -5,8 +5,8 @@ import logo from ".//PDRMA Form 03 Property Loss Report_files/Image_001.jpg"
 const MinorInjury = () => {
     return (  
 <div>
-        <img className="FVSRA" src={logo} />
-        <table className="shift-down">
+        <img className="MLF_FVSRA" src={logo} />
+        <table className="MLF_shift-down">
           <colgroup><col width={120} />
             <col width={110} />
             <col width={220} />
@@ -41,8 +41,8 @@ const MinorInjury = () => {
           </tbody>
         </table>
       
-          <footer className="bottom">
-          <button className="submit" onclick="submitBtn()">Submit</button>
+          <footer className="MLF_bottom">
+          <button className="MLF_submit" onclick="submitBtn()">Submit</button>
         </footer>
         </div>
     );
