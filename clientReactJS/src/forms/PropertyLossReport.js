@@ -1,10 +1,43 @@
 import "../css/PropertyLossReport_CSS.css"
 import "../images/icons/FVSRA_ICON.png"
 import logo from ".//PDRMA Form 03 Property Loss Report_files/Image_001.jpg"
+import {useState} from "react";
 
 
 const PropertyReport = () => {
-    return ( 
+
+const [agencyName, setAgencyName] = useState("Fox Valley Special Recreation Association");
+const [todaysDate, setTodaysDate] = useState("");
+const [dateOfIncident, setDateOfIncident] = useState("");
+const [timeOfIncident, setTimeOfIncident] = useState("");
+const [nameOfPersonCompletingTheReport, setNameOfPersonCompletingTheReport] = useState("");
+const [titleOfPersonCompletingReport, setTitleOfPersonCompletingReport] = useState("");
+const [bizPhone, setBizPhone] = useState("");
+const [bizEmail, setBizEmail] = useState("");
+const [howDidTheIncidentOccurAndWhatPropertyWasDamaged, setHowDidTheIncidentOccurAndWhatPropertyWasDamaged] = useState("");
+const [nameOfLocation, setNameOfLocation] = useState("");
+const [streetAddressIncidentLocation, setStreetAddressIncidentLocation] = useState("");
+const [cityIncidentLocation, setCityIncidentLocation] = useState("");
+const [stateIncidentLocation, setStateIncidentLocation] = useState("");
+const [zipCode, setZipCode] = useState("");
+const [locationSpecify, setLocationSpecify] = useState("");
+const [primaryLocation, setPrimaryLocation] = useState("");
+const [estimateOfLoss, setEstimateOfLoss] = useState("");
+const [contactPersonFacility, setContactPersonFacility] = useState("");
+const [contactPersonEmail, setContactPersonEmail] = useState("")
+const [contactPersonPhoneNum, setContactPersonPhoneNum] = useState("")
+const [damageThirdParty, setDamageThirdParty] = useState("")
+const [personResponsibleName, setPersonResponsibleName] = useState("");
+const [personResponsibleStreetAddress, setPersonResponsibleStreetAddress] = useState("");
+const [personResponsibleCity, setPersonResponsibleCity] = useState("");
+const [personResponsibleState, setPersonResponsibleState] = useState("")
+const [zipCodePersonResponsible, setZipCodePersonResponsible] = useState("")
+const [policeInvestigationYesNoUnknown, setPoliceInvestigationYesNoUnknown] = useState("");
+const [whatPoliceAgency, setWhatPoliceAgency] = useState("");
+const [policeReportNumber, setPoliceNumber] = useState("");
+const [wereCriminalCharges, setWereCriminalCharges] = useState("");
+
+    return (
         <div className="PLRF_entire-page">
         <div className="PLRF_top-space" />
         <div className="PLRF_page-head">
@@ -44,13 +77,13 @@ const PropertyReport = () => {
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                   <p className="PLRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Agency name</p>
-                  <input className="PLRF_Input" type="text" id="Agency_Name" name="Agency_Name" required />
+                  <input className="PLRF_Input" type="text" value={agencyName} onChange={(e) => setAgencyName(e.target.value)} id="Agency_Name" name="Agency_Name" required />
                 </td>
                 <td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                   <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="PLRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Today’s date</p>
-                  <input className="PLRF_Input" type="date" id="Todays_Date" name="Today's_Date" defaultValue min="2021-01-01" max="2050-01-01" />
+                  <input className="PLRF_Input" type="date" id="Todays_Date" value={todaysDate} onChange={(e) => setTodaysDate(e.target.value)} name="Today's_Date" defaultValue min="2021-01-01" max="2050-01-01" />
                 </td>
               </tr>
               <tr style={{height: '22pt'}}>
@@ -59,14 +92,14 @@ const PropertyReport = () => {
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p className="PLRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Date of incident (mm/dd/yyyy)</p>
-                  <input className="PLRF_Input" type="date" id="Date_of_Incident" name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
+                  <input className="PLRF_Input" type="date" id="Date_of_Incident" value={dateOfIncident} onChange={(e) => setDateOfIncident(e.target.value)} name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
                 </td>
                 <td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="PLRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Time of incident (hh/mm,
                     a.m./p.m.)</p>
-                  <input className="PLRF_Input" type="time" id="Time_of_Incident" name="Time_of_Incident" />
+                  <input className="PLRF_Input" type="time" value={timeOfIncident} onChange={(e) => setTimeOfIncident(e.target.value)} id="Time_of_Incident" name="Time_of_Incident" />
                 </td>
               </tr>
               <tr style={{height: '22pt'}}>
