@@ -36,15 +36,11 @@ var EmployeeInjury = function (employeeInjury) {
     this.Cell_phone = employeeInjury.Cell_phone;
     this.Best_number_to_contact_employee = employeeInjury.Best_number_to_contact_employee;
     this.Email = employeeInjury.Email;
-
     this.Social_security_number = employeeInjury.Social_security_number;
-
     this.Date_of_birth = employeeInjury.Date_of_birth;
     this.Gender = employeeInjury.Gender;
     this.Marital_status = employeeInjury.Marital_status;
-
     this.Number_of_dependents = employeeInjury.Number_of_dependents;
-
     this.Does_employee_speak_english = employeeInjury.Does_employee_speak_english;
     this.Average_weekly_wages = employeeInjury.Average_weekly_wages;
     this.Job_title_occupation = employeeInjury.Job_title_occupation;
