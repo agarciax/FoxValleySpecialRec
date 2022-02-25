@@ -108,13 +108,13 @@ label {
 }
 
 /*---------------------------------------------*/
-button {
+.custombutton {
 	outline: none !important;
 	border: none;
 	background: transparent;
 }
 
-button:hover {
+.custombutton:hover {
 	cursor: pointer;
 }
 
