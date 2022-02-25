@@ -127,11 +127,7 @@ label {
 }
 
 /*---------------------------------------------*/
-button {
-	outline: none !important;
-	border: none;
-	background: transparent;
-}
+
 
 button:hover {
 	cursor: pointer;
