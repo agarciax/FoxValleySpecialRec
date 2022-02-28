@@ -24,7 +24,7 @@ const [stateIncidentLocation, setStateIncidentLocation] = useState("");
 const [zipCode, setZipCode] = useState("");
 const [locationSpecify, setLocationSpecify] = useState("");
 const [primaryLocation, setPrimaryLocation] = useState("");
-const [estimateOfLoss, setEstimateOfLoss] = useState("");
+const [estimateOfLoss, setEstimateOfLoss] = useState(0);
 const [contactPersonFacility, setContactPersonFacility] = useState("");
 const [contactPersonEmail, setContactPersonEmail] = useState("")
 const [contactPersonPhoneNum, setContactPersonPhoneNum] = useState("")
@@ -54,7 +54,27 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
       "Business_Phone": bizPhone,
       "Business_Email": bizEmail,
       "How_did_the_incident_occur_and_what_property_was_damaged": howDidTheIncidentOccurAndWhatPropertyWasDamaged,
-      "Name_of_location": nameOfLocation
+      "Name_of_location": nameOfLocation,
+      "Street_Address_Incident_Location": streetAddressIncidentLocation,
+      "State_Incident_Location": stateIncidentLocation,
+      "City_Incident_Location": cityIncidentLocation,
+      "Zip_Code": zipCode,
+      "Location_Specify": locationSpecify,
+        "Primary_Location": primaryLocation,
+      "Estimate_of_Loss": estimateOfLoss,
+        "Contact_Person_Facility": contactPersonFacility,
+      "Contact_Person_Email": contactPersonEmail,
+      "Contact_Person_Phone_Number": contactPersonPhoneNum,
+      "Damage_Third_Party": damageThirdParty,
+      "Person_Responsible_Name": personResponsibleName,
+      "Person_Responsible_Street_Address": personResponsibleStreetAddress,
+      "Person_Responsible_City": personResponsibleCity,
+      "Person_Responsible_State": personResponsibleState,
+      "Zip_Code_Person_Responsible": zipCodePersonResponsible,
+      "Police_Investigation_Yes_No_Unknown": policeInvestigationYesNoUnknown,
+      "What_Police_Agency": whatPoliceAgency,
+      "Police_Report_Number": policeReportNumber,
+      "Were_Criminal_Charges": wereCriminalCharges
     }
 
     fetch('http://127.0.0.1:5000/fvsra/propertyLossReport', {

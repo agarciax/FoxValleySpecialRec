@@ -1,2 +1,4 @@
 /node_modules/
-/clientReactJs/node_modules/
+clientReactJS/node_modules/
+clientReactJS/node_modules/.cache/.eslintcache
+clientReactJS/node_modules/.cache/.eslintcache
