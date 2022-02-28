@@ -37,7 +37,7 @@ const LoginPage = () => {
               </div>
               <div className="container-login100-form-btn">
 
-              <Link to="/Employee"> 
+              <Link to="/Admin">
                 <button className="custombutton" onclick="window.location.href = 'admin.html';">
                   (Temp) Admin
                 </button>
