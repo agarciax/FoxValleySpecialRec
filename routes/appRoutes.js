@@ -35,10 +35,17 @@ module.exports = function (app) {
     // todoList3 Routes
     app.route('/fvsra/employeeInjuryReport')
         .get(form04.list_all_employeeInjuryReports)
+        .post(form04.createEmployeeInjuryReport)
     app.route('/fvsra/employeeInjuryReport/:employee_injury_id')
         .get(form04.read_a_employeeInjuryReport)
-        .delete(form04.deleteMinorIncident)
+        .delete(form04.deleteEmployeeInjuryReport)
 
     var form04E = require('../controller/notificationOfInjuryToEmployerReportAppController')
+    app.route('/fvsra/notificationOfInjuryToEmployerReport')
+        .get(form04E.list_all_notificationOfInjurys)
+        .post(form04E.createNotificationOfInjuryReport)
+    app.route('/fvsra/notificationOfInjuryToEmployerReport/:employee_injury_id')
+        .get(form04E.read_a_notificationOfInjury)
+        .delete(form04E.deleteNotificationOfInjuryReport)
 
 };

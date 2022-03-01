@@ -31,7 +31,7 @@ exports.createEmployeeInjuryReport = function (req, res) {
         });
     }
 };
-exports.deleteMinorIncident = function (req, res) {
+exports.deleteEmployeeInjuryReport = function (req, res) {
     employeeIncident.remove(req.params.employee_injury_id, function (err) {
         if (err) res.send(err);
         res.json({message: 'Item successfully deleted'});
