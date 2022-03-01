@@ -2,7 +2,24 @@
 var sql = require('./db.js');
 //Task object constructor
 var NotificationOfInjury = function (notificationOfInjury) {
-    //this.injury_date = minorIncident.injury_date;
+    this.employee_injury_id  = notificationOfInjury.employee_injury_id;
+    this.Employee_Name  = notificationOfInjury.Employee_Name;
+    this.Date_of_Incident  = notificationOfInjury.Date_of_Incident;
+    this.Time_of_Incident  = notificationOfInjury.Time_of_Incident;
+    this.Specific_location_of_accident  = notificationOfInjury.Specific_location_of_accident;
+    this.Are_you_reporting_the_injury_for_the_first_time_using_this_form  = notificationOfInjury.Are_you_reporting_the_injury_for_the_first_time_using_this_form;
+    this.If_no_when_did_you_first_report_the_injury_And   = notificationOfInjury.If_no_when_did_you_first_report_the_injury_And ;
+    this.Describe_how_the_injury_occurred  = notificationOfInjury.Describe_how_the_injury_occurred;
+    this.Name_all_people_present_at_the_time_of_injury  = notificationOfInjury.Name_all_people_present_at_the_time_of_injury;
+    this.Identify_all_body_parts_you_injured  = notificationOfInjury.Identify_all_body_parts_you_injured;
+    this.Did_you_seek_medical_attention_on_the_date_of_the_accident  = notificationOfInjury.Did_you_seek_medical_attention_on_the_date_of_the_accident;
+    this.If_yes_where_did_you_seek_treatment  = notificationOfInjury.If_yes_where_did_you_seek_treatment;
+    this.Have_you_injured_this_body_part_previously  = notificationOfInjury.Have_you_injured_this_body_part_previously;
+    this.If_yes_describe_which_body_part_and_what_the_prior_   = notificationOfInjury.If_yes_describe_which_body_part_and_what_the_prior_ ;
+    this.If_yes_where_did_you_receive_treatment  = notificationOfInjury.If_yes_where_did_you_receive_treatment;
+    this.The_above_information_is_true_and_accurate  = notificationOfInjury.The_above_information_is_true_and_accurate;
+    this.Notification_of_injury_was_received_on  = notificationOfInjury.Notification_of_injury_was_received_on;
+    this.Notification_of_injury_was_received_by  = notificationOfInjury.Notification_of_injury_was_received_by;
 
 };
 NotificationOfInjury.getNotificationOfInjuryByID = function (minor_injury_id, result) {
