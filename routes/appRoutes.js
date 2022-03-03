@@ -8,14 +8,14 @@ module.exports = function (app) {
         .get(minorLogList.read_a_minorIncident)
         .delete(minorLogList.deleteMinorIncident)
 
-    var form01 = require('../controller/accidentIncidentAppController')
+    var form01 = require('../controller/accidentIncidentAppController') //Matt is working on the Front/Back End Connection
     app.route('/fvsra/accidentIncidentReport')
         .get(form01.list_all_accidentIncidentReports)
     app.route('/fvsra/accidentIncidentReport/:accident_incident_id')
         .get(form01.read_a_accidentIncidentReport)
         .delete(form01.deleteAccidentIncidentReport)
 
-    var form02 = require('../controller/vehicleAccidentAppController');
+    var form02 = require('../controller/vehicleAccidentAppController'); //Josh is working on the Front/Back End Connection
     app.route('/fvsra/vehicleAccidentReport')
         .get(form02.list_all_vehicleAccidents)
         .post(form02.createVehicleAccident)
@@ -35,17 +35,17 @@ module.exports = function (app) {
     // todoList3 Routes
     app.route('/fvsra/employeeInjuryReport')
         .get(form04.list_all_employeeInjuryReports)
-        .post(form04.createEmployeeInjuryReport)
+        .post(form04.createEmployeeInjuryReport) //Not Tested
     app.route('/fvsra/employeeInjuryReport/:employee_injury_id')
         .get(form04.read_a_employeeInjuryReport)
         .delete(form04.deleteEmployeeInjuryReport)
 
     var form04E = require('../controller/notificationOfInjuryToEmployerReportAppController')
     app.route('/fvsra/notificationOfInjuryToEmployerReport')
-        .get(form04E.list_all_notificationOfInjurys)
-        .post(form04E.createNotificationOfInjuryReport)
+        .get(form04E.list_all_notificationOfInjurys) //Not Tested
+        .post(form04E.createNotificationOfInjuryReport) //Not Tested
     app.route('/fvsra/notificationOfInjuryToEmployerReport/:employee_injury_id')
-        .get(form04E.read_a_notificationOfInjury)
-        .delete(form04E.deleteNotificationOfInjuryReport)
+        .get(form04E.read_a_notificationOfInjury) //Not Tested
+        .delete(form04E.deleteNotificationOfInjuryReport) //Not Tested
 
 };
