@@ -247,12 +247,18 @@ table.form-table{
 .submit-button{
     text-align: center;
 }
-#Agency_Name, #Name_of_person_completing_the_report, #Title_of_person_completing_report, #Business_email,
-#How_did_the_incident_occur_and_what_property_was_damaged, #HowDidIncidentOccur2, #HowDidIncidentOccur3, #NameOfLocation,
-#StreetAddressIncidentLocation, #CityStateIncidentLocation, #LocationSpecify, #PrimaryLocation, #EstimateOfLoss, #ContactPersonFacility,
-#ContactPersonEmail, #PersonResponsible, #PersonResponsibleName,
-#PersonResponsibleStreetAddress, #WhatPoliceAgency, #PoliceReportNumber,
-#WereCriminalCharges {
+#Agency_Name2-1, #Name-2-3, #Title-2-3, #Business_email2-4,
+#Incident_Occur2-5, #NameOfLocation2-6,
+#StreetAddress2-7, #LocationSpecify, #PrimaryLocation,
+#AgencyDriverLast2-11, #AgencyDriverFirst2-11,
+#Address2-11, #Email2-11, #JobTitle2-11, #LocationVehicle2-13, #Area2-14, #Estimate2-15,
+#TrailerArea2-16, #TrailerLocation2-16, #EstimatedRepair2-16, #PoliceAgency2-17,
+#PoliceNumber2-17, #Details2-18, #LastNameBuisness2-19, #FirstNameBuisness2-19,
+#Address2-19, #AreaDamage2-19, #PropertyDamage2-19, #AgeInjured2-19, #LocationTaken2-19,
+#DescribeInjury2-19, #LastNameBuisness2-19-2, #FirstNameBuisness2-19-2,
+#Address2-19-2, #PropertyDamage2-19-2, #AgeInjured2-19-2, #LocationTaken2-19-2,
+#DescribeInjury2-19-2, #LocationVehicle2-19, #LocationVehicle2-19-2, #LastName2-20,
+#FirstName2-20, #Address2-20, #Say2-20, #Where2-20, #AgencyStreet2-22, #OtherStreet2-22{
     width: 100%;
 }
 .endInput {
