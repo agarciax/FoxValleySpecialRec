@@ -50,12 +50,13 @@ window.onclick = function(event) {
               <button  className="AD_wrap-login100">Create A Form</button>
               
               <div id="myDropdown" class="AD_dropdown-content">
-						      <a href="/form/AccidentReport">Accident/Incident Report</a>
-						      <a href="/form/VehicleReport">Vehicle Accident Report</a>
-						      <a href="/form/PropertyReport">Property Loss Report</a>
-						      <a href="/form/EmployeeInjury">Employee Injury Report</a>
-						      <a href="/form/NotificationReport">Notification of Injury to Employer Report</a>
-					    </div>
+                  <a href="/form/MinorInjury">Minor Injury</a>
+                  <a href="/form/AccidentReport">Accident/Incident Report</a>
+                  <a href="/form/VehicleReport">Vehicle Accident Report</a>
+                  <a href="/form/PropertyReport">Property Loss Report</a>
+                  <a href="/form/EmployeeInjury">Employee Injury Report</a>
+                  <a href="/form/NotificationReport">Notification of Injury to Employer Report</a>
+              </div>
        
 
             </div>
