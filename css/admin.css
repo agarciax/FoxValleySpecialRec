@@ -25,15 +25,80 @@
   src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
 }
 
+.LogoutButton {
+	position:absolute;
+  margin-top: 1px;
+  margin-right: 2px;
+   top:0; 
+   right:0;
+  outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+.LogoutButton:hover {
+	cursor: pointer;
+}
+
+.LogoutButton {
+  font-family: Poppins-Medium;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.2;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  padding: 0 20px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 25px;
+
+  background: #4AC5AC;
+  z-index: 1;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.LogoutButton::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 1;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.LogoutButton:hover {
+  color: #fff;
+}
+
+.LogoutButton:hover:before {
+  opacity: 0;
+}
 
 
-.item1 { grid-area: header; }
-.item2 { grid-area: left; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
+.AD_item1 { grid-area: header; }
+.AD_item2 { grid-area: left; }
+.AD_item3 { grid-area: main; }
+.AD_item4 { grid-area: right; }
+.AD_item5 { grid-area: footer; }
 
-.grid-container {
+.AD_grid-container {
   display: grid;
   grid-template-areas:
     		'header header header header header header'
@@ -43,7 +108,7 @@
   padding: 10px;
 }
 
-.grid-container > div {
+.AD_wrap-login-header {
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -58,23 +123,12 @@
 	box-sizing: border-box;
 }
 
-body, html {
-	height: 100%;
+.AD_container-login100 {
+	
 	font-family: Poppins-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
-a {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
 
 a:focus {
 	outline: none !important;
@@ -82,7 +136,6 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #fff;
 }
 
 /*---------------------------------------------*/
@@ -90,13 +143,7 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
 
-p {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-}
+
 
 ul, li {
 	margin: 0px;
@@ -105,10 +152,7 @@ ul, li {
 
 
 /*---------------------------------------------*/
-input {
-	outline: none;
-	border: none;
-}
+
 
 textarea {
   outline: none;
@@ -129,15 +173,7 @@ textarea:focus:-moz-placeholder { color:transparent; }
 textarea:focus::-moz-placeholder { color:transparent; }
 textarea:focus:-ms-input-placeholder { color:transparent; }
 
-input::-webkit-input-placeholder { color: #fff;}
-input:-moz-placeholder { color: #fff;}
-input::-moz-placeholder { color: #fff;}
-input:-ms-input-placeholder { color: #fff;}
 
-textarea::-webkit-input-placeholder { color: #fff;}
-textarea:-moz-placeholder { color: #fff;}
-textarea::-moz-placeholder { color: #fff;}
-textarea:-ms-input-placeholder { color: #fff;}
 
 label {
   margin: 0;
@@ -145,10 +181,28 @@ label {
 }
 
 /*---------------------------------------------*/
-button {
+button:hover{
 	outline: none !important;
 
+}
+button:hover .AD_dropdown-content{
+  display:block;
+}
+
+.AD_wrap-login100:hover{
 	background: transparent;
+}
+
+.AD_item2:hover .AD_dropdown-content {
+  display: block;
+  background: transparent;
+}
+.AD_item3:hover .AD_dropdown-content {
+  background: transparent;
+  display: block;}
+.AD_item4:hover .AD_dropdown-content {
+  background: transparent;
+  display: block;
 }
 
 button:hover {
@@ -162,7 +216,7 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
-.txt1 {
+.AD_txt1 {
   font-family: Poppins-Regular;
   font-size: 13px;
   color: #e5e5e5;
@@ -178,7 +232,7 @@ iframe {
   margin: 0 auto;
 }
 
-.container-login100 {
+.AD_container-login100 {
   width: 100%;  
   min-height: 100vh;
   display: -webkit-box;
@@ -198,7 +252,7 @@ iframe {
   z-index: 1;  
 }
 
-.container-login100::before {
+.AD_container-login100::before {
   content: "";
   display: block;
   position: absolute;
@@ -209,17 +263,17 @@ iframe {
   left: 0;
   background-color: rgba(255,255,255,0.9);
 }
-.container-stack{
+.AD_container-stack{
   position: relative;
 }
 
-.formtext{
+.AD_formtext{
   color: white;
   font-size: 30px;
 }
 
 /*Dropdown*/
-.dropbtn {
+.AD_dropbtn {
   background-color: #3498DB;
   color: white;
   padding: 16px;
@@ -228,20 +282,18 @@ iframe {
   cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+.AD_dropbtn:hover, .AD_dropbtn:focus {
   background-color: #2980B9;
 }
 
-.wrap-login100:hover, .wrap-login100:focus {
-  background-color: black;
-}
 
-.dropdown {
+
+.AD_dropdown {
   position: relative;
   display: inline-block;
 }
 
-.dropdown-content {
+.AD_dropdown-content {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -251,46 +303,57 @@ iframe {
   z-index: 1;
 }
 
-.dropdown-content a {
+.AD_wrap-login-header a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-
-.wrap-login100 {
-  border-radius: 10px;
-  padding: 10px 25px 10px 25px;
-  background: #9152f8;
-  background: -webkit-linear-gradient(top, #7579ff, #b224ef);
-  background: -o-linear-gradient(top, #7579ff, #b224ef);
-  background: -moz-linear-gradient(top, #7579ff, #b224ef);
-  background: linear-gradient(top, #7579ff, #b224ef);
+.AD_dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
 }
 
-.wrap-login-header {
+.AD_dropdown a:hover {
+  background-color: #080;
+}
+
+.show {
+  display: block;
+}
+
+.AD_wrap-login100 {
+  border-radius: 10px;
+  padding: 10px 25px 10px 25px;
+  background: rgba(182,199,226,0.80);
+  background: -webkit-linear-gradient(top, #7579ff, rgba(182,199,226,0.80));
+  background: -o-linear-gradient(top, #7579ff, rgba(182,199,226,0.80));
+  background: -moz-linear-gradient(top, #7579ff, rgba(182,199,226,0.80));
+  background: linear-gradient(top, #7579ff, rgba(182,199,226,0.80));
+}
+
+.AD_wrap-login-header {
   border-radius: 10px;
   overflow: hidden;
   padding: 40px 40px 40px 40px;
-  background: #9152f8;
-  background: -webkit-linear-gradient(top, #7579ff, #b224ef);
-  background: -o-linear-gradient(top, #7579ff, #b224ef);
-  background: -moz-linear-gradient(top, #7579ff, #b224ef);
-  background: linear-gradient(top, #7579ff, #b224ef);
+  background: rgba(182,199,226,0.80);
+  background: -webkit-linear-gradient(top, #7579ff, rgba(182,199,226,0.80));
+  background: -o-linear-gradient(top, #7579ff, rgba(182,199,226,0.80));
+  background: -moz-linear-gradient(top, #7579ff, rgba(182,199,226,0.80));
+  background: linear-gradient(top, #7579ff, rgba(182,199,226,0.80));
 }
 
 /*------------------------------------------------------------------
 [ Form ]*/
 
-.login100-form {
+.AD_login100-form {
   width: 100%;
 }
 
-.login100-form-logo {
+.AD_login100-form-logo {
   font-size: 60px; 
   color: #333333;
 
@@ -308,7 +371,7 @@ iframe {
   margin: 0 auto;
 }
 
-.login100-form-title {
+.AD_login100-form-title {
   font-family: Poppins-Medium;
   font-size: 30px;
   color: #fff;
@@ -323,14 +386,14 @@ iframe {
 /*------------------------------------------------------------------
 [ Input ]*/
 
-.wrap-input100 {
+.AD_wrap-input100 {
   width: 100%;
   position: relative;
   border-bottom: 2px solid rgba(255,255,255,0.24);
   margin-bottom: 30px;
 }
 
-.input100 {
+.AD_input100 {
   font-family: Poppins-Regular;
   font-size: 16px;
   color: #fff;
@@ -344,7 +407,7 @@ iframe {
 }
 
 /*---------------------------------------------*/ 
-.focus-input100 {
+.AD_focus-input100 {
   position: absolute;
   display: block;
   width: 100%;
@@ -354,7 +417,7 @@ iframe {
   pointer-events: none;
 }
 
-.focus-input100::before {
+.AD_focus-input100::before {
   content: "";
   display: block;
   position: absolute;
@@ -371,7 +434,7 @@ iframe {
   background: #fff;
 }
 
-.focus-input100::after {
+.AD_focus-input100::after {
   font-family: Material-Design-Iconic-Font;
   font-size: 22px;
   color: #fff;
@@ -390,11 +453,11 @@ iframe {
   transition: all 0.4s;
 }
 
-.input100:focus {
+.AD_input100:focus {
   padding-left: 5px;
 }
 
-.input100:focus + .focus-input100::after {
+.AD_input100:focus + .AD_focus-input100::after {
   top: -22px;
   font-size: 18px;
 }
@@ -476,7 +539,7 @@ iframe {
 
 /*------------------------------------------------------------------
 [ Button ]*/
-.container-login100-form-btn {
+.AD_container-login100-form-btn {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -487,7 +550,7 @@ iframe {
   justify-content: center;
 }
 
-.login100-form-btn {
+.AD_login100-form-btn {
   font-family: Poppins-Medium;
   font-size: 16px;
   color: #555555;
@@ -506,10 +569,10 @@ iframe {
   border-radius: 25px;
 
   background: #9152f8;
-  background: -webkit-linear-gradient(bottom, #7579ff, #b224ef);
-  background: -o-linear-gradient(bottom, #7579ff, #b224ef);
-  background: -moz-linear-gradient(bottom, #7579ff, #b224ef);
-  background: linear-gradient(bottom, #7579ff, #b224ef);
+  background: -webkit-linear-gradient(bottom, #7579ff, rgba(182,199,226,0.80));
+  background: -o-linear-gradient(bottom, #7579ff, rgba(182,199,226,0.80));
+  background: -moz-linear-gradient(bottom, #7579ff, rgba(182,199,226,0.80));
+  background: linear-gradient(bottom, #7579ff, rgba(182,199,226,0.80));
   position: relative;
   z-index: 1;
 
@@ -519,7 +582,7 @@ iframe {
   transition: all 0.4s;
 }
 
-.login100-form-btn::before {
+.AD_login100-form-btn::before {
   content: "";
   display: block;
   position: absolute;
@@ -538,11 +601,12 @@ iframe {
   transition: all 0.4s;
 }
 
-.login100-form-btn:hover {
+.AD_login100-form-btn:hover {
   color: #fff;
+
 }
 
-.login100-form-btn:hover:before {
+.AD_login100-form-btn:hover:before {
   opacity: 0;
 }
 

@@ -1,14 +1,14 @@
-* {
+.ERF_entire-page {
     margin: 0;
     padding: 0;
     text-indent: 0;
 }
-.entire-page{
+.ERF_entire-page{
     width: 724px;
     justify-content: center;
     margin: auto;
 }
-.page-head{
+.ERF_page-head{
 
 }
 h1 {
@@ -20,7 +20,7 @@ h1 {
     font-size: 26pt;
 }
 
-.s1 {
+.ERF_s1 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -57,7 +57,7 @@ h2 {
     font-size: 24pt;
 }
 
-.s2 {
+.ERF_s2 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -66,7 +66,7 @@ h2 {
     font-size: 10pt;
 }
 
-.s3 {
+.ERF_s3 {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -75,7 +75,7 @@ h2 {
     font-size: 9pt;
 }
 
-.s4 {
+.ERF_s4 {
     color: black;
     font-family: Helvetica, sans-serif;
     font-style: normal;
@@ -84,7 +84,7 @@ h2 {
     font-size: 8pt;
 }
 
-.s5 {
+.ERF_s5 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -93,7 +93,7 @@ h2 {
     font-size: 11pt;
 }
 
-.s6 {
+.ERF_s6 {
     color: black;
     font-family: Helvetica, sans-serif;
     font-style: normal;
@@ -102,7 +102,7 @@ h2 {
     font-size: 8pt;
 }
 
-.s7 {
+.ERF_s7 {
     color: #231F20;
     font-family: Arial-BoldItalicMT, sans-serif;
     font-style: italic;
@@ -111,7 +111,7 @@ h2 {
     font-size: 9pt;
 }
 
-.s8 {
+.ERF_s8 {
     color: black;
     font-family: "Times New Roman", serif;
     font-style: normal;
@@ -120,7 +120,7 @@ h2 {
     font-size: 10pt;
 }
 
-.s9 {
+.ERF_s9 {
     color: #231F20;
     font-family: "Times New Roman", serif;
     font-style: normal;
@@ -143,7 +143,7 @@ table, tbody {
     overflow: visible;
 }
 
-.head-text1 {
+.ERF_head-text1 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -152,7 +152,7 @@ table, tbody {
     font-size: 12pt;
 }
 
-.head-text2 {
+.ERF_head-text2 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -161,7 +161,7 @@ table, tbody {
     font-size: 15pt;
 }
 
-.head-text3 {
+.ERF_head-text3 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -170,7 +170,7 @@ table, tbody {
     font-size: 21pt;
 }
 
-.head-text4 {
+.ERF_head-text4 {
     color: #FFF;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -179,31 +179,31 @@ table, tbody {
     font-size: 26pt;
 }
 
-.page-head-grid {
+.ERF_page-head-grid {
     display: grid;
     grid-template-columns: auto auto ;
     /*grid-template-rows: 100px;*/
     /*color: #333333;*/
 }
-.page-head-grid > div {
+.ERF_page-head-grid > div {
     /*text-align: center;*/
     /*padding: 20px 0;*/
     /*font-size: 25px;*/
     /*background-color: #F8EDEB;*/
 }
-.bottom-space{
+.ERF_bottom-space{
    margin-bottom: 100px;
 }
-.top-space{
+.ERF_top-space{
     margin-bottom: 25px;
 }
-.header-body-space{
+.ERF_header-body-space{
     margin-bottom: 8px;
 }
-table.form-table{
+table.ERF_form-table{
     border-collapse: collapse;
 }
-.blue-boxes{
+.ERF_blue-boxes{
     padding-top: 1pt;
     text-indent: 0pt;
     text-align: center;
@@ -216,7 +216,7 @@ table.form-table{
     text-decoration: none;
     font-size: 10pt;
 }
-.blue-boxes-top{
+.ERF_blue-boxes-top{
     border-top: 2px solid #24418E;
     padding-top: 1pt;
     text-indent: 0pt;
@@ -230,7 +230,7 @@ table.form-table{
     text-decoration: none;
     font-size: 10pt;
 }
-.blue-boxes-bottom{
+.ERF_blue-boxes-bottom{
     border-bottom: 2px solid #24418E;
     padding-top: 1pt;
     text-indent: 0pt;
@@ -244,7 +244,7 @@ table.form-table{
     text-decoration: none;
     font-size: 10pt;
 }
-.submit-button{
+.ERF_submit-button{
     text-align: center;
 }
 #Agency_Name, #Name_of_person_completing_the_report, #Title_of_person_completing_report, #Business_email,
@@ -255,18 +255,18 @@ table.form-table{
 #WereCriminalCharges {
     width: 100%;
 }
-.endInput {
+.ERF_endInput {
     padding-right: 15px;
 }
-.inputGrid {
+.ERF_inputGrid {
     display: grid;
     grid-template-columns: auto auto;
 }
-.inputGrid-5 {
+.ERF_inputGrid-5 {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
 }
-.s3-right {
+.ERF_s3-right {
     color: #231F20;
     font-family: Arial, sans-serif;
     font-style: normal;
@@ -275,9 +275,9 @@ table.form-table{
     font-size: 9pt;
     text-align: right;
 }
-.center-text{
+.ERF_center-text{
     text-align: center;
 }
-input {
+.ERF_Input {
     background-color: #E8E8E8;
 }
