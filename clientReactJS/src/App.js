@@ -7,6 +7,7 @@ import NotificationReport from './forms/NotificationOfInjuryReport';
 import PropertyReport from './forms/PropertyLossReport';
 import VehicleReport from './forms/VehicleAccidentReport';
 import Admin from "./Admin";
+import ViewMinorInjury from './tables/viewMinorInjuryLog';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 
@@ -42,6 +43,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/form/VehicleReport" element={<VehicleReport />} />
+          </Routes>
+          <Routes>
+            <Route path="/form/viewMinorInjury" element={<ViewMinorInjury />} />
           </Routes>
         </div>
       </div>

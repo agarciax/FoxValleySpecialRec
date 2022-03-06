@@ -65,7 +65,7 @@ window.onclick = function(event) {
               
               <button className="AD_wrap-login100">View Forms</button>
               <div id="myDropdown2" className="AD_dropdown-content">
-                  <a> Minor Injury </a>
+                  <a href="/form/viewMinorInjury"> Minor Injury </a>
                 <a href="#home">Accident/Incident Report</a>
                 <a href="#about">Vehicle Accident Report</a>
                 <a href="#about">Property Loss Report</a>
