@@ -2,23 +2,29 @@
   "name": "test2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://agarciax.github.io/FoxValleySpecialRec.github.io",
   "dependencies": {
+    "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-csv": "^2.2.2",
     "react-dom": "^17.0.2",
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
+    "save-dev": "^0.0.1-security",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
