@@ -1,4 +1,5 @@
 import UseFetch from "../UseFetch";
+
 import { CSVLink } from 'react-csv'
 
 const viewMinorInjuryLog = () => {
