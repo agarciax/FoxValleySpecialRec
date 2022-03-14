@@ -73,10 +73,10 @@ const  EmployeeInjury = () => {
     e.preventDefault();
 
     let EmployeeInjuryReportObj = {
-      "Name_of_the_Agency": agencyName,
+      "Agency_name": agencyName,
       "Todays_Date": todaysDate,
       "Date_of_Incident": dateIncident,
-      "Time_Of_Incident": time,
+      "Time_Of_Incident": timeIncident,
       "Name_of_the_person_Completing_the_report": name,
       "Title_Of_Person_Completing_the_report": title,
       "Business_Phone": businessPhone,
@@ -87,7 +87,7 @@ const  EmployeeInjury = () => {
       "State_Incident_Location": incidentState,
       "City_Incident_Location": incidentCity,
       "Incident_Zip_Code": incidentZip,
-      "Location_Damage": locationDamage,
+      "Location_Damage": locationSpecify,
       "Primary_Location": primaryLocation,
       "Employer_FEIN": employerFEIN,
       "Employer_Workdays": employerWorkdays,
@@ -458,13 +458,13 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Male</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="Male" id="GenderMale" value={Gender} onChange={(e) => setGender(e.target.value)} name="GenderMale" />
+                        <input className="ERF_Input"  type="radio" defaultValue="Male" id="GenderMale" value={gender} onChange={(e) => setGender(e.target.value)} name="GenderMale" />
                       </div>
                     </div>
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Female</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="Female" id="GenderFemale" value={Gender} onChange={(e) => setGender(e.target.value)} name="GenderFemale" />
+                        <input className="ERF_Input"  type="radio" defaultValue="Female" id="GenderFemale" value={gender} onChange={(e) => setGender(e.target.value)} name="GenderFemale" />
                       </div>
                     </div>
                   </div>
