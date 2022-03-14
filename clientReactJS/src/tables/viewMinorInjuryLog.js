@@ -5,7 +5,7 @@ const viewMinorInjuryLog = () => {
 
     const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/minorInjuryLog');
 
-    
+
     function handleDelete(e, minor_injury_id) {
         e.preventDefault();
 
