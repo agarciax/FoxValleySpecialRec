@@ -6,6 +6,8 @@ import EmployeeInjury from './forms/EmployeeInjuryReport';
 import NotificationReport from './forms/NotificationOfInjuryReport';
 import PropertyReport from './forms/PropertyLossReport';
 import VehicleReport from './forms/VehicleAccidentReport';
+import Admin from "./Admin";
+import ViewMinorInjury from './tables/viewMinorInjuryLog';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 
@@ -20,6 +22,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/login" element={<LoginPage />} />
+          </Routes>
+          <Routes>
+            <Route path="/Admin" element={<Admin />} />
           </Routes>
           <Routes>
             <Route path="/form/AccidentReport" element={<AccidentReport />} />
@@ -38,6 +43,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/form/VehicleReport" element={<VehicleReport />} />
+          </Routes>
+          <Routes>
+            <Route path="/form/viewMinorInjury" element={<ViewMinorInjury />} />
           </Routes>
         </div>
       </div>
