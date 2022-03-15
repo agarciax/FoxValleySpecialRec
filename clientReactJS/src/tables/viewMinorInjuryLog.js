@@ -4,11 +4,12 @@ import { CSVLink } from 'react-csv'
 
 const viewMinorInjuryLog = () => {
 
-    // let logs, isPending, error;
-    //
-    // let p = new Promise((resolve, reject))
-
     const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/minorInjuryLog');
+
+    // const secondFunction = async () => {
+    //     const result = await firstFunction()
+    //     // do something else here after firstFunction completes
+    // }
 
 
     function handleDelete(e, minor_injury_id) {
@@ -39,7 +40,9 @@ const viewMinorInjuryLog = () => {
         <div>
             <div>
                 <h2 className="viewMinorInjuryLogHeader">View Minor Injury Entries</h2>
+                {logs &&
                 <CSVLink data={JSON.stringify(logs)}>Export To Excel</CSVLink>
+                }
             </div>
             {logs &&
             <div>
