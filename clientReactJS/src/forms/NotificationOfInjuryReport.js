@@ -1,9 +1,70 @@
 import "../css/NotificationOfInjurytoEmployerReport_CSS.css"
 import "../images/icons/FVSRA_ICON.png"
 import logo from ".//PDRMA Form 03 Property Loss Report_files/Image_001.jpg"
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 
 const NotificationReport = () => {
+
+  const [name, setName] = useState('');
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  const [specificLocation, setSpecificLocation] = useState('');
+  const [reporting, setReporting] = useState('');
+  const [dateReported, setDateReported] = useState('');
+  const [timeReported, setTimeReported] = useState('');
+  const [reportedTo, setReportedTo] = useState('');
+  const [describeInjury, setDescribeInjury] = useState('');
+  const [peoplePresent, setPeoplePresent] = useState('');
+  const [partsInjured, setPartsInjured] = useState('');
+  const [medicalAttention, setMedicalAttention] = useState('');
+  const [treatment, setTreatment] = useState('');
+  const [injuredPreviously, setInjuredPreviously] = useState('');
+  const [describeInjuredPrior, setDescribeInjuredPrior] = useState('');
+  const [locationTreatment, setLocationTreatment] = useState('');
+  const [signature, setSignature] = useState('');
+  const [dateSignature, setDateSignature] = useState('');
+  const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
+
+
+
+
+  const handleSubmit = (e) => { //Handles the onSubmit action of the log
+    e.preventDefault();
+
+    let NotificationReportObj = {
+      "Employees_Name": name,
+      "Date_of_Incident": date,
+      "Time_Of_Incident": time,
+      "Specific_Location": specificLocation,
+      "Reporting_First_Time": reporting,
+      "Reporting_Date": dateReported,
+      "Reporting_Time": timeReported,
+      "Reported_To": reportedTo,
+      "Describe_How_Injury_Occurred": describeInjury,
+      "People_Present_At_Injury": peoplePresent,
+      "Body_Parts_Injured": partsInjured,
+      "Seek_Medical_Attention": medicalAttention,
+      "Seek_Treatment":treatment,
+      "Injured_Previously":injuredPreviously,
+      "Describe_Which_Part_Was_Injured":describeInjuredPrior,
+      "Where_Treatment_Received":locationTreatment,
+      "Employee_Signature":signature,
+      "Signature_Date":dateSignature
+    }
+
+    fetch('http://127.0.0.1:5000/fvsra/NotificationInjuryReport', {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(NotificationReportObj)
+    }).then(() => {
+      alert("Log has been reported.")
+      navigate('/login') //Redirects page
+    })
+
+  }
+
     return ( 
         <div>
         <div className="NIRF_entire-page">
@@ -42,7 +103,7 @@ const NotificationReport = () => {
                 </td>
                 <td colSpan={3} style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Employee name</p>
-                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Employee_Name" name="Employee_Name" /></div>
+                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Employee_Name"  value={name} onChange={(e) => setName(e.target.value)}  name="Employee_Name" /></div>
                 </td>
               </tr>
               <tr style={{height: '22pt'}}>
@@ -51,14 +112,14 @@ const NotificationReport = () => {
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Date of incident (mm/dd/yyyy)</p>
-                  <input className="NIRF_Input"  type="date" id="Date_of_Incident" name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
+                  <input className="NIRF_Input"  type="date" id="Date_of_Incident"  value={date} onChange={(e) => setDate(e.target.value)}  name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
                 </td>
                 <td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Time of incident (hh/mm,
                     a.m./p.m.)</p>
-                  <input className="NIRF_Input"  type="time" id="Time_of_Incident" name="Time_of_Incident" />
+                  <input className="NIRF_Input"  type="time" id="Time_of_Incident"  value={time} onChange={(e) => setTime(e.target.value)}  name="Time_of_Incident" />
                 </td>
               </tr>
               <tr style={{height: '25pt'}}>
@@ -66,8 +127,8 @@ const NotificationReport = () => {
                   3
                 </td>
                 <td colSpan={3} style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
-                  <p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Specific location of acident. (Ex. Second floor hallway of recreation center, storage closet of maintenance shed, south entrance of aquatic facility, etc.)</p>
-                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Employee_Name" name="Employee_Name" /></div>
+                  <p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Specific location of accident. (Ex. Second floor hallway of recreation center, storage closet of maintenance shed, south entrance of aquatic facility, etc.)</p>
+                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Employee_Name"  value={specificLocation} onChange={(e) => setSpecificLocation(e.target.value)}  name="Employee_Name" /></div>
                 </td>
               </tr>
               <tr style={{height: '22pt'}}>
@@ -82,13 +143,13 @@ const NotificationReport = () => {
                     <div className="NIRF_inputGrid">
                       <div className="NIRF_s3-right">Yes</div>
                       <div className="NIRF_centerInput">
-                        <input className="NIRF_Input"  type="radio" defaultValue="No" id="DamageThirdPartyNo" name="DamageThirdParty" />
+                        <input className="NIRF_Input"  type="radio" defaultValue="Yes" id="reportingYes"  value={reporting} onChange={(e) => setReporting(e.target.value)}  name="DamageThirdParty" />
                       </div>
                     </div>
                     <div className="NIRF_inputGrid">
                       <div className="NIRF_s3-right">No</div>
                       <div className="NIRF_centerInput">
-                        <input className="NIRF_Input"  type="radio" defaultValue="Unknown" id="DamageThirdPartyUnknown" name="DamageThirdParty" defaultChecked />
+                        <input className="NIRF_Input"  type="radio" defaultValue="No" id="reportingNo"  value={reporting} onChange={(e) => setReporting(e.target.value)}  name="DamageThirdParty" defaultChecked />
                       </div>
                     </div>
                   </div>
@@ -106,15 +167,15 @@ const NotificationReport = () => {
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '283pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Date</p>
-                  <input className="NIRF_Input"  type="date" id="Date_of_Incident" name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
+                  <input className="NIRF_Input"  type="date" id="Date_of_Incident"  value={dateReported} onChange={(e) => setDateReported(e.target.value)}  name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'none', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Time</p>
-                  <input className="NIRF_Input"  type="time" id="Time_of_Incident" name="Time_of_Incident" />
+                  <input className="NIRF_Input"  type="time" id="Time_of_Incident"  value={timeReported} onChange={(e) => setTimeReported(e.target.value)}  name="Time_of_Incident" />
                 </td>
                 <td style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Reported to</p>
-                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Reported_to" name="Reported_to" /></div>
+                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Reported_to"  value={reportedTo} onChange={(e) => setReportedTo(e.target.value)}  name="Reported_to" /></div>
                 </td>
               </tr>
               <tr style={{height: '23pt'}}>
@@ -123,7 +184,7 @@ const NotificationReport = () => {
                 </td>
                 <td colSpan={3} style={{borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Describe how the injury occurred. (Identify the job task you were doing and include a step-by-step explanation of what led to the injury.)
                   </p>
-                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="NameOfLocation" name="NameOfLocation" /></div>
+                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="describeInjury"  value={describeInjury} onChange={(e) => setDescribeInjury(e.target.value)}  name="describeInjury" /></div>
                 </td>
               </tr>
               <tr style={{height: '23pt'}}>
@@ -132,7 +193,7 @@ const NotificationReport = () => {
                 </td>
                 <td colSpan={3} style={{borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Name all people present at the time of injury (e.g., coworkers and/or witnesses)
                   </p>
-                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="NameOfLocation" name="NameOfLocation" /></div>
+                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="peoplePresent"  value={peoplePresent} onChange={(e) => setPeoplePresent(e.target.value)}  name="peoplePresent" /></div>
                 </td>
               </tr>
               <tr style={{height: '23pt'}}>
@@ -141,7 +202,7 @@ const NotificationReport = () => {
                 </td>
                 <td colSpan={3} style={{borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Identify all body parts you injured. (Be specific. Indicate left or right, upper or lower.)
                   </p>
-                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="NameOfLocation" name="NameOfLocation" /></div>
+                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="partInjured"  value={partsInjured} onChange={(e) => setPartsInjured(e.target.value)}  name="partInjured" /></div>
                 </td>
               </tr>
               <tr style={{height: '22pt'}}>
@@ -156,13 +217,13 @@ const NotificationReport = () => {
                     <div className="NIRF_inputGrid">
                       <div className="NIRF_s3-right">Yes</div>
                       <div className="NIRF_centerInput">
-                        <input className="NIRF_Input"  type="radio" defaultValue="No" id="DamageThirdPartyNo" name="DamageThirdParty" />
+                        <input className="NIRF_Input"  type="radio" defaultValue="Yes" id="DamageThirdPartyYes"  value={medicalAttention} onChange={(e) => setMedicalAttention(e.target.value)}  name="DamageThirdParty" />
                       </div>
                     </div>
                     <div className="NIRF_inputGrid">
                       <div className="NIRF_s3-right">No</div>
                       <div className="NIRF_centerInput">
-                        <input className="NIRF_Input"  type="radio" defaultValue="Unknown" id="DamageThirdPartyUnknown" name="DamageThirdParty" defaultChecked />
+                        <input className="NIRF_Input"  type="radio" defaultValue="No" id="DamageThirdPartyNo"  value={medicalAttention} onChange={(e) => setMedicalAttention(e.target.value)}  name="DamageThirdParty" defaultChecked />
                       </div>
                     </div>
                   </div>
@@ -172,7 +233,7 @@ const NotificationReport = () => {
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>If yes, where did you seek treatment?</p>
-                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Reported_to" name="Reported_to" /></div>
+                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Reported_to"  value={treatment} onChange={(e) => setTreatment(e.target.value)}  name="Reported_to" /></div>
                 </td>
               </tr>
             </tbody></table>
@@ -246,13 +307,13 @@ const NotificationReport = () => {
                       <div className="NIRF_inputGrid">
                         <div className="NIRF_s3-right">Yes</div>
                         <div className="NIRF_centerInput">
-                          <input className="NIRF_Input"  type="radio" defaultValue="No" id="DamageThirdPartyNo" name="DamageThirdParty" />
+                          <input className="NIRF_Input"  type="radio" defaultValue="Yes" id="DamagePreviousYes"  value={injuredPreviously} onChange={(e) => setInjuredPreviously(e.target.value)}  name="DamageThirdParty" />
                         </div>
                       </div>
                       <div className="NIRF_inputGrid">
                         <div className="NIRF_s3-right">No</div>
                         <div className="NIRF_centerInput">
-                          <input className="NIRF_Input"  type="radio" defaultValue="Unknown" id="DamageThirdPartyUnknown" name="DamageThirdParty" defaultChecked />
+                          <input className="NIRF_Input"  type="radio" defaultValue="No" id="DamagePreviousNo"  value={injuredPreviously} onChange={(e) => setInjuredPreviously(e.target.value)}  name="DamageThirdParty" defaultChecked />
                         </div>
                       </div>
                     </div>
@@ -262,14 +323,14 @@ const NotificationReport = () => {
                   <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                   <td colSpan={3} style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                     <p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>If yes, please describe which body part and what the prior injury was.</p>
-                    <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Reported_to" name="Reported_to" /></div>
+                    <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Injured_Prior"  value={describeInjuredPrior} onChange={(e) => setDescribeInjuredPrior(e.target.value)}  name="Injured_Prior" /></div>
                   </td>
                 </tr>
                 <tr style={{height: '21pt'}}>
                   <td className="NIRF_blue-boxes-top" />
                   <td colSpan={3} style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                     <p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>If yes, where did you receive treatment?</p>
-                    <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Employee_Name" name="Employee_Name" /></div>
+                    <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="locationTreatment"  value={locationTreatment} onChange={(e) => setLocationTreatment(e.target.value)}  name="LocationTreatment" /></div>
                   </td>
                 </tr>
                 <tr style={{height: '25pt'}}>
@@ -283,11 +344,11 @@ const NotificationReport = () => {
                   <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                   <td colSpan={2} style={{width: '283pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'none', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                     <p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>(Employee Signature)</p>
-                    <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Reported_to" name="Reported_to" /></div>
+                    <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="Employee_Signature"  value={signature} onChange={(e) => setSignature(e.target.value)}  name="Employee_Signature" /></div>
                   </td>
                   <td style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'none', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                     <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Date</p>
-                    <input className="NIRF_Input"  type="date" id="Date_of_Incident" name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
+                    <input className="NIRF_Input"  type="date" id="Signature_Date"  value={dateSignature} onChange={(e) => setDateSignature(e.target.value)}  name="Signature_Date" defaultValue min="2021-01-01" max="2050-01-01" />
                   </td>
                 </tr>
                 <tr style={{height: '25pt'}}>
