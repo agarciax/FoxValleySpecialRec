@@ -27,13 +27,15 @@ const viewMinorInjuryLog = () => {
 
     return (
         <div className="theHeader">
+            {error && <div>{error}</div>}
+            {isPending && <div>Loading...</div>}
+            {logs &&
             <div>
-                {logs && <div>
+                <div>
                     <h2 className="viewMinorInjuryLogHeader">View Minor Injury Entries</h2>
                     <CSVLink filename={"minor-injury-log.csv"} data={(getCSVData())} target="_blank" >Export To Excel</CSVLink>
                 </div>
-                }
-                {logs &&
+
                 <div>
                     <table className="tableMinorInjuryLog">
                         <thead>
@@ -67,8 +69,8 @@ const viewMinorInjuryLog = () => {
                         ))}
                         </tbody>
                     </table>
-                </div> }
-            </div>
+                </div>
+            </div> }
         </div>
     );
 }
