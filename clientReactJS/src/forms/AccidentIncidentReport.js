@@ -3,6 +3,7 @@ import "../images/icons/FVSRA_ICON.png"
 import logo from ".//PDRMA Form 03 Property Loss Report_files/Image_001.jpg"
 
 const AccidentReport = () => {
+  
     return (
         <div>
         <div className="ARF_entire-page">
@@ -142,7 +143,7 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="DamageThirdParty" name="DamageThirdParty" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="Does_Incident_Have_A_Address" name="Does_Incident_Have_A_Address" />
                     </div>
                   </div>
                   {/*                <p class="s3" style="text-indent: 0pt;line-height: 10pt;text-align: right;">Yes <div class="centerInput"><input className="ARF_Input" type="checkbox" id="horns" name="horns"></div></p>*/}
@@ -152,13 +153,13 @@ const AccidentReport = () => {
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="DamageThirdParty" name="DamageThirdParty" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="Does_Incident_Have_A_Address" name="Does_Incident_Have_A_Address" />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="DamageThirdParty" name="DamageThirdParty" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="Does_Incident_Have_A_Address" name="Does_Incident_Have_A_Address" />
                       </div>
                     </div>
                   </div>
@@ -237,7 +238,7 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="DamageThirdParty" name="DamageThirdParty" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="Was_A_Person_Injured" name="Was_A_Person_Injured" />
                     </div>
                   </div>
                   {/*                <p class="s3" style="text-indent: 0pt;line-height: 10pt;text-align: right;">Yes <div class="centerInput"><input className="ARF_Input" type="checkbox" id="horns" name="horns"></div></p>*/}
@@ -247,13 +248,13 @@ const AccidentReport = () => {
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="DamageThirdParty" name="DamageThirdParty" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="Was_A_Person_Injured" name="Was_A_Person_Injured" />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="DamageThirdParty" name="DamageThirdParty" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="Was_A_Person_Injured" name="Was_A_Person_Injured" />
                       </div>
                     </div>
                   </div>
@@ -270,11 +271,11 @@ const AccidentReport = () => {
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '283pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Last name</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleName" name="PersonResponsibleName" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleLastName" name="PersonResponsibleLastName" /></div>
                 </td>
                 <td colSpan={3} style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>First name</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleStreetAddress" name="PersonResponsibleStreetAddress" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleFirstName" name="PersonResponsibleFirstName" /></div>
                 </td>
               </tr>
               <tr style={{height: '36pt'}}>
@@ -303,38 +304,38 @@ const AccidentReport = () => {
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Home phone #</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleCity" name="PersonResponsibleCity" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleHomePhone" name="PersonResponsibleHomePhone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Work phone #</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleState" name="PersonResponsibleState" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleWorkPhone" name="PersonResponsibleWorkPhone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
                 </td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Cell phone #</p>
-                  <input className="ARF_Input" type="tel" id="ZipCodePersonResponsible" name="ZipCodePersonResponsible" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                  <input className="ARF_Input" type="tel" id="PersonResponsibleCellPhone" name="PersonResponsibleCellPhone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
                 </td>
               </tr>
               <tr style={{height: '29pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={2} style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Age</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleCity" name="PersonResponsibleCity" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleAge" name="PersonResponsibleAge" /></div>
                 </td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ARF_s3" style={{paddingRight: '33pt', textIndent: '0pt', textAlign: 'right'}}>
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_inputGrid3">
                       <div className="ARF_s3">Sex</div>
-                      <div className="ARF_input-right">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
-                      </div>
                       <div className="ARF_s3-left">Male</div>
+                      <div className="ARF_input-right">
+                        <input className="ARF_Input" type="checkbox" defaultValue="Male" id="PersonResponsibleMaleSex" name="PersonResponsibleMaleSex" />
+                      </div>
                     </div>
                     <div className="ARF_inputGrid">
-                      <div className="ARF_input-right">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
-                      </div>
                       <div className="ARF_s3-left">Female</div>
+                      <div className="ARF_input-right">
+                        <input className="ARF_Input" type="checkbox" defaultValue="Female" id="PersonResponsibleFemaleSex" name="PersonResponsibleFemaleSex" />
+                      </div>
                     </div>
                   </div>
                 </td>
@@ -351,7 +352,7 @@ const AccidentReport = () => {
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="InjuredPersonIsAgencyVolunteer" name="InjuredPersonIsAgencyVolunteer" />
                     </div>
                   </div>
                 </td>
@@ -361,13 +362,13 @@ const AccidentReport = () => {
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="InjuredPersonIsNotAgencyVolunteer" name="InjuredPersonIsNotAgencyVolunteer" />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="InjuredPersonIsUnknownAgencyVolunteer" name="InjuredPersonIsUnknownAgencyVolunteer" />
                       </div>
                     </div>
                   </div>
@@ -379,7 +380,7 @@ const AccidentReport = () => {
                 </td>
                 <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Describe the injury (affected body part and type of injury; Ex. contusion, bruise, laceration, sprain, break, etc.)</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleStreetAddress" name="PersonResponsibleStreetAddress" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="InjuryDescription" name="InjuryDescription" /></div>
                 </td>
               </tr>
               <tr style={{height: '25pt'}}>
@@ -394,7 +395,7 @@ const AccidentReport = () => {
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="InjuredPersonMakesAStatement" name="InjuredPersonMakesAStatement" />
                     </div>
                   </div>
                 </td>
@@ -404,13 +405,13 @@ const AccidentReport = () => {
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="DoesNotMakeAStatement" name="DoesNotMakeAStatement" />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="UnknownStatement" name="UnknownStatement" />
                       </div>
                     </div>
                   </div>
@@ -420,7 +421,7 @@ const AccidentReport = () => {
                 <td className="ARF_blue-boxes-bottom">
                 </td>
                 <td colSpan={3} style={{width: '526pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>If yes, what did injured person say?</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WereCriminalCharges" name="WereCriminalCharges" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="whatDidInjuredPersonSay" name="whatDidInjuredPersonSay" /></div>
                 </td>
               </tr>
             </tbody></table>
@@ -478,7 +479,7 @@ const AccidentReport = () => {
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="FirstAidWasAdministered" name="FirstAidWasAdministered" />
                     </div>
                   </div>
                 </td>
@@ -488,13 +489,13 @@ const AccidentReport = () => {
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="FirstAidWasNotAdministered" name="FirstAidWasNotAdministered" />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="FirstAidWasUnknown" name="FirstAidWasUnknown" />
                       </div>
                     </div>
                   </div>
@@ -503,13 +504,13 @@ const AccidentReport = () => {
               <tr style={{height: '32pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Name and position of person who administered first aid</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="StreetAddressIncidentLocation" name="StreetAddressIncidentLocation" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="NameAndPositionOfPersonAdministered" name="NameAndPositionOfPersonAdministered" /></div>
                 </td>
               </tr>
               <tr style={{height: '32pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>What first aid was given?</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="StreetAddressIncidentLocation" name="StreetAddressIncidentLocation" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="TypeOfFirstAidAdministered" name="TypeOfFirstAidAdministered" /></div>
                 </td>
               </tr>
               <tr style={{height: '25pt'}}>
@@ -523,7 +524,7 @@ const AccidentReport = () => {
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="AedOrCprWasInvolved" name="AedOrCprWasInvolved" />
                     </div>
                   </div>
                 </td>
@@ -533,13 +534,13 @@ const AccidentReport = () => {
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="AedOrCprWasNotInvolved" name="AedOrCprWasNotInvolved" />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="AedOrCprWasNotUnknown" name="AedOrCprWasNotUnknown" />
                       </div>
                     </div>
                   </div>
@@ -561,11 +562,11 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Called and refused (at scene by patron)
-                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="CalledAndRefused" name="CalledAndRefused" />
                     </div>
                     <div className="ARF_s3">
                       Offered and called
-                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="OfferedAndCalled" name="OfferedAndCalled" />
                     </div>
                   </div>
                 </td>
@@ -576,11 +577,11 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Offered and refused
-                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="OfferedAndRefused" name="OfferedAndRefused" />
                     </div>
                     <div className="ARF_s3">
                       Offered, refused, called by agency anyway
-                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="OfferedAndRefusedButCalledByAgency" name="OfferedAndRefusedButCalledByAgency" />
                     </div>
                   </div>
                 </td>
@@ -591,7 +592,7 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Unable to respond and called
-                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="UnableToRespond" name="UnableToRespond" />
                     </div>
                     <div />
                   </div>
@@ -607,7 +608,7 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="DamageThirdParty" name="DamageThirdParty" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="PoliceWereCalled" name="PoliceWereCalled" />
                     </div>
                   </div>
                 </td>
@@ -618,13 +619,13 @@ const AccidentReport = () => {
               <tr style={{height: '32pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Name of police department</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="StreetAddressIncidentLocation" name="StreetAddressIncidentLocation" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PoliceDepartmentName" name="PoliceDepartmentName" /></div>
                 </td>
               </tr>
               <tr style={{height: '32pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Name of officer</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="StreetAddressIncidentLocation" name="StreetAddressIncidentLocation" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="OfficerName" name="OfficerName" /></div>
                 </td>
               </tr>
               <tr style={{height: '19pt'}}>
@@ -637,7 +638,7 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="DamageThirdParty" name="DamageThirdParty" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="ClaimIsExpected" name="ClaimIsExpected" />
                     </div>
                   </div>
                 </td>
@@ -646,13 +647,13 @@ const AccidentReport = () => {
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="DamageThirdParty" name="DamageThirdParty" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="ClaimIsNotExpected" name="ClaimIsNotExpected" />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="DamageThirdParty" name="DamageThirdParty" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="ClaimIsNotUnknown" name="ClaimIsNotUnknown" />
                       </div>
                     </div>
                   </div>
@@ -673,7 +674,7 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="DamageThirdParty" name="DamageThirdParty" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="PropertyWasDamagedFromIncident" name="PropertyWasDamagedFromIncident" />
                     </div>
                   </div>
                   {/*                <p class="s3" style="text-indent: 0pt;line-height: 10pt;text-align: right;">Yes <div class="centerInput"><input className="ARF_Input" type="checkbox" id="horns" name="horns"></div></p>*/}
@@ -683,13 +684,13 @@ const AccidentReport = () => {
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="DamageThirdParty" name="DamageThirdParty" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="PropertyWasNotDamagedFromIncident" name="PropertyWasNotDamagedFromIncident" />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="DamageThirdParty" name="DamageThirdParty" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PropertyWasUnknown" name="PropertyWasUnknown" />
                       </div>
                     </div>
                   </div>
@@ -708,11 +709,11 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Owner of property adjacent to park district
-                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="OwnerOfPropertyAdjacentToParkDistrict" name="OwnerOfPropertyAdjacentToParkDistrict" />
                     </div>
                     <div className="ARF_s3">
                       Patron
-                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="Patron" name="Patron" />
                     </div>
                   </div>
                 </td>
@@ -738,10 +739,10 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Last name (or business name)
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleName" name="PersonResponsibleName" /></div>                  </div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="LastOrBusinessName" name="LastOrBusinessName" /></div>                  </div>
                     <div className="ARF_s3">
                       First name (not necessary if business name)
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleName" name="PersonResponsibleName" /></div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="FirstNameIfNotBusinessName" name="FirstNameIfNotBusinessName" /></div>
                     </div>
                   </div>
                 </td>
@@ -750,7 +751,7 @@ const AccidentReport = () => {
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Address</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleStreetAddress" name="PersonResponsibleStreetAddress" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PropertyOwnerAddress" name="PropertyOwnerAddress" /></div>
                 </td>
               </tr>
               <tr style={{height: '20pt'}}>
@@ -759,18 +760,18 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid4">
                     <div className="ARF_s3">
                       City
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleName" name="PersonResponsibleName" /></div>                  </div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PropertyOwnerCity" name="PropertyOwnerCity" /></div>                  </div>
                     <div className="ARF_s3">
                       State
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleName" name="PersonResponsibleName" /></div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PropertyOwnerState" name="PropertyOwnerState" /></div>
                     </div>
                     <div className="ARF_s3">
                       Zip Code
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="ZipCodePersonResponsible" name="ZipCodePersonResponsible"  placeholder="00000" pattern="[0-9]{5}" required /></div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PropertyOwnerZipCode" name="PropertyOwnerZipCode"  placeholder="00000" pattern="[0-9]{5}" required /></div>
                     </div>
                     <div className="ARF_s3">
                       Phone number
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleCity" name="PersonResponsibleCity" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PropertyOwnerPhoneNumber" name="PropertyOwnerPhoneNumber" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
                     </div>
                   </div>
                 </td>
@@ -778,7 +779,7 @@ const AccidentReport = () => {
               <tr style={{height: '32pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Describe the property damage</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="StreetAddressIncidentLocation" name="StreetAddressIncidentLocation" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PropertyDamageDescription" name="PropertyDamageDescription" /></div>
                 </td>
               </tr>
               <tr style={{height: '23pt'}}>
@@ -799,10 +800,10 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Last name
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleName" name="PersonResponsibleName" /></div>                  </div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WitnessLastName" name="WitnessLastName" /></div>                  </div>
                     <div className="ARF_s3">
                       First name
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleName" name="PersonResponsibleName" /></div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WitnessFirstName" name="WitnessFirstName" /></div>
                     </div>
                   </div>
                 </td>
@@ -811,7 +812,7 @@ const AccidentReport = () => {
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Address</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleStreetAddress" name="PersonResponsibleStreetAddress" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WitnessAddress" name="WitnessAddress" /></div>
                 </td>
               </tr>
               <tr style={{height: '20pt'}}>
@@ -820,18 +821,18 @@ const AccidentReport = () => {
                   <div className="ARF_inputGrid4">
                     <div className="ARF_s3">
                       City
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleName" name="PersonResponsibleName" /></div>                  </div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WitnessCity" name="WitnessCity" /></div>                  </div>
                     <div className="ARF_s3">
                       State
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleName" name="PersonResponsibleName" /></div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WitnessState" name="WitnessState" /></div>
                     </div>
                     <div className="ARF_s3">
                       Zip Code
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="ZipCodePersonResponsible" name="ZipCodePersonResponsible"  placeholder="00000"  pattern="[0-9]{5}" required /></div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WitnessStateZipCode" name="WitnessStateZipCode"  placeholder="00000"  pattern="[0-9]{5}" required /></div>
                     </div>
                     <div className="ARF_s3">
                       Phone number
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleCity" name="PersonResponsibleCity" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WitnessStatePhoneNumber" name="WitnessStatePhoneNumber" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
                     </div>
                   </div>
                 </td>
@@ -848,7 +849,7 @@ const AccidentReport = () => {
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="WitnessMadeStatements" name="WitnessMadeStatements" />
                     </div>
                   </div>
                 </td>
@@ -858,13 +859,13 @@ const AccidentReport = () => {
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="No" id="WitnessDidNotMakeStatements" name="WitnessDidNotMakeStatements" />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="PoliceInvestigationYesNoUnknown" name="PoliceInvestigationYesNoUnknown" />
+                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" id="WitnessStatementsUnknown" name="WitnessStatementsUnknown" />
                       </div>
                     </div>
                   </div>
@@ -875,21 +876,22 @@ const AccidentReport = () => {
                 </td>
                 <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>If yes, what did witness say?</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PersonResponsibleStreetAddress" name="PersonResponsibleStreetAddress" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WhatDidTheWitnessSay" name="WhatDidTheWitnessSay" /></div>
                 </td>
               </tr>
               <tr style={{height: '23pt'}}>
                 <td className="ARF_blue-boxes-bottom">21
                 </td>
                 <td colSpan={3} style={{width: '526pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Where was witness when the accident/incident occurred?</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WereCriminalCharges" name="WereCriminalCharges" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="WitnessLocationDuringIncident" name="WitnessLocationDuringIncident" /></div>
                 </td>
               </tr>
-            </tbody></table>
+            </tbody>
+          </table>
           <div className="ARF_bottom-space" />
         </div>
-      </div>
-      );
+        </div>
+    );
 }
  
 export default AccidentReport;

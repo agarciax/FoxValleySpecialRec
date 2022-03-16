@@ -54,7 +54,7 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
             <col width={150} />
             <col width={350} />
             <col width={200} />
-            <col width={140} />
+            <col width={140} /> 
           </colgroup>
 
           <thead>
