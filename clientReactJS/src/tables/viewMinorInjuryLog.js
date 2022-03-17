@@ -17,9 +17,12 @@ const viewMinorInjuryLog = () => {
         })
     }
 
-    function getCSVData() {
-        let buffer = [["Minor Injury ID", "Date", "Time", "Name Of Injury", "Injury Location", "Treatment", "How Injury Occurred", "Facility/Location Where Injury Occurred", "Full Name Of Staff Who Noticed Guardian"]];
-        logs.forEach((row) => {
+    let header = ["Minor Injury ID", "Date", "Time", "Name Of Injury", "Injury Location", "Treatment", "How Injury Occurred", "Facility/Location Where Injury Occurred", "Full Name Of Staff Who Noticed Guardian"];
+
+
+    function getCSVData(row) {
+        let buffer = [];
+        row.forEach((row) => {
             buffer.push([row.minor_injury_id, moment.utc(row.injury_date).format('MM/DD/YYYY'), moment(row.injury_time, 'HH:mm:ss').format('h:mm A'), row.name_of_injured, row.injury_location, row.treatment, row.how_injury_occurred, row.facility_where_injury_occurred, row.full_name_of_staff])
         })
         return buffer;
@@ -33,7 +36,7 @@ const viewMinorInjuryLog = () => {
             <div>
                 <div>
                     <h2 className="viewMinorInjuryLogHeader">View Minor Injury Entries</h2>
-                    <CSVLink filename={"minor-injury-log.csv"} data={(getCSVData())} target="_blank" >Export To Excel</CSVLink>
+                    <CSVLink filename={"minor-injury-log.csv"} headers={header} data={(getCSVData(logs))} target="_blank" >Export To Excel</CSVLink>
                 </div>
 
                 <div>
