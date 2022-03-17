@@ -40,7 +40,7 @@ const viewMinorInjuryLog = () => {
             <div>
                 <div>
                     <h2 className="viewMinorInjuryLogHeader">View Minor Injury Entries</h2>
-                    <CSVLink filename={"minor-injury-log.csv"} headers={header} data={(getCSVData(logs))} target="_blank" >Export To Excel</CSVLink>
+                    <button type={"button"}><CSVLink style={{ textDecoration: 'none', color:'black' }} filename={"minor-injury-log.csv"} headers={header} data={(getCSVData(logs))} target="_blank" >Export To Excel</CSVLink></button>
                 </div>
 
                 <div>
