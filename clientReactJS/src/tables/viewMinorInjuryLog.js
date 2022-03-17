@@ -1,20 +1,24 @@
 import UseFetch from "../UseFetch";
 import { CSVLink } from 'react-csv'
 import moment from 'moment';
+import { confirm } from "react-confirm-box";
 
 const viewMinorInjuryLog = () => {
 
     const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/minorInjuryLog');
 
-    function handleDelete(e, minor_injury_id) {
+    const handleDelete = async (e, minor_injury_id) => {
         e.preventDefault();
-
-        fetch('http://127.0.0.1:5000/fvsra/minorInjuryLog/' + minor_injury_id, {
-            method: 'DELETE'
-        }).then(() => {
-            alert("Minor Injury Entry:" + minor_injury_id + " Deleted");
-            window.location.reload(false);
-        })
+        const result = await confirm("Are you sure?");
+        if (result) {
+            fetch('http://127.0.0.1:5000/fvsra/minorInjuryLog/' + minor_injury_id, {
+                method: 'DELETE'
+            }).then(() => {
+                alert("Minor Injury Entry:" + minor_injury_id + " Deleted");
+                window.location.reload(false);
+            })
+            return;
+        }
     }
 
     let header = ["Minor Injury ID", "Date", "Time", "Name Of Injury", "Injury Location", "Treatment", "How Injury Occurred", "Facility/Location Where Injury Occurred", "Full Name Of Staff Who Noticed Guardian"];
