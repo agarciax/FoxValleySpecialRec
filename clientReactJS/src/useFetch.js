@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-const useFetch = (url) => { //Custom hooks in react must start with the word "use"
+const useFetch = (url) => {
 
     const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
@@ -19,7 +19,6 @@ const useFetch = (url) => { //Custom hooks in react must start with the word "us
                     return res.json()
                 })
                 .then((data) => {
-                    //console.log(data)
                     setData(data)
                     setIsPending(false);
                     setError(null)

@@ -68,7 +68,7 @@ window.onclick = function(event) {
                   <a href="/form/viewMinorInjury"> Minor Injury </a>
                 <a href="#home">Accident/Incident Report</a>
                 <a href="#about">Vehicle Accident Report</a>
-                <a href="#about">Property Loss Report</a>
+                <a href="/form/viewPropertyLossReport">Property Loss Report</a>
                 <a href="#about">Employee Injury Report</a>
                 <a href="#about">Notification of Injury to Employer Report</a>
               </div>

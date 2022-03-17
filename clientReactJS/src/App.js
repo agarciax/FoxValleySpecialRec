@@ -8,6 +8,7 @@ import PropertyReport from './forms/PropertyLossReport';
 import VehicleReport from './forms/VehicleAccidentReport';
 import Admin from "./Admin";
 import ViewMinorInjury from './tables/viewMinorInjuryLog';
+import ViewPropertyLoss from './tables/viewPropertyLossReport'
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 
@@ -46,6 +47,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path="/form/viewMinorInjury" element={<ViewMinorInjury />} />
+          </Routes>
+          <Routes>
+            <Route path={"/form/viewPropertyLossReport"} element={<ViewPropertyLoss />}/>
           </Routes>
         </div>
       </div>
