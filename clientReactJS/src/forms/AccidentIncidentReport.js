@@ -2,6 +2,8 @@ import "../css/AccidentIncidentReport_CSS.css"
 import "../images/icons/FVSRA_ICON.png"
 import logo from ".//PDRMA Form 03 Property Loss Report_files/Image_001.jpg"
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+
 
 const AccidentReport = () => {
   const [AgencyName, setAgencyName] = useState('');
@@ -27,7 +29,7 @@ const AccidentReport = () => {
   const [EmpAddress, setEmpAddress] = useState('');
   const [EmpCity, setEmpCity] = useState('');
   const [EmpState, setEmpState] = useState('');
-  const [EmpZip, setZip] = useState('');
+  const [EmpZip, setEmpZip] = useState('');
   const [EmpHomePhone, setEmpHomePhone] = useState('');
   const [EmpWorkPhone, setEmpWorkPhone] = useState('');
   const [EmpCellPhone, setEmpCellPhone] = useState('');
@@ -66,6 +68,7 @@ const AccidentReport = () => {
   const [WitnessStatement, setWitnessStatement] = useState('');
   const [WitnessSaid, setWitnessSaid] = useState('');
   const [WitnessLocationDuringIncident, setWitnessLocationDuringIncident] = useState('');
+  const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
 
 
   const handleSubmit = (e) => {
@@ -139,7 +142,7 @@ const AccidentReport = () => {
     fetch('http://127.0.0.1:5000/fvsra/accidentIncidentReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(minorInjuryLogObj)
+      body: JSON.stringify(accidentReportObj)
     }).then(() => {
       alert("Log has been reported.")
       navigate('/login') //Redirects page
@@ -274,7 +277,7 @@ return (
                 <td><input type="text" placeholder="i.e. Zombie" name="PropDamageLName" value={PropDamageLName} onChange={(e) => setPropDamageLName(e.target.value)} id="PropDamageLName"   /></td>
                 <td><input type="text" placeholder="i.e. Rob" name="PropDamageFName" value={PropDamageFName} onChange={(e) => setPropDamageFName(e.target.value)} id="PropDamageFName"   /></td>
                 <td><input type="text" placeholder="i.e. 123 Graveyard Lane" name="PropDamAddress" value={PropDamAddress} onChange={(e) => setPropDamAddress(e.target.value)} id="PropDamAddress"   /></td>
-                <td><input type="text" placeholder="i.e. Aurora" name=PropDamCity"" value={PropDamCity} onChange={(e) => setPropDamCity(e.target.value)} id="PropDamCity"   /></td>
+                <td><input type="text" placeholder="i.e. Aurora" name="PropDamCity" value={PropDamCity} onChange={(e) => setPropDamCity(e.target.value)} id="PropDamCity"   /></td>
                 <td><input type="text" placeholder="i.e. Illinois" name="PropDamState" value={PropDamState} onChange={(e) => setPropDamState(e.target.value)} id="PropDamState"   /></td>
                 <td><input type="text" placeholder="i.e. 61616" name="PropDamZip" value={PropDamZip} onChange={(e) => setPropDamZip(e.target.value)} id="PropDamZip"   /></td>
                 <td><input type="text" placeholder="i.e. Big Hole in the wall of Walmart" name="PropDamDescription" value={PropDamDescription} onChange={(e) => setPropDamDescription(e.target.value)} id="PropDamDescription"   /></td>
