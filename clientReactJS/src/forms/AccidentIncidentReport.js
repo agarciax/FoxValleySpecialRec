@@ -4,7 +4,6 @@ import logo from ".//PDRMA Form 03 Property Loss Report_files/Image_001.jpg"
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
-
 const AccidentReport = () => {
   const [AgencyName, setAgencyName] = useState('');
   const [TodaysDate, setTodaysDate] = useState('');
