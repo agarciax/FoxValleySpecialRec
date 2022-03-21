@@ -1,11 +1,11 @@
-import useFetch from "../useFetch";
+import UseFetch from "../useFetch";
 import {CSVLink} from "react-csv";
 import moment from "moment";
 import {confirm} from "react-confirm-box";
 
 const viewPropertyLossReport = () => {
 
-    const { data: reports, isPending, error} = useFetch('http://127.0.0.1:5000/fvsra/propertyLossReport');
+    const { data: reports, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/propertyLossReport');
     let header = ["Property Loss ID", "Agency Name", "Today's Date", "Date Of Incident", "Time Of Incident", "Name Of Person Completing The Report", "Title Of Person Completing The Report", "Business Phone",
     "Incident Description And Property Damage", "Name Of Location", "Business Email", "Street Address Incident Location", "City Incident Location", "State Incident Location", "Zip Code Incident Location",
     "Location", "Primary Location", "Estimate Of Loss", "Contact Person Of Facility", "Contact Email Of Facility", "Contact Phone Of Facility", "Was Damage Caused By 3rd Party", "Person Responsible Name",

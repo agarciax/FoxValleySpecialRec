@@ -1,11 +1,11 @@
-import useFetch from "../useFetch";
+import UseFetch from "../useFetch";
 import { CSVLink } from 'react-csv'
 import moment from 'moment';
 import { confirm } from "react-confirm-box";
 
 const viewMinorInjuryLog = () => {
 
-    const { data: logs, isPending, error} = useFetch('http://127.0.0.1:5000/fvsra/minorInjuryLog');
+    const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/minorInjuryLog');
 
     const handleDelete = async (e, minor_injury_id) => {
         e.preventDefault();
