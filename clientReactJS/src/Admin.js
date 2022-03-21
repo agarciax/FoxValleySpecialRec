@@ -50,27 +50,25 @@ window.onclick = function(event) {
               <button  className="AD_wrap-login100">Create A Form</button>
               
               <div id="myDropdown" class="AD_dropdown-content">
-                  <a href="/form/MinorInjury">Minor Injury</a>
-                  <a href="/form/AccidentReport">Accident/Incident Report</a>
-                  <a href="/form/VehicleReport">Vehicle Accident Report</a>
-                  <a href="/form/PropertyReport">Property Loss Report</a>
-                  <a href="/form/EmployeeInjury">Employee Injury Report</a>
-                  <a href="/form/NotificationReport">Notification of Injury to Employer Report</a>
+                  <a href="/form/MinorInjury">Minor Injury Log</a>
+                  <a href="/form/AccidentReport">Accident/Incident 01</a>
+                  <a href="/form/VehicleReport">Vehicle Accident 02</a>
+                  <a href="/form/PropertyReport">Property Loss 03</a>
+                  <a href="/form/EmployeeInjury">Employee Injury 04</a>
+                  <a href="/form/NotificationReport">Employee Injury 04E</a>
               </div>
-       
-
             </div>
 
             <div className="AD_item3">
               
               <button className="AD_wrap-login100">View Forms</button>
               <div id="myDropdown2" className="AD_dropdown-content">
-                  <a href="/form/viewMinorInjury"> Minor Injury </a>
-                <a href="#home">Accident/Incident Report</a>
-                <a href="#about">Vehicle Accident Report</a>
-                <a href="/form/viewPropertyLossReport">Property Loss Report</a>
-                <a href="#about">Employee Injury Report</a>
-                <a href="#about">Notification of Injury to Employer Report</a>
+                  <a href="/form/viewMinorInjury"> Minor Injury Log</a>
+                <a href="#home">Accident/Incident 01</a>
+                <a href="#about">Vehicle Accident 02</a>
+                <a href="/form/viewPropertyLossReport">Property Loss 03</a>
+                <a href="#about">Employee Injury 04</a>
+                <a href="#about">Employee Injury 04E</a>
               </div>
             </div>
 

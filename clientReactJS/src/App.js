@@ -8,7 +8,7 @@ import PropertyReport from './forms/PropertyLossReport';
 import VehicleReport from './forms/VehicleAccidentReport';
 import Admin from "./Admin";
 import ViewMinorInjury from './tables/viewMinorInjuryLog';
-import ViewPropertyLoss from './tables/viewPropertyLossReport'
+import ViewPropertyLoss from './tables/viewPropertyLossReport';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 

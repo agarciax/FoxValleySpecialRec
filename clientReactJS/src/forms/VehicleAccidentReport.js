@@ -1,9 +1,16 @@
 import "../css/VehicleAccidentReport.css"
 import "../images/icons/FVSRA_ICON.png"
 import logo from ".//PDRMA Form 03 Property Loss Report_files/Image_001.jpg"
-
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const VehicleReport = () => {
+  const [AgencyName2_1, setAgencyName2_1] = useState('');
+  const [TodaysDate2_1, setTodaysDate2_1] = useState('');
+  const [DateIncident2_2, setDateIncident2_2] = useState('');
+  const [TimeIncident2_2, setTimeIncident2_2] = useState('');
+  const [Name2_3, setName2_3] = useState('');
+  const [Name2_322, setName222_3] = useState('');
     return ( 
       <div>
       <div className="entire-page">
@@ -44,13 +51,13 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Agency name</p>
-                <input type="text" id="Agency_Name2-1" name="Agency_Name2-1" />
+                <input type="text" id="Agency_Name2-1" name="Agency_Name2-1" value={AgencyName2_1} onChange={(e) => setAgencyName2_1(e.target.value)} />
               </td>
               <td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                 <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Today’s date</p>
-                <input type="date" id="Todays_Date2-1" name="Todays_Date2-1" defaultValue min="2021-01-01" max="2050-01-01" />
+                <input type="date" id="Todays_Date2-1" name="Todays_Date2-1" defaultValue min="2021-01-01" max="2050-01-01" value={TodaysDate2_1} onChange={(e) => setTodaysDate2_1(e.target.value)} />
               </td>
             </tr>
             <tr style={{height: '22pt'}}>
@@ -59,14 +66,14 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Date of incident (mm/dd/yyyy)</p>
-                <input type="date" id="Date_of_Incident2-2" name="Date_of_Incident2-2" defaultValue min="2021-01-01" max="2050-01-01" />
+                <input type="date" id="Date_of_Incident2-2" name="Date_of_Incident2-2" defaultValue min="2021-01-01" max="2050-01-01" value={DateIncident2_2} onChange={(e) => setDateIncident2_2(e.target.value)}/>
               </td>
               <td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                 <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Time of incident (hh/mm,
                   a.m./p.m.)</p>
-                <input type="time" id="Time_of_Incident2-2" name="Time_of_Incident2-2" required />
+                <input type="time" id="Time_of_Incident2-2" name="Time_of_Incident2-2" value={TimeIncident2_2} onChange={(e) => setTimeIncident2_2(e.target.value)} required />
               </td>
             </tr>
             <tr style={{height: '22pt'}}>
@@ -75,7 +82,7 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Name of person completing the report</p>
-                <input type="text" id="Name-2-3" name="Name-2-3" />
+                <input type="text" id="Name-2-3" name="Name-2-3" value={Name2_3} onChange={(e) => setName2_3(e.target.value)}/>
               </td><td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                 <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>

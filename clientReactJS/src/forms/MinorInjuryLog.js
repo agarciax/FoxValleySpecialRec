@@ -66,7 +66,7 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
               <th>Treatment</th>
               <th>How injury occurred</th>
               <th>Facility/Location where injury occurred</th>
-              <th>Full Name of staff who noticed guardian</th>
+              <th>Full Name of staff who notified guardian</th>
             </tr>
           </thead>
           <tbody>
