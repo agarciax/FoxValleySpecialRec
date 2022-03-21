@@ -153,6 +153,7 @@ const AccidentReport = () => {
 
 return (
         <div>
+          <form onSubmit={handleSubmit}>
         <div className="ARF_entire-page">
           <div className="ARF_top-space" />
           <div className="ARF_page-head">
@@ -180,7 +181,9 @@ return (
               </div>
             </div>
           </div>
+
           <div className="ARF_header-body-space" />
+
           <table className="ARF_form-table">
             <tbody><tr style={{height: '21pt'}}>
                 <td className="ARF_blue-boxes-top">
@@ -1058,11 +1061,18 @@ return (
                   <div className="ARF_endInput"><input className="ARF_Input" type="text" name="WitnessLocationDuringIncident" value={WitnessLocationDuringIncident} onChange={(e) => setWitnessLocationDuringIncident(e.target.value)} id="WitnessLocationDuringIncident"   /></div>
                 </td>
               </tr>
+            <div>
+              <button type={"submit"}>Submit</button>
+            </div>
             </tbody>
+
           </table>
           <div className="ARF_bottom-space" />
         </div>
+
+          </form>
         </div>
+
     );
 }
  

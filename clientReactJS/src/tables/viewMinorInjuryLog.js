@@ -1,4 +1,4 @@
-import UseFetch from "../UseFetch";
+import UseFetch from "../useFetch";
 import { CSVLink } from 'react-csv'
 import moment from 'moment';
 import { confirm } from "react-confirm-box";
