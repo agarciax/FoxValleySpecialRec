@@ -4,7 +4,6 @@ import logo from ".//PDRMA Form 03 Property Loss Report_files/Image_001.jpg"
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
-
 const AccidentReport = () => {
   const [AgencyName, setAgencyName] = useState('');
   const [TodaysDate, setTodaysDate] = useState('');
@@ -85,7 +84,7 @@ const AccidentReport = () => {
       "Business_Email" : BusinessEmail,
       "How_did_the_incident_Occur" : HowIncidentOccurred,
       "Name_of_the_location" : LocationName,
-      "Is_there_an_address_for_incident_Location" : LocationAddress,
+      //"Is_there_an_address_for_incident_Location" : LocationAddress,
       "Street_Address" : StreetAddress,
       "City" : City,
       "State" : State,
@@ -117,7 +116,7 @@ const AccidentReport = () => {
       "Name_of_the_officer" : OfficerName,
       "did_you_expect_this_person_submit_a_claim" : DidYouExpectAClaim,
       "Was_Property_Damaged_As_A_Result_Of_This_AccidentOrIncident" : WasPropDamaged,
-      "If_Yes_How_Was_The_Person_Involved_In_The_AccidentOrIncident" : HowWasPropDamaged,
+      //"If_Yes_How_Was_The_Person_Involved_In_The_AccidentOrIncident" : HowWasPropDamaged,
       "last_name_Property_damage" : PropDamageLName,
       "first_name_Property_damage" : PropDamageFName,
       "Address_Property_damage" : PropDamAddress,
@@ -154,6 +153,7 @@ const AccidentReport = () => {
 
 return (
         <div>
+          <form onSubmit={handleSubmit}>
         <div className="ARF_entire-page">
           <div className="ARF_top-space" />
           <div className="ARF_page-head">
@@ -181,7 +181,9 @@ return (
               </div>
             </div>
           </div>
+
           <div className="ARF_header-body-space" />
+
           <table className="ARF_form-table">
             <tbody><tr style={{height: '21pt'}}>
                 <td className="ARF_blue-boxes-top">
@@ -1059,11 +1061,18 @@ return (
                   <div className="ARF_endInput"><input className="ARF_Input" type="text" name="WitnessLocationDuringIncident" value={WitnessLocationDuringIncident} onChange={(e) => setWitnessLocationDuringIncident(e.target.value)} id="WitnessLocationDuringIncident"   /></div>
                 </td>
               </tr>
+            <div>
+              <button type={"submit"}>Submit</button>
+            </div>
             </tbody>
+
           </table>
           <div className="ARF_bottom-space" />
         </div>
+
+          </form>
         </div>
+
     );
 }
  

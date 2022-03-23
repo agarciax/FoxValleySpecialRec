@@ -230,6 +230,12 @@ iframe {
   margin-bottom: 30px;
 }
 
+.input100Error {
+  font-family: Poppins-Regular;
+  font-size: 16px;
+  color: #c80000;
+}
+
 .input100 {
   font-family: Poppins-Regular;
   font-size: 16px;
