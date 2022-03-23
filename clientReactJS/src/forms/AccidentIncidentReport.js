@@ -752,7 +752,7 @@ return (
                 <td className="ARF_blue-boxes" />
 
 
-                
+
                 {/*I didn't have a field inside the database. I can add this as a useState if needed*/}
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p className="ARF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>
