@@ -822,7 +822,7 @@ return (
               </tr>
               <tr style={{height: '22pt'}}>
                 <td className="ARF_blue-boxes">
-                  10
+                  16
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p className="ARF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Was property damaged as a result of this accident/incident?</p></td>
@@ -854,7 +854,7 @@ return (
               </tr>
               <tr style={{height: '27pt'}}>
                 <td className="ARF_blue-boxes">
-                  11
+                  17
                 </td>
                 <td colSpan={3} style={{width: '526pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingRight: '9pt', textIndent: '0pt', textAlign: 'left'}}>If yes, how was the person involved in the accident/incident?</p>
                 </td>
@@ -890,7 +890,10 @@ return (
                 </td>
               </tr>
               <tr style={{height: '20pt'}}>
-                <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}>18<br /></p></td>
+                <td className="ARF_blue-boxes">
+                  18
+                </td>
+                {/*<td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}>18<br /></p></td>*/}
                 <td colSpan={4} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
