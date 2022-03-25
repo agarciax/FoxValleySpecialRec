@@ -25,6 +25,21 @@ const viewPropertyLossReport = () => {
         }
     }
 
+    function getCSVData(row) {
+        let buffer = [];
+        row.forEach((row) => {
+            buffer.push([row.property_loss_id, row.Name_of_the_Agency, moment.utc(row.Todays_Date).format('MM/DD/YYYY'),
+                moment.utc(row.Date_of_Incident).format('MM/DD/YYYY'), moment(row.Time_of_Incident, 'HH:mm:ss').format('h:mm A'),
+                row.Name_of_the_person_Completing_the_report, row.Title_Of_Person_Completing_the_report, row.Business_Phone, row.Business_Email,
+                row.How_did_the_incident_occur_and_what_property_was_damaged, row.Name_of_location, row.Street_Address_Incident_Location, row.State_Incident_Location,
+                row.City_Incident_Location, row.Zip_Code, row.Location_Specify, row.Primary_Location, row.Estimate_of_Loss, row.Contact_Person_Facility,
+                row.Contact_Person_Email, row.Contact_Person_Phone_Number, row.Damage_Third_Party, row.Person_Responsible_Name, row.Person_Responsible_Street_Address,
+                row.Person_Responsible_City, row.Person_Responsible_State, row.Zip_Code_Person_Responsible, row.Police_Investigation_Yes_No_Unknown,
+                row.What_Police_Agency, row.Police_Report_Number, row.Were_Criminal_Charges])
+        })
+        return buffer;
+    }
+
     return (
     <div className={"viewPropertyLossReport"}>
         {error && <div>{error}</div>}
@@ -32,7 +47,8 @@ const viewPropertyLossReport = () => {
         {reports && <div>
             <div>
                 <h2 className="viewPropertyLossReportHeader">View Property Loss Reports</h2>
-                {/*<CSVLink filename={"minor-injury-log.csv"} data={(getCSVData())} target="_blank" >Export To Excel</CSVLink>*/}
+                <button type={"button"}><CSVLink style={{ textDecoration: 'none', color:'black' }} filename={"property-loss-report.csv"} headers={header} data={(getCSVData(reports))} target="_blank" >Export To Excel</CSVLink></button>
+
             </div>
             <div>
                 <table className="tableMinorInjuryLog">
@@ -51,8 +67,7 @@ const viewPropertyLossReport = () => {
                             <td>{moment.utc(reports.Date_of_Incident).format('MM/DD/YYYY')}</td>
                             <td>{reports.Name_of_the_person_Completing_the_report}</td>
                             <td><button type="button" onClick={(e) => handleDelete(e, reports.property_loss_id)}>Delete {reports.property_loss_id}</button>
-                                <button type={"button"}>Export To Excel</button>
-                                <button type={"button"}>Export To PDF</button>
+                                <button type={"button"}>Edit {reports.property_loss_id}</button>
                             </td>
                         </tr>
                     ))}

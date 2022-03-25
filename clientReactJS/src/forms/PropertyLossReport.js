@@ -60,9 +60,9 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
       "City_Incident_Location": cityIncidentLocation,
       "Zip_Code": zipCode,
       "Location_Specify": locationSpecify,
-        "Primary_Location": primaryLocation,
+      "Primary_Location": primaryLocation,
       "Estimate_of_Loss": estimateOfLoss,
-        "Contact_Person_Facility": contactPersonFacility,
+      "Contact_Person_Facility": contactPersonFacility,
       "Contact_Person_Email": contactPersonEmail,
       "Contact_Person_Phone_Number": contactPersonPhoneNum,
       "Damage_Third_Party": damageThirdParty,
@@ -323,7 +323,7 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
                   <div className="PLRF_inputGrid">
                     <div className="PLRF_s3-right">Yes</div>
                     <div className="PLRF_centerInput">
-                      <input className="PLRF_Input" type="radio" value={damageThirdParty} onChange={(e) => setDamageThirdParty(e.target.value)} defaultValue="Yes" id="DamageThirdPartyYes" name="DamageThirdParty" />
+                      <input className="PLRF_Input" type="radio" value="Yes" checked={damageThirdParty === "Yes"} onClick={() => setDamageThirdParty("Yes")} defaultValue="Yes" id="DamageThirdPartyYes" name="DamageThirdParty" />
                     </div>
                   </div>
                   {/*                <p class="s3" style="text-indent: 0pt;line-height: 10pt;text-align: right;">Yes <div class="centerInput"><input className="PLRF_Input" type="checkbox" id="horns" name="horns"></div></p>*/}
@@ -333,13 +333,13 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
                     <div className="PLRF_inputGrid">
                       <div className="PLRF_s3-right">No</div>
                       <div className="PLRF_centerInput">
-                        <input className="PLRF_Input" type="radio" defaultValue="No" id="DamageThirdPartyNo" name="DamageThirdParty" />
+                        <input className="PLRF_Input" type="radio" value={"No"} checked={damageThirdParty === "No"} onClick={() => setDamageThirdParty("No")} defaultValue="No" id="DamageThirdPartyNo" name="DamageThirdParty" />
                       </div>
                     </div>
                     <div className="PLRF_inputGrid">
                       <div className="PLRF_s3-right">Unknown</div>
                       <div className="PLRF_centerInput">
-                        <input className="PLRF_Input" type="radio" defaultValue="Unknown" id="DamageThirdPartyUnknown" name="DamageThirdParty" defaultChecked />
+                        <input className="PLRF_Input" type="radio" value={"Unknown"} onClick={() => setDamageThirdParty("Unknown")} defaultValue="Unknown" id="DamageThirdPartyUnknown" name="DamageThirdParty" defaultChecked />
                       </div>
                     </div>
                   </div>
