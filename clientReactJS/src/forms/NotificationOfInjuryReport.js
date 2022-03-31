@@ -34,11 +34,11 @@ const NotificationReport = () => {
     e.preventDefault();
 
     let NotificationReportObj = {
-      "Employees_Name": name,
+      "Employee_Name": name,
       "Date_of_Incident": date,
-      "Time_Of_Incident": time,
-      "Specific_Location": specificLocation,
-      "Reporting_First_Time": reporting,
+      "Time_of_Incident": time,
+      "Specific_location_of_accident": specificLocation,
+      "Are_you_reporting_the_injury_for_the_first_time_using_this_form": reporting,
       "Reporting_Date": dateReported,
       "Reporting_Time": timeReported,
       "Reported_To": reportedTo,

@@ -11,6 +11,7 @@ import ViewMinorInjury from './tables/viewMinorInjuryLog';
 import ViewPropertyLoss from './tables/viewPropertyLossReport';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
+import ViewNotificationOfInjuryToEmployer from "./tables/viewNotificationOfInjuryToEmployerReport";
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path={"/form/viewPropertyLossReport"} element={<ViewPropertyLoss />}/>
+          </Routes>
+          <Routes>
+            <Route path={"/form/viewNotificationOfInjuryToEmployerReport"} element={<ViewNotificationOfInjuryToEmployer />} />
           </Routes>
         </div>
       </div>

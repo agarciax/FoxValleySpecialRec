@@ -1,8 +1,8 @@
 'use strict';
-var notificationOfInjury = require('../model/accidentIncidentAppModel.js');
+var notificationOfInjury = require('../model/notificationOfInjuryToEmployerReportAppModel.js');
 
 exports.list_all_notificationOfInjurys = function (req, res) {
-    console.log("LIST ALL ACCIDENT INCIDENT REPORTS");
+    console.log("LIST ALL NOTIFICATION OF INJURY TO EMPLOYER REPORTS");
     notificationOfInjury.getAllNotificationOfInjury(function (err, item) {
         res.setHeader('Content-Type', 'application/json');
         if (err) res.send(err);
