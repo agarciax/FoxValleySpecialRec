@@ -301,6 +301,10 @@ table.ARF_form-table{
 }
 .ARF_Input{
     background-color: #E8E8E8;
+    width: 100%;
+}
+.ARF_Input2{
+    background-color: #E8E8E8;
 }
 .ARF_white-boxes-red-text{
     padding-top: 1pt;

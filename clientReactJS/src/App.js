@@ -9,6 +9,7 @@ import VehicleReport from './forms/VehicleAccidentReport';
 import Admin from "./Admin";
 import ViewMinorInjury from './tables/viewMinorInjuryLog';
 import ViewPropertyLoss from './tables/viewPropertyLossReport';
+import PrivateRoute from "./PrivateRoute";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import ViewNotificationOfInjuryToEmployer from "./tables/viewNotificationOfInjuryToEmployerReport";
@@ -25,9 +26,18 @@ function App() {
           <Routes>
             <Route path="/login" element={<LoginPage />} />
           </Routes>
+
           <Routes>
-            <Route path="/Admin" element={<Admin />} />
+            <Route
+                path="/admin"
+                element={
+                  <PrivateRoute>
+                    <Admin />
+                  </PrivateRoute>
+                }
+            />
           </Routes>
+
           <Routes>
             <Route path="/form/AccidentReport" element={<AccidentReport />} />
           </Routes>

@@ -312,9 +312,13 @@ iframe {
 
 .AD_dropdown-content a {
   color: black;
-  padding: 10px 12px;
+  padding: 7px 11px;
   text-decoration: none;
   display: block;
+}
+
+.AD_dropdown-content a:hover{
+  background-color: rgba(182,199,226,0.80);
 }
 
 .AD_dropdown a:hover {
