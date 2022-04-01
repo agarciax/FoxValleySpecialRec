@@ -27,9 +27,6 @@ const NotificationReport = () => {
   const [dateSignature, setDateSignature] = useState('');
   const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
 
-
-
-
   const handleSubmit = (e) => { //Handles the onSubmit action of the log
     e.preventDefault();
 
@@ -54,7 +51,7 @@ const NotificationReport = () => {
       "Signature_Date":dateSignature
     }
 
-    fetch('http://127.0.0.1:5000/fvsra/NotificationInjuryReport', {
+    fetch('http://127.0.0.1:5000/fvsra/notificationOfInjuryToEmployerReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(NotificationReportObj)
@@ -67,7 +64,8 @@ const NotificationReport = () => {
 
     return ( 
         <div>
-        <div className="NIRF_entire-page">
+          <form onSubmit={handleSubmit}>
+          <div className="NIRF_entire-page">
           <div className="NIRF_top-space" />
           <div className="NIRF_page-head">
             <div className="NIRF_page-head-grid">
@@ -293,7 +291,7 @@ const NotificationReport = () => {
             </div>
           </div>
           <div className="NIRF_header-body-space" />
-          <form>
+
             <table className="NIRF_form-table">
               <tbody><tr style={{height: '22pt'}}>
                   <td className="NIRF_blue-boxes">
@@ -357,11 +355,12 @@ const NotificationReport = () => {
                 </tr>
               </tbody></table>
             <div className="NIRF_center-text">
-              <button name="submit4E" onclick>Submit</button>
+              <button name="submit4E" >Submit</button>
             </div>
-          </form>
+
           <div className="NIRF_bottom-space" />
         </div>
+      </form>
       </div>
      );
 }
