@@ -30,8 +30,8 @@ const viewNotificationOfInjuryToEmployerReport = () => {
                 moment(row.Time_of_Incident, 'HH:mm:ss').format('h:mm A'),
                 row.Specific_Location, row.Reporting_First_Time, moment.utc(row.Reporting_Date).format('MM/DD/YYYY'),
                 moment(row.Reporting_Time, 'HH:mm:ss').format('h:mm A'),
-                row.Reported_To, row.Describe_How_Injury_Occurred, row.People_Present_At_Injury, row.Body_Parts_Injured,
-                row.Seek_Medical_Attention, row.Seek_Treatment, row.Injured_Previously, row.Describe_Which_Part_Was_Injured, row.Where_Treatment_Received, row.Employee_Signature,
+                row.Reported_To, row.Describe_how_the_injury_occurred, row.Name_all_people_present_at_the_time_of_injury, row.Identify_all_body_parts_you_injured,
+                row.Did_you_seek_medical_attention_on_the_date_of_the_accident, row.If_yes_where_did_you_seek_treatment, row.Have_you_injured_this_body_part_previously, row.If_yes_describe_which_body_part_and_what_the_prior_injury_was, row.If_yes_where_did_you_receive_treatment, row.Employee_Signature,
                 moment.utc(row.Signature_Date).format('MM/DD/YYYY')])
         })
         return buffer;
