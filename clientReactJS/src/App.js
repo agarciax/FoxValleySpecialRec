@@ -21,7 +21,7 @@ function App() {
       <div className="App">
         <div className="content">
           <Routes>
-            <Route path="/" element={<Employee />} />
+            <Route path="/FoxValleySpecialRec" element={<Employee />} />
           </Routes>
           <Routes>
             <Route path="/login" element={<LoginPage />} />
