@@ -21,10 +21,10 @@ function App() {
       <div className="App">
         <div className="content">
           <Routes>
-            <Route path="/FoxValleySpecialRec" element={<Employee />} />
+            <Route path="/employee" element={<Employee />} />
           </Routes>
           <Routes>
-            <Route path="/FoxValleySpecialRec/login" element={<LoginPage />} />
+            <Route path="/" element={<LoginPage />} />
           </Routes>
 
           <Routes>
