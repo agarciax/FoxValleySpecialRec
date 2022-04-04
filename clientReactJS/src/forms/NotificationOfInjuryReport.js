@@ -110,14 +110,14 @@ const NotificationReport = () => {
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Date of incident (mm/dd/yyyy)</p>
-                  <input className="NIRF_Input"  type="date" id="Date_of_Incident"  value={date} onChange={(e) => setDate(e.target.value)}  name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
+                  <input className="NIRF_Input2"  type="date" id="Date_of_Incident"  value={date} onChange={(e) => setDate(e.target.value)}  name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
                 </td>
                 <td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Time of incident (hh/mm,
                     a.m./p.m.)</p>
-                  <input className="NIRF_Input"  type="time" id="Time_of_Incident"  value={time} onChange={(e) => setTime(e.target.value)}  name="Time_of_Incident" />
+                  <input className="NIRF_Input2"  type="time" id="Time_of_Incident"  value={time} onChange={(e) => setTime(e.target.value)}  name="Time_of_Incident" />
                 </td>
               </tr>
               <tr style={{height: '25pt'}}>
@@ -165,11 +165,11 @@ const NotificationReport = () => {
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '283pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Date</p>
-                  <input className="NIRF_Input"  type="date" id="Date_of_Incident"  value={dateReported} onChange={(e) => setDateReported(e.target.value)}  name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
+                  <input className="NIRF_Input2"  type="date" id="Date_of_Incident"  value={dateReported} onChange={(e) => setDateReported(e.target.value)}  name="Date_of_Incident" defaultValue min="2021-01-01" max="2050-01-01" />
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'none', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Time</p>
-                  <input className="NIRF_Input"  type="time" id="Time_of_Incident"  value={timeReported} onChange={(e) => setTimeReported(e.target.value)}  name="Time_of_Incident" />
+                  <input className="NIRF_Input2"  type="time" id="Time_of_Incident"  value={timeReported} onChange={(e) => setTimeReported(e.target.value)}  name="Time_of_Incident" />
                 </td>
                 <td style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Reported to</p>
@@ -346,7 +346,7 @@ const NotificationReport = () => {
                   </td>
                   <td style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'none', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                     <p className="NIRF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Date</p>
-                    <input className="NIRF_Input"  type="date" id="Signature_Date"  value={dateSignature} onChange={(e) => setDateSignature(e.target.value)}  name="Signature_Date" defaultValue min="2021-01-01" max="2050-01-01" />
+                    <input className="NIRF_Input2"  type="date" id="Signature_Date"  value={dateSignature} onChange={(e) => setDateSignature(e.target.value)}  name="Signature_Date" defaultValue min="2021-01-01" max="2050-01-01" />
                   </td>
                 </tr>
                 <tr style={{height: '25pt'}}>

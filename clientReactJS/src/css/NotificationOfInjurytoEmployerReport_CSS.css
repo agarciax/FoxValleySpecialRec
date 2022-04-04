@@ -268,4 +268,10 @@ table.NIRF_form-table{
 }
 .NIRF_Input {
     background-color: #E8E8E8;
+    width: 100%;
+}
+
+.NIRF_Input2 {
+    background-color: #E8E8E8;
+
 }
