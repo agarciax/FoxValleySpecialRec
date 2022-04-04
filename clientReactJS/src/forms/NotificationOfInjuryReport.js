@@ -11,16 +11,16 @@ const NotificationReport = () => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [specificLocation, setSpecificLocation] = useState('');
-  const [reporting, setReporting] = useState('');
+  const [reporting, setReporting] = useState('No');
   const [dateReported, setDateReported] = useState('');
   const [timeReported, setTimeReported] = useState('');
   const [reportedTo, setReportedTo] = useState('');
   const [describeInjury, setDescribeInjury] = useState('');
   const [peoplePresent, setPeoplePresent] = useState('');
   const [partsInjured, setPartsInjured] = useState('');
-  const [medicalAttention, setMedicalAttention] = useState('');
+  const [medicalAttention, setMedicalAttention] = useState('No');
   const [treatment, setTreatment] = useState('');
-  const [injuredPreviously, setInjuredPreviously] = useState('');
+  const [injuredPreviously, setInjuredPreviously] = useState('No');
   const [describeInjuredPrior, setDescribeInjuredPrior] = useState('');
   const [locationTreatment, setLocationTreatment] = useState('');
   const [signature, setSignature] = useState('');
@@ -39,7 +39,7 @@ const NotificationReport = () => {
       "Reporting_Date": dateReported,
       "Reporting_Time": timeReported,
       "Reported_To": reportedTo,
-      "Describe_how_injury_occurred": describeInjury,
+      "Describe_how_the_injury_occurred": describeInjury,
       "Name_all_people_present_at_the_time_of_injury": peoplePresent,
       "Identify_all_body_parts_you_injured": partsInjured,
       "Did_you_seek_medical_attention_on_the_date_of_the_accident": medicalAttention,
@@ -141,13 +141,13 @@ const NotificationReport = () => {
                     <div className="NIRF_inputGrid">
                       <div className="NIRF_s3-right">Yes</div>
                       <div className="NIRF_centerInput">
-                        <input className="NIRF_Input"  type="radio" defaultValue="Yes" id="reportingYes"  value={reporting} onChange={(e) => setReporting(e.target.value)}  name="DamageThirdParty" />
+                        <input className="NIRF_Input"  type="radio" defaultValue="Yes" id="reportingYes"  value={"Yes"} onClick={() => setReporting("Yes")}  name="ReportInjuryForFirstTime" />
                       </div>
                     </div>
                     <div className="NIRF_inputGrid">
                       <div className="NIRF_s3-right">No</div>
                       <div className="NIRF_centerInput">
-                        <input className="NIRF_Input"  type="radio" defaultValue="No" id="reportingNo"  value={reporting} onChange={(e) => setReporting(e.target.value)}  name="DamageThirdParty" defaultChecked />
+                        <input className="NIRF_Input"  type="radio" defaultValue="No" id="reportingNo"  value={"No"} onClick={() => setReporting("No")}  name="ReportInjuryForFirstTime" defaultChecked />
                       </div>
                     </div>
                   </div>
@@ -182,7 +182,7 @@ const NotificationReport = () => {
                 </td>
                 <td colSpan={3} style={{borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="NIRF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Describe how the injury occurred. (Identify the job task you were doing and include a step-by-step explanation of what led to the injury.)
                   </p>
-                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="describeInjury"  value={describeInjury} onChange={(e) => setDescribeInjury(e.target.value)}  name="describeInjury" /></div>
+                  <div className="NIRF_endInput"><input className="NIRF_Input"  type="text" id="describeInjury"  value={describeInjury} onChange={(e) => setDescribeInjury(e.target.value)}  name="describeInjury" required /></div>
                 </td>
               </tr>
               <tr style={{height: '23pt'}}>
@@ -215,13 +215,13 @@ const NotificationReport = () => {
                     <div className="NIRF_inputGrid">
                       <div className="NIRF_s3-right">Yes</div>
                       <div className="NIRF_centerInput">
-                        <input className="NIRF_Input"  type="radio" defaultValue="Yes" id="DamageThirdPartyYes"  value={medicalAttention} onChange={(e) => setMedicalAttention(e.target.value)}  name="DamageThirdParty" />
+                        <input className="NIRF_Input"  type="radio" defaultValue="Yes" id="SeekMedAttentionYes"  value={"Yes"} onClick={() => setMedicalAttention("Yes")}  name="SeekMedAttention" />
                       </div>
                     </div>
                     <div className="NIRF_inputGrid">
                       <div className="NIRF_s3-right">No</div>
                       <div className="NIRF_centerInput">
-                        <input className="NIRF_Input"  type="radio" defaultValue="No" id="DamageThirdPartyNo"  value={medicalAttention} onChange={(e) => setMedicalAttention(e.target.value)}  name="DamageThirdParty" defaultChecked />
+                        <input className="NIRF_Input"  type="radio" defaultValue="No" id="SeekMedAttentionNo"  value={"No"} onClick={() => setMedicalAttention("No")}  name="SeekMedAttention" defaultChecked />
                       </div>
                     </div>
                   </div>
@@ -305,13 +305,13 @@ const NotificationReport = () => {
                       <div className="NIRF_inputGrid">
                         <div className="NIRF_s3-right">Yes</div>
                         <div className="NIRF_centerInput">
-                          <input className="NIRF_Input"  type="radio" defaultValue="Yes" id="DamagePreviousYes"  value={injuredPreviously} onChange={(e) => setInjuredPreviously(e.target.value)}  name="DamageThirdParty" />
+                          <input className="NIRF_Input"  type="radio" defaultValue="Yes" id="DamagePreviousYes"  value={"Yes"} onClick={() => setInjuredPreviously("Yes")}  name="DamagePrevious" />
                         </div>
                       </div>
                       <div className="NIRF_inputGrid">
                         <div className="NIRF_s3-right">No</div>
                         <div className="NIRF_centerInput">
-                          <input className="NIRF_Input"  type="radio" defaultValue="No" id="DamagePreviousNo"  value={injuredPreviously} onChange={(e) => setInjuredPreviously(e.target.value)}  name="DamageThirdParty" defaultChecked />
+                          <input className="NIRF_Input"  type="radio" defaultValue="No" id="DamagePreviousNo"  value={"No"} onClick={() => setInjuredPreviously("No")}  name="DamagePrevious" defaultChecked />
                         </div>
                       </div>
                     </div>

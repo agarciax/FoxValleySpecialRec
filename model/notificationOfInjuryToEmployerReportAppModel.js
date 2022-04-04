@@ -8,6 +8,7 @@ var NotificationOfInjury = function (notificationOfInjury) {
     this.Time_of_Incident  = notificationOfInjury.Time_of_Incident;
     this.Specific_location_of_accident  = notificationOfInjury.Specific_location_of_accident;
     this.Are_you_reporting_the_injury_for_the_first_time_using_this_form  = notificationOfInjury.Are_you_reporting_the_injury_for_the_first_time_using_this_form;
+    this.Describe_how_the_injury_occurred = notificationOfInjury.Describe_how_the_injury_occurred;
     this.Reporting_Date = notificationOfInjury.Reporting_Date;
     this.Reporting_Time = notificationOfInjury.Reporting_Time;
     this.Reported_To =  notificationOfInjury.Reported_To;
@@ -17,10 +18,10 @@ var NotificationOfInjury = function (notificationOfInjury) {
     this.Did_you_seek_medical_attention_on_the_date_of_the_accident  = notificationOfInjury.Did_you_seek_medical_attention_on_the_date_of_the_accident;
     this.If_yes_where_did_you_seek_treatment  = notificationOfInjury.If_yes_where_did_you_seek_treatment;
     this.Have_you_injured_this_body_part_previously  = notificationOfInjury.Have_you_injured_this_body_part_previously;
-    this.If_yes_describe_which_body_part_and_what_the_prior_   = notificationOfInjury.If_yes_describe_which_body_part_and_what_the_prior_ ;
+    this.If_yes_describe_which_body_part_and_what_the_prior_injury_was   = notificationOfInjury.If_yes_describe_which_body_part_and_what_the_prior_injury_was ;
     this.If_yes_where_did_you_receive_treatment  = notificationOfInjury.If_yes_where_did_you_receive_treatment;
-    this.Notification_of_injury_was_received_on  = notificationOfInjury.Notification_of_injury_was_received_on;
-    this.Notification_of_injury_was_received_by  = notificationOfInjury.Notification_of_injury_was_received_by;
+    this.Employee_Signature = notificationOfInjury.Employee_Signature
+    this.Signature_Date = notificationOfInjury.Signature_Date
 
 };
 NotificationOfInjury.getNotificationOfInjuryByID = function (minor_injury_id, result) {

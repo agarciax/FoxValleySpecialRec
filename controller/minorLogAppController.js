@@ -1,6 +1,5 @@
 'use strict';
 var minorIncident = require('../model/minorLogAppModel.js');
-const {response} = require("express");
 
 exports.list_all_minorIncidents = function (req, res) {
     console.log("LIST ALL MINOR ACCIDENTS");

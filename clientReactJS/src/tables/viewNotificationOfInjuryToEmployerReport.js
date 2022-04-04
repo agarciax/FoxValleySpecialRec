@@ -7,7 +7,7 @@ const viewNotificationOfInjuryToEmployerReport = () => {
 
     const { data: reports, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/notificationOfInjuryToEmployerReport');
     let header = ["Notification Of Injury To Employer ID", "Employee's Name", "Date Of Incident", "Time Of Incident", "Specific Location", "Reporting First Time", "Reporting Date",
-        "Reporting Time", "Reported_To", "Describe How Injury Occurred", "People Present At Injury", "Body Parts Injured", "Seek_Medical_Attention",
+        "Reporting Time", "Reported To", "Describe How Injury Occurred", "People Present At Injury", "Body Parts Injured", "Seek_Medical_Attention",
     "Seek_Treatment", "Injured_Previously", "Describe_Which_Part_Was_Injured", "Where_Treatment_Received", "Employee_Signature", "Signature Date"];
 
     const handleDelete = async (e, employee_injury_id) => {
@@ -26,10 +26,17 @@ const viewNotificationOfInjuryToEmployerReport = () => {
     function getCSVData(row) {
         let buffer = [];
         row.forEach((row) => {
+            let reportingDate = row.Reporting_Date;
+            let reportingTime = row.Reporting_Time;
+            if(reportingDate !== ""){
+                reportingDate = moment.utc(row.Reporting_Date).format('MM/DD/YYYY');
+            }
+            if(reportingTime !== ""){
+                reportingTime = moment(row.Reporting_Time, 'HH:mm:ss').format('h:mm A');
+            }
             buffer.push([row.employee_injury_id, row.Employee_Name, moment.utc(row.Date_of_Incident).format('MM/DD/YYYY'),
                 moment(row.Time_of_Incident, 'HH:mm:ss').format('h:mm A'),
-                row.Specific_Location, row.Reporting_First_Time, moment.utc(row.Reporting_Date).format('MM/DD/YYYY'),
-                moment(row.Reporting_Time, 'HH:mm:ss').format('h:mm A'),
+                row.Specific_location_of_accident, row.Are_you_reporting_the_injury_for_the_first_time_using_this_form, reportingDate, reportingTime,
                 row.Reported_To, row.Describe_how_the_injury_occurred, row.Name_all_people_present_at_the_time_of_injury, row.Identify_all_body_parts_you_injured,
                 row.Did_you_seek_medical_attention_on_the_date_of_the_accident, row.If_yes_where_did_you_seek_treatment, row.Have_you_injured_this_body_part_previously, row.If_yes_describe_which_body_part_and_what_the_prior_injury_was, row.If_yes_where_did_you_receive_treatment, row.Employee_Signature,
                 moment.utc(row.Signature_Date).format('MM/DD/YYYY')])
