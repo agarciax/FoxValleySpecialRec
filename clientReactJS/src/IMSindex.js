@@ -6,8 +6,12 @@ import background from "./images/bg-01.jpg";
  import "./fonts/iconic/css/material-design-iconic-font.min.css"
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import UseFetch from "./UseFetch";
 
 const LoginPage = () => {
+
+    const { data: logs, isPending, error} = UseFetch('http://localhost:5000/');
+
 
   // React States
   const [errorMessages, setErrorMessages] = useState({});
@@ -25,6 +29,10 @@ const LoginPage = () => {
       password: "test"
     }
   ];
+
+
+
+
   //Error Messages
   const errors = {
     uname: "Invalid Username",
@@ -35,7 +43,9 @@ const LoginPage = () => {
     //Prevent page reload
     event.preventDefault();
 
-    var { uname, pass } = document.forms[0];
+
+      var { uname, pass } = document.forms[0];
+
 
     // Find user login info
     const userData = database.find((user) => user.username === uname.value);
@@ -43,9 +53,11 @@ const LoginPage = () => {
     // Compare user info
     if (userData) {
       if (userData.password !== pass.value) {
-        // Invalid password
+
+          // Invalid password
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
+          //Authenticates users and redirects once user and pass has been matched
         setIsSubmitted(true);
         localStorage.setItem("isAuthenticated", "true");
         window.location.href = "/admin";
@@ -104,6 +116,8 @@ const LoginPage = () => {
   );
 
   return (
+
+
       <div className="limiter">
         <div className="container-login100" style={{backgroundImage: `url(${background})`}}>
           <div className="wrap-login101">

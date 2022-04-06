@@ -1,4 +1,5 @@
 'use strict';
+const form04E = require("../controller/notificationOfInjuryToEmployerReportAppController");
 module.exports = function (app) {
     var minorLogList = require('../controller/minorLogAppController'); //Finished W/ Front/Back End Connection
     app.route('/fvsra/minorInjuryLog')
@@ -47,5 +48,13 @@ module.exports = function (app) {
     app.route('/fvsra/notificationOfInjuryToEmployerReport/:employee_injury_id')
         .get(form04E.read_a_notificationOfInjury) //Not Tested
         .delete(form04E.deleteNotificationOfInjuryReport) //Not Tested
+
+    var login = require('../controller/authenticationAppController')
+    app.route('/')
+        .get(login.list_all_users()) //Not Tested
+        .post(login.createLoginInfo()) //Not Tested
+    app.route('/:user_id')
+        .get(login.read_loginInfo()) //Not Tested
+        .delete(login.deleteLoginInfo) //Not Tested
 
 };
