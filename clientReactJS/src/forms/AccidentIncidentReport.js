@@ -77,14 +77,14 @@ const AccidentReport = () => {
       "Agency_Name" : AgencyName,
       "Todays_Date" : TodaysDate,
       "Date_of_Incident" : IncidentDate,
-      "Time_Of_Incident" : IncidentTime,
+      "Time_of_Incident" : IncidentTime,
       "Name_of_the_person_Completing_the_report" : PersonCompletingFormName,
       "Title_Of_Person_Completing_the_report" : PersonCompletingFormTitle,
       "Business_Phone" : BusinessPhone,
       "Business_Email" : BusinessEmail,
       "How_did_the_incident_Occur" : HowIncidentOccurred,
       "Name_of_the_location" : LocationName,
-      //"Is_there_an_address_for_incident_Location" : LocationAddress,
+      "Is_there_an_address_for_incident_Location" : DoesLocationHaveAddress,
       "Street_Address" : StreetAddress,
       "City" : City,
       "State" : State,
@@ -293,7 +293,7 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" name="DoesLocationHaveAddress" value={DoesLocationHaveAddress} onChange={(e) => setDoesLocationHaveAddress(e.target.value)} id="DoesLocationHaveAddress"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="DoesLocationHaveAddress" value={"Yes"} onClick={() => setDoesLocationHaveAddress("Yes")} id="DoesLocationHaveAddress"  required />
                     </div>
                   </div>
                   {/*                <p class="s3" style="text-indent: 0pt;line-height: 10pt;text-align: right;">Yes <div class="centerInput"><input className="ARF_Input" type="checkbox" id="horns" name="horns"></div></p>*/}
@@ -303,13 +303,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" name="DoesLocationHaveAddress" value={DoesLocationHaveAddress} onChange={(e) => setDoesLocationHaveAddress(e.target.value)} id="DoesLocationHaveAddress"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="DoesLocationHaveAddress" value={"No"} onClick={() => setDoesLocationHaveAddress("No")} id="DoesLocationHaveAddress"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" name="DoesLocationHaveAddress" value={DoesLocationHaveAddress} onChange={(e) => setDoesLocationHaveAddress(e.target.value)} id="DoesLocationHaveAddress"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="DoesLocationHaveAddress" value={"Unknown"} onClick={() => setDoesLocationHaveAddress("Unknown")} id="DoesLocationHaveAddress"  required />
                       </div>
                     </div>
                   </div>
@@ -388,7 +388,7 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" name="InjuredPerson" value={InjuredPerson} onChange={(e) => setInjuredPerson(e.target.value)} id="InjuredPerson"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="InjuredPerson" value={"Yes"} onClick={() => setInjuredPerson("Yes")} id="InjuredPerson"  required />
                     </div>
                   </div>
                   {/*                <p class="s3" style="text-indent: 0pt;line-height: 10pt;text-align: right;">Yes <div class="centerInput"><input className="ARF_Input" type="checkbox" id="horns" name="horns"></div></p>*/}
@@ -398,13 +398,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" name="InjuredPerson" value={InjuredPerson} onChange={(e) => setInjuredPerson(e.target.value)} id="InjuredPerson"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="InjuredPerson" value={"No"} onClick={() => setInjuredPerson("No")} id="InjuredPerson"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" name="InjuredPerson" value={InjuredPerson} onChange={(e) => setInjuredPerson(e.target.value)} id="InjuredPerson"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="InjuredPerson" value={"Unknown"} onChange={() => setInjuredPerson("Unknown")} id="InjuredPerson"  required />
                       </div>
                     </div>
                   </div>
