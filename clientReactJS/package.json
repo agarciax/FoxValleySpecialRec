@@ -2,13 +2,12 @@
   "name": "test2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://agarciax.github.io/",
+  "homepage": "https://agarciax.github.io/FoxValleySpecialRec/",
   "dependencies": {
     "-": "^0.0.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "gh-pages": "^3.2.3",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-confirm-box": "^1.2.0",
@@ -45,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

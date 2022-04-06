@@ -24,7 +24,7 @@ function App() {
             <Route path="/employee" element={<Employee />} />
           </Routes>
           <Routes>
-            <Route path="/" element={<LoginPage />} />
+            <Route path="/FoxValleySpecialRec" element={<LoginPage />} />
           </Routes>
 
           <Routes>

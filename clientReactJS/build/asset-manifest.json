@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/FoxValleySpecialRec/static/css/main.989c1e05.css",
+    "main.js": "/FoxValleySpecialRec/static/js/main.d82baed5.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/FoxValleySpecialRec/static/media/fontawesome-webfont.6878d55e3615ccf40c38.svg",
+    "static/media/fontawesome-webfont.eot": "/FoxValleySpecialRec/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/FoxValleySpecialRec/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/Poppins-Regular.ttf": "/FoxValleySpecialRec/static/media/Poppins-Regular.1c701c9a6b587802e3d0.ttf",
+    "static/media/Poppins-Medium.ttf": "/FoxValleySpecialRec/static/media/Poppins-Medium.b59f6a636397975c5409.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/FoxValleySpecialRec/static/media/Poppins-SemiBold.5981b450a68d5134225b.ttf",
+    "static/media/Poppins-Bold.ttf": "/FoxValleySpecialRec/static/media/Poppins-Bold.e2abc8f5e9a67ea669ea.ttf",
+    "static/media/SpecialRecLogo.png": "/FoxValleySpecialRec/static/media/SpecialRecLogo.5abd975eb99ddce194f0.png",
+    "static/media/bg-01.jpg": "/FoxValleySpecialRec/static/media/bg-01.96faedc8601ef7f8d2c8.jpg",
+    "static/media/Material-Design-Iconic-Font.ttf?v=2.2.0": "/FoxValleySpecialRec/static/media/Material-Design-Iconic-Font.5a588d6a8bfc41d69f88.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/FoxValleySpecialRec/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/FoxValleySpecialRec/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/Material-Design-Iconic-Font.woff?v=2.2.0": "/FoxValleySpecialRec/static/media/Material-Design-Iconic-Font.bd9b02bf1131d90bfe22.woff",
+    "static/media/Material-Design-Iconic-Font.woff2?v=2.2.0": "/FoxValleySpecialRec/static/media/Material-Design-Iconic-Font.6ee80f4bf5d3f92f3bf7.woff2",
+    "index.html": "/FoxValleySpecialRec/index.html",
+    "main.989c1e05.css.map": "/FoxValleySpecialRec/static/css/main.989c1e05.css.map",
+    "main.d82baed5.js.map": "/FoxValleySpecialRec/static/js/main.d82baed5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.989c1e05.css",
+    "static/js/main.d82baed5.js"
+  ]
+}
