@@ -30,7 +30,6 @@ LoginInfo.getAllLoginInfos = function (result) {
         }
     });
 };
-
 LoginInfo.createLoginInfo = function (newIncident, result) {
     sql.query("INSERT INTO Login_Info set ?", newIncident, function (err, res) {
         if (err) {

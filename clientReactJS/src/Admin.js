@@ -19,7 +19,7 @@ const Admin = () => {
 
         <div className="AD_container-login100" style={{backgroundImage: `url(${background})`}}>
           
-          <Link to="/">
+          <Link to="/FoxValleySpecialRec">
           <button className="LogoutButton"  onClick={handleLogout}>
             Log Out
           </button>

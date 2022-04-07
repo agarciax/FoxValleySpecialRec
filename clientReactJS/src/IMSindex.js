@@ -10,8 +10,8 @@ import UseFetch from "./UseFetch";
 
 const LoginPage = () => {
 
-    const { data: logs, isPending, error} = UseFetch('http://localhost:5000/');
-
+    const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/FoxValleySpecialRec');
+    console.log(logs)
 
   // React States
   const [errorMessages, setErrorMessages] = useState({});
