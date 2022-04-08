@@ -73,6 +73,16 @@ ul, li {
 	border: none;
 }
 
+.input100Error {
+  font-family: Poppins-Regular;
+  font-size: 16px;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: #ff0000;
+}
+
 textarea {
   outline: none;
   border: none;

@@ -9,11 +9,10 @@ import { Link } from "react-router-dom";
 import UseFetch from "./UseFetch";
 
 const LoginPage = () => {
+    const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/');
 
-    const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/FoxValleySpecialRec');
-    console.log(logs)
 
-  // React States
+    // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -44,11 +43,17 @@ const LoginPage = () => {
     event.preventDefault();
 
 
+      // User Login info
+      const db = [];
+      for (let i = 0; i < logs.length; i++) {
+          db.push({username : logs[i].username, password : logs[i].password});
+      }
+
       var { uname, pass } = document.forms[0];
 
 
     // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
+    const userData = db.find((user) => user.username === uname.value);
 
     // Compare user info
     if (userData) {
