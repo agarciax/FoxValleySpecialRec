@@ -51,10 +51,10 @@ module.exports = function (app) {
 
     var login = require('../controller/authenticationAppController')
     app.route('/')
-        .get(login.list_all_users()) //Not Tested
-        .post(login.createLoginInfo()) //Not Tested
+        .get(login.list_all_users) //Not Tested
+        .post(login.createLoginInfo) //Not Tested
     app.route('/:user_id')
-        .get(login.read_loginInfo()) //Not Tested
+        .get(login.read_loginInfo) //Not Tested
         .delete(login.deleteLoginInfo) //Not Tested
 
 };
