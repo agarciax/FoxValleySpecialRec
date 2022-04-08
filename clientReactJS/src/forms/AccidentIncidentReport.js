@@ -43,6 +43,7 @@ const AccidentReport = () => {
   const [FirstAidGiven, setFirstAidGiven] = useState('');
   const [CprOrAed, setCprOrAed] = useState('');
   const [ParamedicsOffered, setParamedicsOffered] = useState('');
+  const [WerePoliceCalled, setWerePoliceCalled] = useState("");
   const [PoliceDepName, setPoliceDepName] = useState('');
   const [OfficerName, setOfficerName] = useState('');
   const [DidYouExpectAClaim, setDidYouExpectAClaim] = useState('');
@@ -55,7 +56,6 @@ const AccidentReport = () => {
   const [PropDamState, setPropDamState] = useState('');
   const [PropDamZip, setPropDamZip] = useState('');
   const [PropDamDescription, setPropDamDescription] = useState('');
-  const [Witness, setWitness] = useState('');
   const [WitnessLName, setWitnessLName] = useState('');
   const [WitnessFName, setWitnessFName] = useState('');
   const [WitnessAddress, setWitnessAddress] = useState('');
@@ -63,7 +63,6 @@ const AccidentReport = () => {
   const [WitnessState, setWitnessState] = useState('');
   const [WitnessZip, setWitnessZip] = useState('');
   const [WitnessPhoneNum, setWitnessPhoneNum] = useState('');
-  const [PropDamageDescByWitness, setPropDamageDescByWitness] = useState('');
   const [WitnessStatement, setWitnessStatement] = useState('');
   const [WitnessSaid, setWitnessSaid] = useState('');
   const [WitnessLocationDuringIncident, setWitnessLocationDuringIncident] = useState('');
@@ -112,11 +111,12 @@ const AccidentReport = () => {
       "What_first_aid_was_given" : FirstAidGiven,
       "Did_first_aid_involve_AED_and_or_CPR" : CprOrAed,
       "Were_paramedic_services_offered" : ParamedicsOffered,
+      "Were_Police_Called": WerePoliceCalled,
       "Name_of_the_police_department" : PoliceDepName,
       "Name_of_the_officer" : OfficerName,
       "did_you_expect_this_person_submit_a_claim" : DidYouExpectAClaim,
       "Was_Property_Damaged_As_A_Result_Of_This_AccidentOrIncident" : WasPropDamaged,
-      //"If_Yes_How_Was_The_Person_Involved_In_The_AccidentOrIncident" : HowWasPropDamaged,
+      "If_Yes_How_Was_The_Person_Involved_In_The_AccidentOrIncident" : HowWasPersonInvolved,
       "last_name_Property_damage" : PropDamageLName,
       "first_name_Property_damage" : PropDamageFName,
       "Address_Property_damage" : PropDamAddress,
@@ -124,7 +124,6 @@ const AccidentReport = () => {
       "state_Property_damage" : PropDamState,
       "zip_code_Property_damage" : PropDamZip,
       "Describe_the_property_damage" : PropDamDescription,
-      "If_There_Was_A_Witness_To_The_AccidentOrIncident" : Witness,
       "Last_name_witness_information" : WitnessLName,
       "first_name_witness_information" : WitnessFName,
       "Address_witness_information" : WitnessAddress,
@@ -132,7 +131,6 @@ const AccidentReport = () => {
       "State_witness_information" : WitnessState,
       "zip_code_witness_information" : WitnessZip,
       "phone_number_witness_information" : WitnessPhoneNum,
-      "Describe_the_property_damage_witness_information" : PropDamageDescByWitness,
       "did_Witness_make_any_statements" : WitnessStatement,
       "If_yes_what_did_witness_say" : WitnessSaid,
       "Where_was_witness_when_the_accident" : WitnessLocationDuringIncident
@@ -478,13 +476,13 @@ return (
                       <div className="ARF_s3">Sex</div>
                       <div className="ARF_s3-left">Male</div>
                       <div className="ARF_input-right">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Male" name="EmpSex" value={EmpSex} onChange={(e) => setEmpSex(e.target.value)} id="EmpSex"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Male" name="EmpSex" value={"M"} onClick={() => setEmpSex("M")} id="EmpSex"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-left">Female</div>
                       <div className="ARF_input-right">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Female" name="EmpSex" value={EmpSex} onChange={(e) => setEmpSex(e.target.value)} id="EmpSex"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Female" name="EmpSex" value={"F"} onClick={() => setEmpSex("F")} id="EmpSex"  required />
 
                       </div>
                     </div>
@@ -503,7 +501,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" name="IsInjuredPersonAgencyVolunteer" value={IsInjuredPersonAgencyVolunteer} onChange={(e) => setIsInjuredPersonAgencyVolunteer(e.target.value)} id="IsInjuredPersonAgencyVolunteer"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="IsInjuredPersonAgencyVolunteer" value={"Yes"} onClick={() => setIsInjuredPersonAgencyVolunteer("Yes")} id="IsInjuredPersonAgencyVolunteer"  required />
 
                     </div>
                   </div>
@@ -514,13 +512,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" name="IsInjuredPersonAgencyVolunteer" value={IsInjuredPersonAgencyVolunteer} onChange={(e) => setIsInjuredPersonAgencyVolunteer(e.target.value)} id="IsInjuredPersonAgencyVolunteer"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="IsInjuredPersonAgencyVolunteer" value={"No"} onChange={() => setIsInjuredPersonAgencyVolunteer("No")} id="IsInjuredPersonAgencyVolunteer"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" name="IsInjuredPersonAgencyVolunteer" value={IsInjuredPersonAgencyVolunteer} onChange={(e) => setIsInjuredPersonAgencyVolunteer(e.target.value)} id="IsInjuredPersonAgencyVolunteer"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="IsInjuredPersonAgencyVolunteer" value={"Unknown"} onChange={() => setIsInjuredPersonAgencyVolunteer("Unknown")} id="IsInjuredPersonAgencyVolunteer"  required />
                       </div>
                     </div>
                   </div>
@@ -547,7 +545,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" name="InjuredStatements" value={InjuredStatements} onChange={(e) => setInjuredStatements(e.target.value)} id="InjuredStatements"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="InjuredStatements" value={"Yes"} onChange={() => setInjuredStatements("Yes")} id="InjuredStatements"  required />
                     </div>
                   </div>
                 </td>
@@ -557,13 +555,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" name="InjuredStatements" value={InjuredStatements} onChange={(e) => setInjuredStatements(e.target.value)} id="InjuredStatements"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="InjuredStatements" value={"No"} onChange={() => setInjuredStatements("No")} id="InjuredStatements"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" name="InjuredStatements" value={InjuredStatements} onChange={(e) => setInjuredStatements(e.target.value)} id="InjuredStatements"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="InjuredStatements" value={"Unknown"} onChange={() => setInjuredStatements("Unknown")} id="InjuredStatements"  required />
                       </div>
                     </div>
                   </div>
@@ -631,7 +629,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" name="FirstAid" value={FirstAid} onChange={(e) => setFirstAid(e.target.value)} id="FirstAid"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="FirstAid" value={"Yes"} onChange={() => setFirstAid("Yes")} id="FirstAid"  required />
                     </div>
                   </div>
                 </td>
@@ -641,13 +639,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" name="FirstAid" value={FirstAid} onChange={(e) => setFirstAid(e.target.value)} id="FirstAid"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="FirstAid" value={"No"} onChange={() => setFirstAid("No")} id="FirstAid"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" name="FirstAid" value={FirstAid} onChange={(e) => setFirstAid(e.target.value)} id="FirstAid"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="FirstAid" value={"Unknown"} onChange={() => setFirstAid("Unknown")} id="FirstAid"  required />
                       </div>
                     </div>
                   </div>
@@ -676,7 +674,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" name="CprOrAed" value={CprOrAed} onChange={(e) => setCprOrAed(e.target.value)} id="CprOrAed"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="CprOrAed" value={"Yes"} onChange={() => setCprOrAed("Yes")} id="CprOrAed"  required />
                     </div>
                   </div>
                 </td>
@@ -686,13 +684,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" name="CprOrAed" value={CprOrAed} onChange={(e) => setCprOrAed(e.target.value)} id="CprOrAed"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="CprOrAed" value={"No"} onChange={() => setCprOrAed("No")} id="CprOrAed"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" name="CprOrAed" value={CprOrAed} onChange={(e) => setCprOrAed(e.target.value)} id="CprOrAed"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="CprOrAed" value={"Unknown"} onChange={() => setCprOrAed("Unknown")} id="CprOrAed"  required />
                       </div>
                     </div>
                   </div>
@@ -714,11 +712,11 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Called and refused (at scene by patron)
-                      <input className="ARF_Input" type="checkbox" defaultValue="CalledAndRefused" name="ParamedicsOffered" value={ParamedicsOffered} onChange={(e) => setParamedicsOffered(e.target.value)} id="ParamedicsOffered"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="CalledAndRefused" name="ParamedicsOffered" value={"CalledAndRefused"} onClick={() => setParamedicsOffered("CalledAndRefused")} id="ParamedicsOffered" required />
                     </div>
                     <div className="ARF_s3">
                       Offered and called
-                      <input className="ARF_Input" type="checkbox" defaultValue="OfferedAndCalled" name="ParamedicsOffered" value={ParamedicsOffered} onChange={(e) => setParamedicsOffered(e.target.value)} id="ParamedicsOffered"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="OfferedAndCalled" name="ParamedicsOffered" value={"OfferedAndCalled"} onClick={() => setParamedicsOffered("OfferedAndCalled")} id="ParamedicsOffered"  required />
                     </div>
                   </div>
                 </td>
@@ -729,11 +727,11 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Offered and refused
-                      <input className="ARF_Input" type="checkbox" defaultValue="OfferedAndRefused" name="ParamedicsOffered" value={ParamedicsOffered} onChange={(e) => setParamedicsOffered(e.target.value)} id="ParamedicsOffered"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="OfferedAndRefused" name="ParamedicsOffered" value={"OfferedAndRefused"} onClick={() => setParamedicsOffered("OfferedAndRefused")} id="ParamedicsOffered"  required />
                     </div>
                     <div className="ARF_s3">
                       Offered, refused, called by agency anyway
-                      <input className="ARF_Input" type="checkbox" defaultValue="OfferedAndRefusedButCalledByAgency" name="ParamedicsOffered" value={ParamedicsOffered} onChange={(e) => setParamedicsOffered(e.target.value)} id="ParamedicsOffered"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="OfferedAndRefusedButCalledByAgency" name="ParamedicsOffered" value={"OfferedAndRefusedButCalledByAgency"} onClick={() => setParamedicsOffered("OfferedAndRefusedButCalledByAgency")} id="ParamedicsOffered"  required />
                     </div>
                   </div>
                 </td>
@@ -744,7 +742,7 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Unable to respond and called
-                      <input className="ARF_Input" type="checkbox" defaultValue="UnableToRespond" name="ParamedicsOffered" value={ParamedicsOffered} onChange={(e) => setParamedicsOffered(e.target.value)} id="ParamedicsOffered"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="UnableToRespond" name="ParamedicsOffered" value={"UnableToRespond"} onClick={() => setParamedicsOffered("UnableToRespond")} id="ParamedicsOffered"  required />
                     </div>
                     <div />
                   </div>
@@ -755,7 +753,6 @@ return (
 
 
 
-                {/*I didn't have a field inside the database. I can add this as a useState if needed*/}
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p className="ARF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>
                     Were police called?</p>
@@ -764,9 +761,17 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" id="PoliceWereCalled" name="PoliceWereCalled" />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" id="PoliceWereCalled" onClick={() => setWerePoliceCalled("Yes")} name="PoliceWereCalled" />
                     </div>
                   </div>
+
+                  <div className="ARF_inputGrid">
+                    <div className="ARF_s3-right">No</div>
+                    <div className="ARF_centerInput">
+                      <input className="ARF_Input" type="radio" defaultValue="No" id="PoliceWereCalled" onClick={() => setWerePoliceCalled("No")} name="PoliceWereCalled" />
+                    </div>
+                  </div>
+
                 </td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <div className="ARF_s3">If yes, provide the following information:</div>
@@ -794,7 +799,7 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" name="DidYouExpectAClaim" value={DidYouExpectAClaim} onChange={(e) => setDidYouExpectAClaim(e.target.value)} id="DidYouExpectAClaim"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="DidYouExpectAClaim" value={"Yes"} onClick={() => setDidYouExpectAClaim("Yes")} id="DidYouExpectAClaim"  required />
                     </div>
                   </div>
                 </td>
@@ -803,13 +808,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" name="DidYouExpectAClaim" value={DidYouExpectAClaim} onChange={(e) => setDidYouExpectAClaim(e.target.value)} id="DidYouExpectAClaim"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="DidYouExpectAClaim" value={"No"} onClick={() => setDidYouExpectAClaim("No")} id="DidYouExpectAClaim"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" name="DidYouExpectAClaim" value={DidYouExpectAClaim} onChange={(e) => setDidYouExpectAClaim(e.target.value)} id="DidYouExpectAClaim"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="DidYouExpectAClaim" value={"Unknown"} onClick={() => setDidYouExpectAClaim("Unknown")} id="DidYouExpectAClaim"  required />
                       </div>
                     </div>
                   </div>
@@ -830,7 +835,7 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" name="WasPropDamaged" value={WasPropDamaged} onChange={(e) => setWasPropDamaged(e.target.value)} id="WasPropDamaged"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="WasPropDamaged" value={"Yes"} onClick={() => setWasPropDamaged("Yes")} id="WasPropDamaged"  required />
                     </div>
                   </div>
                   {/*                <p class="s3" style="text-indent: 0pt;line-height: 10pt;text-align: right;">Yes <div class="centerInput"><input className="ARF_Input" type="checkbox" id="horns" name="horns"></div></p>*/}
@@ -840,13 +845,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" name="WasPropDamaged" value={WasPropDamaged} onChange={(e) => setWasPropDamaged(e.target.value)} id="WasPropDamaged"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="WasPropDamaged" value={"No"} onClick={() => setWasPropDamaged("No")} id="WasPropDamaged"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" name="WasPropDamaged" value={WasPropDamaged} onChange={(e) => setWasPropDamaged(e.target.value)} id="WasPropDamaged"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="WasPropDamaged" value={"Unknown"} onClick={() => setWasPropDamaged("Unknown")} id="WasPropDamaged"  required />
                       </div>
                     </div>
                   </div>
@@ -865,11 +870,11 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Owner of property adjacent to park district
-                      <input className="ARF_Input" type="checkbox" defaultValue="OwnerOfPropertyAdjacentToParkDistrict" name="HowWasPersonInvolved" value={HowWasPersonInvolved} onChange={(e) => setHowWasPersonInvolved(e.target.value)} id="HowWasPersonInvolved"   />
+                      <input className="ARF_Input" type="radio" defaultValue="OwnerOfPropertyAdjacentToParkDistrict" name="HowWasPersonInvolved" value={"OwnerOfPropertyAdjacentToParkDistrict"} onClick={() => setHowWasPersonInvolved("OwnerOfPropertyAdjacentToParkDistrict")} id="HowWasPersonInvolved"   />
                     </div>
                     <div className="ARF_s3">
                       Patron
-                      <input className="ARF_Input" type="checkbox" defaultValue="Patron" name="HowWasPersonInvolved" value={HowWasPersonInvolved} onChange={(e) => setHowWasPersonInvolved(e.target.value)} id="HowWasPersonInvolved"   />
+                      <input className="ARF_Input" type="radio" defaultValue="Patron" name="HowWasPersonInvolved" value={"Patron"} onClick={() => setHowWasPersonInvolved("Patron")} id="HowWasPersonInvolved"   />
                     </div>
                   </div>
                 </td>
@@ -880,11 +885,11 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Vehicle Owner
-                      <input className="ARF_Input" type="checkbox" defaultValue="VehicleOwner" name="HowWasPersonInvolved" value={HowWasPersonInvolved} onChange={(e) => setHowWasPersonInvolved(e.target.value)} id="HowWasPersonInvolved"   />
+                      <input className="ARF_Input" type="radio" defaultValue="VehicleOwner" name="HowWasPersonInvolved" value={"VehicleOwner"} onChange={() => setHowWasPersonInvolved("VehicleOwner")} id="HowWasPersonInvolved"   />
                     </div>
                     <div className="ARF_s3">
                       Other
-                      <input className="ARF_Input" type="checkbox" defaultValue="Other" name="HowWasPersonInvolved" value={HowWasPersonInvolved} onChange={(e) => setHowWasPersonInvolved(e.target.value)} id="HowWasPersonInvolved"   />
+                      <input className="ARF_Input" type="radio" defaultValue="Other" name="HowWasPersonInvolved" value={"Other"} onChange={() => setHowWasPersonInvolved("Other")} id="HowWasPersonInvolved"   />
                     </div>
                   </div>
                 </td>
@@ -940,7 +945,7 @@ return (
               <tr style={{height: '32pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Describe the property damage</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PropertyDamageDescription" name="PropertyDamageDescription" /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" id="PropertyDamageDescription" name="PropertyDamageDescription" value={PropDamDescription} onChange={(e) => setPropDamDescription(e.target.value)} /></div>
                 </td>
               </tr>
               <tr style={{height: '23pt'}}>
@@ -1023,7 +1028,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="checkbox" defaultValue="Yes" name="WitnessStatement" value={WitnessStatement} onChange={(e) => setWitnessStatement(e.target.value)} id="WitnessStatement"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="WitnessStatement" value={"Yes"} onClick={() => setWitnessStatement("Yes")} id="WitnessStatement"  required />
                     </div>
                   </div>
                 </td>
@@ -1033,21 +1038,18 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="No" name="WitnessStatement" value={WitnessStatement} onChange={(e) => setWitnessStatement(e.target.value)} id="WitnessStatement"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="WitnessStatement" value={"No"} onClick={() => setWitnessStatement("No")} id="WitnessStatement"  required />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="checkbox" defaultValue="Unknown" name="WitnessStatement" value={WitnessStatement} onChange={(e) => setWitnessStatement(e.target.value)} id="WitnessStatement"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="WitnessStatement" value={"Unknown"} onClick={() => setWitnessStatement("Unknown")} id="WitnessStatement"  required />
                       </div>
                     </div>
                   </div>
                 </td>
               </tr>
-
-            {/*<input type="text" name="PropDamageDescByWitness" value={PropDamageDescByWitness} onChange={(e) => setPropDamageDescByWitness(e.target.value)} id="PropDamageDescByWitness"   />*/}
-            {/*The phpMyAdmin includes a field that prompts the user for the property damage that the witness sees but i don't see any fields here to put that so here is the code if needed.*/}
 
               <tr style={{height: '36pt'}}>
                 <td className="ARF_blue-boxes">
@@ -1072,7 +1074,6 @@ return (
           </table>
           <div className="ARF_bottom-space" />
         </div>
-
           </form>
         </div>
 
