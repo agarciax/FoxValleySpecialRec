@@ -84,7 +84,6 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
     }).then(() => {
       alert("Report has been submitted!")
       navigate(-1) //Redirects page
-
     })
 
   }
