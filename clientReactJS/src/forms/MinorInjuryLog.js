@@ -37,7 +37,8 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
       body: JSON.stringify(minorInjuryLogObj)
     }).then(() => {
       alert("Log has been reported.")
-      navigate('/login') //Redirects page
+      navigate(-1) //Redirects page
+
     })
 
   }

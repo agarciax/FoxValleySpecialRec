@@ -82,8 +82,9 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(propertyLossReportObj)
     }).then(() => {
-      alert("Log has been reported.")
-      navigate('/login') //Redirects page
+      alert("Report has been submitted!")
+      navigate(-1) //Redirects page
+
     })
 
   }

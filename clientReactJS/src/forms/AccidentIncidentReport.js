@@ -143,7 +143,7 @@ const AccidentReport = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(accidentReportObj)
     }).then(() => {
-      alert("Log has been reported.")
+      alert("Report has been submitted!")
       navigate(-1) //Redirects page
     })
 
