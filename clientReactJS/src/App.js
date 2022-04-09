@@ -13,6 +13,7 @@ import PrivateRoute from "./PrivateRoute";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import ViewNotificationOfInjuryToEmployer from "./tables/viewNotificationOfInjuryToEmployerReport";
+import ViewAccidentIncident from "./tables/viewAccidentIncidentReport";
 
 function App() {
   return (
@@ -64,6 +65,9 @@ function App() {
           </Routes>
           <Routes>
             <Route path={"/form/viewNotificationOfInjuryToEmployerReport"} element={<ViewNotificationOfInjuryToEmployer />} />
+          </Routes>
+          <Routes>
+            <Route path={"/form/viewAccidentIncidentReport"} element={<ViewAccidentIncident />} />
           </Routes>
         </div>
       </div>

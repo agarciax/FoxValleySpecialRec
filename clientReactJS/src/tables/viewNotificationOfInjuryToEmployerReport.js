@@ -12,7 +12,7 @@ const viewNotificationOfInjuryToEmployerReport = () => {
 
     const handleDelete = async (e, employee_injury_id) => {
         e.preventDefault();
-        const result = await confirm("Are you sure?");
+        const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
             fetch('http://127.0.0.1:5000/fvsra/notificationOfInjuryToEmployerReport/' + employee_injury_id, {
                 method: 'DELETE'
@@ -71,7 +71,6 @@ return (
                             <td>{moment.utc(reports.Date_of_Incident).format('MM/DD/YYYY')}</td>
                             <td>{reports.Employee_Name}</td>
                             <td><button type="button" onClick={(e) => handleDelete(e, reports.employee_injury_id)}>Delete {reports.employee_injury_id}</button>
-                                <button type={"button"}>Edit {reports.employee_injury_id}</button>
                             </td>
                         </tr>
                     ))}

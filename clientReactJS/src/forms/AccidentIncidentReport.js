@@ -5,7 +5,7 @@ import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 const AccidentReport = () => {
-  const [AgencyName, setAgencyName] = useState('');
+  const [AgencyName, setAgencyName] = useState('Fox Valley Special Recreation Association');
   const [TodaysDate, setTodaysDate] = useState('');
   const [IncidentDate, setIncidentDate] = useState('');
   const [IncidentTime, setIncidentTime] = useState('');
@@ -55,6 +55,7 @@ const AccidentReport = () => {
   const [PropDamCity, setPropDamCity] = useState('');
   const [PropDamState, setPropDamState] = useState('');
   const [PropDamZip, setPropDamZip] = useState('');
+  const [PropDamPhone, setPropDamPhone] = useState("");
   const [PropDamDescription, setPropDamDescription] = useState('');
   const [WitnessLName, setWitnessLName] = useState('');
   const [WitnessFName, setWitnessFName] = useState('');
@@ -76,7 +77,7 @@ const AccidentReport = () => {
       "Agency_Name" : AgencyName,
       "Todays_Date" : TodaysDate,
       "Date_of_Incident" : IncidentDate,
-      "Time_of_Incident" : IncidentTime,
+      "Time_of_incident" : IncidentTime,
       "Name_of_the_person_Completing_the_report" : PersonCompletingFormName,
       "Title_Of_Person_Completing_the_report" : PersonCompletingFormTitle,
       "Business_Phone" : BusinessPhone,
@@ -123,6 +124,7 @@ const AccidentReport = () => {
       "city_Property_damage" : PropDamCity,
       "state_Property_damage" : PropDamState,
       "zip_code_Property_damage" : PropDamZip,
+      "phone_num_Property_Damage": PropDamPhone,
       "Describe_the_property_damage" : PropDamDescription,
       "Last_name_witness_information" : WitnessLName,
       "first_name_witness_information" : WitnessFName,
@@ -141,8 +143,8 @@ const AccidentReport = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(accidentReportObj)
     }).then(() => {
-      alert("Log has been reported.")
-      navigate('/login') //Redirects page
+      alert("Report has been submitted!")
+      navigate(-1) //Redirects page
     })
 
   }
@@ -316,22 +318,22 @@ return (
               <tr style={{height: '32pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Street address</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" name="StreetAddress" value={StreetAddress} onChange={(e) => setStreetAddress(e.target.value)} id="StreetAddress" required /></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" name="StreetAddress" value={StreetAddress} onChange={(e) => setStreetAddress(e.target.value)} id="StreetAddress" /></div>
                 </td>
               </tr>
               <tr style={{height: '27pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="ARF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>City</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" name="City" value={City} onChange={(e) => setCity(e.target.value)} id="City" required/></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" name="City" value={City} onChange={(e) => setCity(e.target.value)} id="City"/></div>
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="ARF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>State</p>
-                  <div className="ARF_endInput"><input className="ARF_Input" type="text" placeholder="i.e. Illinois" name="State" value={State} onChange={(e) => setState(e.target.value)} id="State" required/></div>
+                  <div className="ARF_endInput"><input className="ARF_Input" type="text" placeholder="i.e. Illinois" name="State" value={State} onChange={(e) => setState(e.target.value)} id="State" /></div>
                 </td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ARF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Zip code</p>
-                  <input className="ARF_Input" type="tel" placeholder="00000" name="ZipCode" pattern="[0-9]{5}" value={ZipCode} onChange={(e) => setZipCode(e.target.value)} id="ZipCode"  required />
+                  <input className="ARF_Input" type="tel" placeholder="00000" name="ZipCode" pattern="[0-9]{5}" value={ZipCode} onChange={(e) => setZipCode(e.target.value)} id="ZipCode"   />
                 </td>
               </tr>
               <tr style={{height: '5pt'}}>
@@ -445,7 +447,7 @@ return (
                 </td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ARF_s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Zip code</p>
-                  <input className="ARF_Input" type="tel"  name="EmpZip" value={EmpZip} onChange={(e) => setEmpZip(e.target.value)} id="EmpZip" placeholder="00000"  pattern="[0-9]{5}" required />
+                  <input className="ARF_Input" type="tel"  name="EmpZip" value={EmpZip} onChange={(e) => setEmpZip(e.target.value)} id="EmpZip" placeholder="00000"  pattern="[0-9]{5}" />
                 </td>
               </tr>
               <tr style={{height: '29pt'}}>
@@ -476,13 +478,13 @@ return (
                       <div className="ARF_s3">Sex</div>
                       <div className="ARF_s3-left">Male</div>
                       <div className="ARF_input-right">
-                        <input className="ARF_Input" type="radio" defaultValue="Male" name="EmpSex" value={"M"} onClick={() => setEmpSex("M")} id="EmpSex"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Male" name="EmpSex" value={"M"} onClick={() => setEmpSex("M")} id="EmpSex"   />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-left">Female</div>
                       <div className="ARF_input-right">
-                        <input className="ARF_Input" type="radio" defaultValue="Female" name="EmpSex" value={"F"} onClick={() => setEmpSex("F")} id="EmpSex"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Female" name="EmpSex" value={"F"} onClick={() => setEmpSex("F")} id="EmpSex"  />
 
                       </div>
                     </div>
@@ -501,7 +503,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="IsInjuredPersonAgencyVolunteer" value={"Yes"} onClick={() => setIsInjuredPersonAgencyVolunteer("Yes")} id="IsInjuredPersonAgencyVolunteer"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="IsInjuredPersonAgencyVolunteer" value={"Yes"} onClick={() => setIsInjuredPersonAgencyVolunteer("Yes")} id="IsInjuredPersonAgencyVolunteer"   />
 
                     </div>
                   </div>
@@ -512,13 +514,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="No" name="IsInjuredPersonAgencyVolunteer" value={"No"} onChange={() => setIsInjuredPersonAgencyVolunteer("No")} id="IsInjuredPersonAgencyVolunteer"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="IsInjuredPersonAgencyVolunteer" value={"No"} onChange={() => setIsInjuredPersonAgencyVolunteer("No")} id="IsInjuredPersonAgencyVolunteer"   />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="IsInjuredPersonAgencyVolunteer" value={"Unknown"} onChange={() => setIsInjuredPersonAgencyVolunteer("Unknown")} id="IsInjuredPersonAgencyVolunteer"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="IsInjuredPersonAgencyVolunteer" value={"Unknown"} onChange={() => setIsInjuredPersonAgencyVolunteer("Unknown")} id="IsInjuredPersonAgencyVolunteer"  />
                       </div>
                     </div>
                   </div>
@@ -545,7 +547,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="InjuredStatements" value={"Yes"} onChange={() => setInjuredStatements("Yes")} id="InjuredStatements"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="InjuredStatements" value={"Yes"} onChange={() => setInjuredStatements("Yes")} id="InjuredStatements"   />
                     </div>
                   </div>
                 </td>
@@ -555,13 +557,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="No" name="InjuredStatements" value={"No"} onChange={() => setInjuredStatements("No")} id="InjuredStatements"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="InjuredStatements" value={"No"} onChange={() => setInjuredStatements("No")} id="InjuredStatements"   />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="InjuredStatements" value={"Unknown"} onChange={() => setInjuredStatements("Unknown")} id="InjuredStatements"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="InjuredStatements" value={"Unknown"} onChange={() => setInjuredStatements("Unknown")} id="InjuredStatements"   />
                       </div>
                     </div>
                   </div>
@@ -629,7 +631,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="FirstAid" value={"Yes"} onChange={() => setFirstAid("Yes")} id="FirstAid"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="FirstAid" value={"Yes"} onChange={() => setFirstAid("Yes")} id="FirstAid"   />
                     </div>
                   </div>
                 </td>
@@ -639,13 +641,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="No" name="FirstAid" value={"No"} onChange={() => setFirstAid("No")} id="FirstAid"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="FirstAid" value={"No"} onChange={() => setFirstAid("No")} id="FirstAid"   />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="FirstAid" value={"Unknown"} onChange={() => setFirstAid("Unknown")} id="FirstAid"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="FirstAid" value={"Unknown"} onChange={() => setFirstAid("Unknown")} id="FirstAid"   />
                       </div>
                     </div>
                   </div>
@@ -653,7 +655,8 @@ return (
               </tr>
               <tr style={{height: '32pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
-                <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Name and position of person who administered first aid</p>
+                <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
+                  <p className="ARF_s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Name and position of person who administered first aid</p>
                   <div className="ARF_endInput"><input className="ARF_Input" type="text" name="PersonAndPositionOfFirstAidGiver" value={PersonAndPositionOfFirstAidGiver} onChange={(e) => setPersonAndPositionOfFirstAidGiver(e.target.value)} id="PersonAndPositionOfFirstAidGiver"  /></div>
                 </td>
               </tr>
@@ -674,7 +677,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="CprOrAed" value={"Yes"} onChange={() => setCprOrAed("Yes")} id="CprOrAed"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="CprOrAed" value={"Yes"} onChange={() => setCprOrAed("Yes")} id="CprOrAed"  />
                     </div>
                   </div>
                 </td>
@@ -684,13 +687,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="No" name="CprOrAed" value={"No"} onChange={() => setCprOrAed("No")} id="CprOrAed"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="CprOrAed" value={"No"} onChange={() => setCprOrAed("No")} id="CprOrAed"  />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="CprOrAed" value={"Unknown"} onChange={() => setCprOrAed("Unknown")} id="CprOrAed"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="CprOrAed" value={"Unknown"} onChange={() => setCprOrAed("Unknown")} id="CprOrAed"  />
                       </div>
                     </div>
                   </div>
@@ -712,11 +715,11 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Called and refused (at scene by patron)
-                      <input className="ARF_Input" type="radio" defaultValue="CalledAndRefused" name="ParamedicsOffered" value={"CalledAndRefused"} onClick={() => setParamedicsOffered("CalledAndRefused")} id="ParamedicsOffered" required />
+                      <input className="ARF_Input" type="radio" defaultValue="CalledAndRefused" name="ParamedicsOffered" value={"CalledAndRefused"} onClick={() => setParamedicsOffered("CalledAndRefused")} id="ParamedicsOffered"  />
                     </div>
                     <div className="ARF_s3">
                       Offered and called
-                      <input className="ARF_Input" type="radio" defaultValue="OfferedAndCalled" name="ParamedicsOffered" value={"OfferedAndCalled"} onClick={() => setParamedicsOffered("OfferedAndCalled")} id="ParamedicsOffered"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="OfferedAndCalled" name="ParamedicsOffered" value={"OfferedAndCalled"} onClick={() => setParamedicsOffered("OfferedAndCalled")} id="ParamedicsOffered"   />
                     </div>
                   </div>
                 </td>
@@ -727,11 +730,11 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Offered and refused
-                      <input className="ARF_Input" type="radio" defaultValue="OfferedAndRefused" name="ParamedicsOffered" value={"OfferedAndRefused"} onClick={() => setParamedicsOffered("OfferedAndRefused")} id="ParamedicsOffered"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="OfferedAndRefused" name="ParamedicsOffered" value={"OfferedAndRefused"} onClick={() => setParamedicsOffered("OfferedAndRefused")} id="ParamedicsOffered"   />
                     </div>
                     <div className="ARF_s3">
                       Offered, refused, called by agency anyway
-                      <input className="ARF_Input" type="radio" defaultValue="OfferedAndRefusedButCalledByAgency" name="ParamedicsOffered" value={"OfferedAndRefusedButCalledByAgency"} onClick={() => setParamedicsOffered("OfferedAndRefusedButCalledByAgency")} id="ParamedicsOffered"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="OfferedAndRefusedButCalledByAgency" name="ParamedicsOffered" value={"OfferedAndRefusedButCalledByAgency"} onClick={() => setParamedicsOffered("OfferedAndRefusedButCalledByAgency")} id="ParamedicsOffered"   />
                     </div>
                   </div>
                 </td>
@@ -742,7 +745,7 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3">
                       Unable to respond and called
-                      <input className="ARF_Input" type="radio" defaultValue="UnableToRespond" name="ParamedicsOffered" value={"UnableToRespond"} onClick={() => setParamedicsOffered("UnableToRespond")} id="ParamedicsOffered"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="UnableToRespond" name="ParamedicsOffered" value={"UnableToRespond"} onClick={() => setParamedicsOffered("UnableToRespond")} id="ParamedicsOffered"  />
                     </div>
                     <div />
                   </div>
@@ -761,14 +764,14 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="radio" defaultValue="Yes" id="PoliceWereCalled" onClick={() => setWerePoliceCalled("Yes")} name="PoliceWereCalled" />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" id="PoliceWereCalled" onClick={() => setWerePoliceCalled("Yes")} name="PoliceWereCalled"  />
                     </div>
                   </div>
 
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">No</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="radio" defaultValue="No" id="PoliceWereCalled" onClick={() => setWerePoliceCalled("No")} name="PoliceWereCalled" />
+                      <input className="ARF_Input" type="radio" defaultValue="No" id="PoliceWereCalled" onClick={() => setWerePoliceCalled("No")} name="PoliceWereCalled"  />
                     </div>
                   </div>
 
@@ -799,7 +802,7 @@ return (
                   <div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="DidYouExpectAClaim" value={"Yes"} onClick={() => setDidYouExpectAClaim("Yes")} id="DidYouExpectAClaim"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="DidYouExpectAClaim" value={"Yes"} onClick={() => setDidYouExpectAClaim("Yes")} id="DidYouExpectAClaim"   />
                     </div>
                   </div>
                 </td>
@@ -808,13 +811,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="No" name="DidYouExpectAClaim" value={"No"} onClick={() => setDidYouExpectAClaim("No")} id="DidYouExpectAClaim"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="DidYouExpectAClaim" value={"No"} onClick={() => setDidYouExpectAClaim("No")} id="DidYouExpectAClaim"   />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="DidYouExpectAClaim" value={"Unknown"} onClick={() => setDidYouExpectAClaim("Unknown")} id="DidYouExpectAClaim"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="DidYouExpectAClaim" value={"Unknown"} onClick={() => setDidYouExpectAClaim("Unknown")} id="DidYouExpectAClaim"   />
                       </div>
                     </div>
                   </div>
@@ -861,7 +864,8 @@ return (
                 <td className="ARF_blue-boxes">
                   17
                 </td>
-                <td colSpan={3} style={{width: '526pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingRight: '9pt', textIndent: '0pt', textAlign: 'left'}}>If yes, how was the person involved in the accident/incident?</p>
+                <td colSpan={3} style={{width: '526pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
+                  <p className="ARF_s3" style={{paddingRight: '9pt', textIndent: '0pt', textAlign: 'left'}}>If yes, how was the person involved in the accident/incident?</p>
                 </td>
               </tr>
               <tr style={{height: '20pt'}}>
@@ -937,7 +941,7 @@ return (
                     </div>
                     <div className="ARF_s3">
                       Phone number
-                      <div className="ARF_endInput"><input className="ARF_Input" type="text" name="PropDamDescription" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={PropDamDescription} onChange={(e) => setPropDamDescription(e.target.value)} id="PropDamDescription"   /></div>
+                      <div className="ARF_endInput"><input className="ARF_Input" type="text" name="PropDamPhone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={PropDamPhone} onChange={(e) => setPropDamPhone(e.target.value)} id="PropDamPhone"   /></div>
                     </div>
                   </div>
                 </td>
@@ -957,7 +961,8 @@ return (
                 <td className="ARF_blue-boxes">
                   19
                 </td>
-                <td colSpan={3} style={{width: '526pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="ARF_s3" style={{paddingRight: '9pt', textIndent: '0pt', textAlign: 'left'}}>If there was a witness(es) to the accident/incident, please provide the following information:</p>
+                <td colSpan={3} style={{width: '526pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
+                  <p className="ARF_s3" style={{paddingRight: '9pt', textIndent: '0pt', textAlign: 'left'}}>If there was a witness(es) to the accident/incident, please provide the following information:</p>
                 </td>
               </tr>
 
@@ -1028,7 +1033,7 @@ return (
                   </p><div className="ARF_inputGrid">
                     <div className="ARF_s3-right">Yes</div>
                     <div className="ARF_centerInput">
-                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="WitnessStatement" value={"Yes"} onClick={() => setWitnessStatement("Yes")} id="WitnessStatement"  required />
+                      <input className="ARF_Input" type="radio" defaultValue="Yes" name="WitnessStatement" value={"Yes"} onClick={() => setWitnessStatement("Yes")} id="WitnessStatement"   />
                     </div>
                   </div>
                 </td>
@@ -1038,13 +1043,13 @@ return (
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">No</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="No" name="WitnessStatement" value={"No"} onClick={() => setWitnessStatement("No")} id="WitnessStatement"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="No" name="WitnessStatement" value={"No"} onClick={() => setWitnessStatement("No")} id="WitnessStatement"   />
                       </div>
                     </div>
                     <div className="ARF_inputGrid">
                       <div className="ARF_s3-right">Unknown</div>
                       <div className="ARF_centerInput">
-                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="WitnessStatement" value={"Unknown"} onClick={() => setWitnessStatement("Unknown")} id="WitnessStatement"  required />
+                        <input className="ARF_Input" type="radio" defaultValue="Unknown" name="WitnessStatement" value={"Unknown"} onClick={() => setWitnessStatement("Unknown")} id="WitnessStatement"   />
                       </div>
                     </div>
                   </div>
