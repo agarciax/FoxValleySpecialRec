@@ -126,8 +126,9 @@ const VehicleReport = () => {
   const [agencyDirection2_23, setAgencyDirection2_23] = useState('');
   const [otherDirection2_23, setOtherDirection2_23] = useState('');
   const [weather2_24, setWeather2_24] = useState('');
-  const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
+  
 
+  const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
 
   const handleSubmit = (e) => { //Handles the onSubmit action of the log
     e.preventDefault();
