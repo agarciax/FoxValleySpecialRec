@@ -99,6 +99,33 @@ const VehicleReport = () => {
   const [locationVehicle2_19_2, setLocationVehicle2_19_2] = useState('');
   const [damageExtent2_19_2, setDamageExtent2_19_2] = useState('');
   const [propertyDamage2_19_2, setPropertyDamage2_19_2] = useState('');
+  const [damageExtentNonVehicle2_19_2, setDamageExtentNonVehicle2_19_2] = useState('');
+  const [ageInjured2_19_2, setAgeInjured2_19_2] = useState('');
+  const [gender2_19_2, setGender2_19_2] = useState('');
+  const [paramedics2_19_2, setParamedics2_19_2] = useState('');
+  const [locationTaken2_19_2, setLocationTaken2_19_2] = useState('');
+  const [claim2_19_2, setClaim2_19_2] = useState('');
+  const [describeInjury2_19_2, setDescribeInjury2_19_2] = useState('');
+  const [lastName2_20, setLastName2_20] = useState('');
+  const [firstName2_20, setFirstName2_20] = useState('');
+  const [address2_20, setAddress2_20] = useState('');
+  const [city2_20, setCity2_20] = useState('');
+  const [state2_20, setState2_20] = useState('');
+  const [zipCode2_20, setZipCode2_20] = useState('');
+  const [homePhone2_20, setHomePhone2_20] = useState('');
+  const [workPhone2_20, setWorkPhone2_20] = useState('');
+  const [cellPhone2_20, setCellPhone2_20] = useState('');
+  const [witness2_20, setWitness2_20] = useState('');
+  const [relation2_20, setRelation2_20] = useState('');
+  const [statements2_20, setStatements2_20] = useState('');
+  const [say2_20, setSay2_20] = useState('');
+  const [where2_20, setWhere2_20] = useState('');
+  const [driver_2_21, setDriver_2_21] = useState('');
+  const [agencyStreet2_22, setAgencyStreet2_22] = useState('');
+  const [otherStreet2_22, setOtherStreet2_22] = useState('');
+  const [agencyDirection2_23, setAgencyDirection2_23] = useState('');
+  const [otherDirection2_23, setOtherDirection2_23] = useState('');
+  const [weather2_24, setWeather2_24] = useState('');
 
 
 
@@ -1580,7 +1607,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Moderate</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Moderate" id="DamageExtentNonVehicle2-19-2" name="DamageExtentNonVehicle2-19-2" value={damageExtentNonVehicle2} onChange={(e) => setPropertyDamage2_19_2(e.target.value)}/>
+                    <input type="radio" defaultValue="Moderate" id="DamageExtentNonVehicle2-19-2" name="DamageExtentNonVehicle2-19-2" value={damageExtentNonVehicle2_19_2} onChange={(e) => setDamageExtentNonVehicle2_19_2(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1589,7 +1616,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Nothing Visible</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Nothing Visible" id="DamageExtentNonVehicle2-19-2" name="DamageExtentNonVehicle2-19-2" />
+                      <input type="radio" defaultValue="Nothing Visible" id="DamageExtentNonVehicle2-19-2" name="DamageExtentNonVehicle2-19-2" value={damageExtentNonVehicle2_19_2} onChange={(e) => setDamageExtentNonVehicle2_19_2(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -1604,7 +1631,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Severe</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Severe" id="DamageExtentNonVehicle2-19-2" name="DamageExtentNonVehicle2-19-2" />
+                    <input type="radio" defaultValue="Severe" id="DamageExtentNonVehicle2-19-2" name="DamageExtentNonVehicle2-19-2" value={damageExtentNonVehicle2_19_2} onChange={(e) => setDamageExtentNonVehicle2_19_2(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1613,7 +1640,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Slight</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Slight" id="DamageExtentNonVehicle2-19-2" name="DamageExtentNonVehicle2-19-2" />
+                      <input type="radio" defaultValue="Slight" id="DamageExtentNonVehicle2-19-2" name="DamageExtentNonVehicle2-19-2" value={damageExtentNonVehicle2_19_2} onChange={(e) => setDamageExtentNonVehicle2_19_2(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
@@ -1625,7 +1652,7 @@ const VehicleReport = () => {
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Age of injured person</p>
-                <div className="endInput"><input type="text" id="AgeInjured2-19-2" name="AgeInjured2-19-2" /></div>
+                <div className="endInput"><input type="text" id="AgeInjured2-19-2" name="AgeInjured2-19-2" value={ageInjured2_19_2} onChange={(e) => setAgeInjured2_19_2(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '20pt'}}>
@@ -1637,11 +1664,11 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3">
                     Male
-                    <input type="radio" defaultValue="Male" id="Gender2-19-2" name="Gender2-19-2" />
+                    <input type="radio" defaultValue="Male" id="Gender2-19-2" name="Gender2-19-2" value={gender2_19_2} onChange={(e) => setGender2_19_2(e.target.value)}/>
                   </div>
                   <div className="s3">
                     Female
-                    <input type="radio" defaultValue="Female" id="Gender2-19-2" name="Gender2-19-2" />
+                    <input type="radio" defaultValue="Female" id="Gender2-19-2" name="Gender2-19-2" value={gender2_19_2} onChange={(e) => setGender2_19_2(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1655,11 +1682,11 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3">
                     Yes
-                    <input type="radio" defaultValue="Yes" id="Paramedics2-19-2" name="Paramedics2-19-2" />
+                    <input type="radio" defaultValue="Yes" id="Paramedics2-19-2" name="Paramedics2-19-2" value={paramedics2_19_2} onChange={(e) => setParamedics2_19_2(e.target.value)}/>
                   </div>
                   <div className="s3">
                     No
-                    <input type="radio" defaultValue="No" id="Paramedics2-19-2" name="Paramedics2-19-2" />
+                    <input type="radio" defaultValue="No" id="Paramedics2-19-2" name="Paramedics2-19-2" value={paramedics2_19_2} onChange={(e) => setParamedics2_19_2(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1668,7 +1695,7 @@ const VehicleReport = () => {
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>If yes, where was the injured person taken?</p>
-                <div className="endInput"><input type="text" id="LocationTaken2-19-2" name="LocationTaken2-19-2" /></div>
+                <div className="endInput"><input type="text" id="LocationTaken2-19-2" name="LocationTaken2-19-2" value={locationTaken2_19_2} onChange={(e) => setLocationTaken2_19_2(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '20pt'}}>
@@ -1680,11 +1707,11 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3">
                     Yes
-                    <input type="radio" defaultValue="Yes" id="Claim2-19-2" name="Claim2-19-2" />
+                    <input type="radio" defaultValue="Yes" id="Claim2-19-2" name="Claim2-19-2" value={claim2_19_2} onChange={(e) => setClaim2_19_2(e.target.value)}/>
                   </div>
                   <div className="s3">
                     No
-                    <input type="radio" defaultValue="No" id="Claim2-19-2" name="Claim2-19-2" />
+                    <input type="radio" defaultValue="No" id="Claim2-19-2" name="Claim2-19-2" value={claim2_19_2} onChange={(e) => setClaim2_19_2(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1693,7 +1720,7 @@ const VehicleReport = () => {
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Describe the injury</p>
-                <div className="endInput"><input type="text" id="DescribeInjury2-19-2" name="DescribeInjury2-19-2" /></div>
+                <div className="endInput"><input type="text" id="DescribeInjury2-19-2" name="DescribeInjury2-19-2" value={describeInjury2_19_2} onChange={(e) => setDescribeInjury2_19_2(e.target.value)}/></div>
               </td>
             </tr>
           </tbody></table>
@@ -1756,11 +1783,11 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3">
                     Last name
-                    <div className="endInput"><input type="text" id="LastName2-20" name="LastName2-20" /></div>
+                    <div className="endInput"><input type="text" id="LastName2-20" name="LastName2-20" value={lastName2_20} onChange={(e) => setLastName2_20(e.target.value)}/></div>
                   </div>
                   <div className="s3">
                     First name
-                    <div className="endInput"><input type="text" id="FirstName2-20" name="FirstName2-20" /></div>
+                    <div className="endInput"><input type="text" id="FirstName2-20" name="FirstName2-20" value={firstName2_20} onChange={(e) => setFirstName2_20(e.target.value)}/></div>
                   </div>
                 </div>
               </td>
@@ -1769,37 +1796,37 @@ const VehicleReport = () => {
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Address</p>
-                <div className="endInput"><input type="text" id="Address2-20" name="Address2-20" /></div>
+                <div className="endInput"><input type="text" id="Address2-20" name="Address2-20" value={address2_20} onChange={(e) => setAddress2_20(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '29pt'}}>
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>City</p>
-                <div className="endInput"><input type="text" id="City2-20" name="City2-20" /></div>
+                <div className="endInput"><input type="text" id="City2-20" name="City2-20" value={city2_20} onChange={(e) => setCity2_20(e.target.value)}/></div>
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>State</p>
-                <div className="endInput"><input type="text" id="State2-20" name="State2-20" /></div>
+                <div className="endInput"><input type="text" id="State2-20" name="State2-20" value={state2_20} onChange={(e) => setState2_20(e.target.value)}/></div>
               </td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Zip code</p>
-                <input type="tel" id="ZipCode2-20" name="ZipCode2-20" placeholder="00000" pattern="[0-9]{5}" required />
+                <input type="tel" id="ZipCode2-20" name="ZipCode2-20" placeholder="00000" pattern="[0-9]{5}" required value={zipCode2_20} onChange={(e) => setZipCode2_20(e.target.value)}/>
               </td>
             </tr>
             <tr style={{height: '29pt'}}>
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Home phone #</p>
-                <div className="endInput"><input type="text" id="HomePhone2-20" name="HomePhone2-20" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
+                <div className="endInput"><input type="text" id="HomePhone2-20" name="HomePhone2-20" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={homePhone2_20} onChange={(e) => setHomePhone2_20(e.target.value)}/></div>
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Work phone #</p>
-                <div className="endInput"><input type="text" id="WorkPhone2-20" name="WorkPhone2-20" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
+                <div className="endInput"><input type="text" id="WorkPhone2-20" name="WorkPhone2-20" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={workPhone2_20} onChange={(e) => setWorkPhone2_20(e.target.value)}/></div>
               </td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Cell phone #</p>
-                <input type="tel" id="CellPhone2-20" name="CellPhone2-20" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                <input type="tel" id="CellPhone2-20" name="CellPhone2-20" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" value={cellPhone2_20} onChange={(e) => setCellPhone2_20(e.target.value)}/>
               </td>
             </tr>
             <tr style={{height: '25pt'}}>
@@ -1813,7 +1840,7 @@ const VehicleReport = () => {
                 </p><div className="inputGrid">
                   <div className="s3-right">Yes</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Yes" id="Witness2-20" name="Witness2-20" />
+                    <input type="radio" defaultValue="Yes" id="Witness2-20" name="Witness2-20" value={witness2_20} onChange={(e) => setWitness2_20(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1823,13 +1850,13 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">No</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="No" id="Witness2-20" name="Witness2-20" />
+                      <input type="radio" defaultValue="No" id="Witness2-20" name="Witness2-20" value={witness2_20} onChange={(e) => setWitness2_20(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
                     <div className="s3-right">Unknown</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Unknown" id="Witness2-20" name="Witness2-20" />
+                      <input type="radio" defaultValue="Unknown" id="Witness2-20" name="Witness2-20" value={witness2_20} onChange={(e) => setWitness2_20(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -1851,7 +1878,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Agency employee or volunteer</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Agency employee or volunteer" id="Relation2-20" name="Relation2-20" />
+                    <input type="radio" defaultValue="Agency employee or volunteer" id="Relation2-20" name="Relation2-20" value={relation2_20} onChange={(e) => setRelation2_20(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1860,7 +1887,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Another program participant or park user</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Another program participant or park user" id="Relation2-20" name="Relation2-20" />
+                      <input type="radio" defaultValue="Another program participant or park user" id="Relation2-20" name="Relation2-20" value={relation2_20} onChange={(e) => setRelation2_20(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -1875,7 +1902,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Friend</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Friend" id="Relation2-20" name="Relation2-20" />
+                    <input type="radio" defaultValue="Friend" id="Relation2-20" name="Relation2-20" value={relation2_20} onChange={(e) => setRelation2_20(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1884,7 +1911,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Relative</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Relative" id="Relation2-20" name="Relation2-20" />
+                      <input type="radio" defaultValue="Relative" id="Relation2-20" name="Relation2-20" value={relation2_20} onChange={(e) => setRelation2_20(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
@@ -1901,7 +1928,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Passerby</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Passerby" id="Relation2-20" name="Relation2-20" />
+                    <input type="radio" defaultValue="Passerby" id="Relation2-20" name="Relation2-20" value={relation2_20} onChange={(e) => setRelation2_20(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1910,7 +1937,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Other</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Other" id="Relation2-20" name="Relation2-20" />
+                      <input type="radio" defaultValue="Other" id="Relation2-20" name="Relation2-20" value={relation2_20} onChange={(e) => setRelation2_20(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
@@ -1929,7 +1956,7 @@ const VehicleReport = () => {
                 </p><div className="inputGrid">
                   <div className="s3-right">Yes</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Yes" id="Statements2-20" name="Statements2-20" />
+                    <input type="radio" defaultValue="Yes" id="Statements2-20" name="Statements2-20" value={statements2_20} onChange={(e) => setStatements2_20(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1939,13 +1966,13 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">No</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="No" id="Statements2-20" name="Statements2-20" />
+                      <input type="radio" defaultValue="No" id="Statements2-20" name="Statements2-20" value={statements2_20} onChange={(e) => setStatements2_20(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
                     <div className="s3-right">Unknown</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Unknown" id="Statements2-20" name="Statements2-20" />
+                      <input type="radio" defaultValue="Unknown" id="Statements2-20" name="Statements2-20" value={statements2_20} onChange={(e) => setStatements2_20(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -1962,14 +1989,14 @@ const VehicleReport = () => {
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>What did the witness say?</p>
-                <div className="endInput"><input type="text" id="Say2-20" name="Say2-20" /></div>
+                <div className="endInput"><input type="text" id="Say2-20" name="Say2-20" value={say2_20} onChange={(e) => setSay2_20(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '36pt'}}>
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td colSpan={3} style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Where was the witness when the accident occurred?</p>
-                <div className="endInput"><input type="text" id="Where2-20" name="Where2-20" /></div>
+                <div className="endInput"><input type="text" id="Where2-20" name="Where2-20" value={where2_20} onChange={(e) => setWhere2_20(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '25pt'}}>
@@ -1984,7 +2011,7 @@ const VehicleReport = () => {
                 </p><div className="inputGrid">
                   <div className="s3-right">Yes</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Yes" id="Driver2-21" name="Driver2-21" />
+                    <input type="radio" defaultValue="Yes" id="Driver2-21" name="Driver2-21" value={driver_2_21} onChange={(e) => setDriver_2_21(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -1994,13 +2021,13 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">No</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="No" id="Driver2-21" name="Driver2-21" />
+                      <input type="radio" defaultValue="No" id="Driver2-21" name="Driver2-21" value={driver_2_21} onChange={(e) => setDriver_2_21(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
                     <div className="s3-right">Unknown</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Unknown" id="Driver2-21" name="Driver2-21" />
+                      <input type="radio" defaultValue="Unknown" id="Driver2-21" name="Driver2-21" value={driver_2_21} onChange={(e) => setDriver_2_21(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -2014,11 +2041,11 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3">
                     What street was the agency driver on?
-                    <div className="endInput"><input type="text" id="AgencyStreet2-22" name="AgencyStreet2-22" /></div>
+                    <div className="endInput"><input type="text" id="AgencyStreet2-22" name="AgencyStreet2-22" value={agencyStreet2_22} onChange={(e) => setAgencyStreet2_22(e.target.value)}/></div>
                   </div>
                   <div className="s3">
                     What street was the other driver driving on?
-                    <div className="endInput"><input type="text" id="OtherStreet2-22" name="OtherStreet2-22" /></div>
+                    <div className="endInput"><input type="text" id="OtherStreet2-22" name="OtherStreet2-22" value={otherStreet2_22} onChange={(e) => setOtherStreet2_22(e.target.value)}/></div>
                   </div>
                 </div>
               </td>
@@ -2033,7 +2060,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">North</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="North" id="AgencyDirection2-23" name="AgencyDirection2-23" />
+                    <input type="radio" defaultValue="North" id="AgencyDirection2-23" name="AgencyDirection2-23" value={agencyDirection2_23} onChange={(e) => setAgencyDirection2_23(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -2042,7 +2069,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">South</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="South" id="AgencyDirection2-23" name="AgencyDirection2-23" />
+                      <input type="radio" defaultValue="South" id="AgencyDirection2-23" name="AgencyDirection2-23" value={agencyDirection2_23} onChange={(e) => setAgencyDirection2_23(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -2057,7 +2084,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">East</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="East" id="AgencyDirection2-23" name="AgencyDirection2-23" />
+                    <input type="radio" defaultValue="East" id="AgencyDirection2-23" name="AgencyDirection2-23" value={agencyDirection2_23} onChange={(e) => setAgencyDirection2_23(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -2066,7 +2093,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">West</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="West" id="AgencyDirection2-23" name="AgencyDirection2-23" />
+                      <input type="radio" defaultValue="West" id="AgencyDirection2-23" name="AgencyDirection2-23" value={agencyDirection2_23} onChange={(e) => setAgencyDirection2_23(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
@@ -2083,7 +2110,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">North</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="North" id="OtherDirection2-23" name="OtherDirection2-23" />
+                    <input type="radio" defaultValue="North" id="OtherDirection2-23" name="OtherDirection2-23" value={otherDirection2_23} onChange={(e) => setOtherDirection2_23(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -2092,7 +2119,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">South</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="South" id="OtherDirection2-23" name="OtherDirection2-23" />
+                      <input type="radio" defaultValue="South" id="OtherDirection2-23" name="OtherDirection2-23" value={otherDirection2_23} onChange={(e) => setOtherDirection2_23(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -2107,7 +2134,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">East</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="East" id="OtherDirection2-23" name="OtherDirection2-23" />
+                    <input type="radio" defaultValue="East" id="OtherDirection2-23" name="OtherDirection2-23" value={otherDirection2_23} onChange={(e) => setOtherDirection2_23(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -2116,7 +2143,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">West</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="West" id="OtherDirection2-23" name="OtherDirection2-23" />
+                      <input type="radio" defaultValue="West" id="OtherDirection2-23" name="OtherDirection2-23" value={otherDirection2_23} onChange={(e) => setOtherDirection2_23(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
@@ -2134,7 +2161,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Dry</div>
                   <div className="centerInput">
-                    <input type="checkbox" defaultValue="Dry" id="Weather2-24" name="Weather2-24" />
+                    <input type="checkbox" defaultValue="Dry" id="Weather2-24" name="Weather2-24" value={weather2_24} onChange={(e) => setWeather2_24(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -2143,7 +2170,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Fog</div>
                     <div className="centerInput">
-                      <input type="checkbox" defaultValue="Fog" id="Weather2-24" name="Weather2-24" />
+                      <input type="checkbox" defaultValue="Fog" id="Weather2-24" name="Weather2-24" value={weather2_24} onChange={(e) => setWeather2_24(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -2158,7 +2185,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Ice</div>
                   <div className="centerInput">
-                    <input type="checkbox" defaultValue="Ice" id="Weather2-24" name="Weather2-24" />
+                    <input type="checkbox" defaultValue="Ice" id="Weather2-24" name="Weather2-24" value={weather2_24} onChange={(e) => setWeather2_24(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -2167,7 +2194,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Snow</div>
                     <div className="centerInput">
-                      <input type="checkbox" defaultValue="Snow" id="Weather2-24" name="Weather2-24" />
+                      <input type="checkbox" defaultValue="Snow" id="Weather2-24" name="Weather2-24" value={weather2_24} onChange={(e) => setWeather2_24(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
@@ -2184,7 +2211,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Wet</div>
                   <div className="centerInput">
-                    <input type="checkbox" defaultValue="Wet" id="Weather2-24" name="Weather2-24" />
+                    <input type="checkbox" defaultValue="Wet" id="Weather2-24" name="Weather2-24" value={weather2_24} onChange={(e) => setWeather2_24(e.target.value)}/>
                   </div>
                 </div>
               </td>
