@@ -12,6 +12,7 @@ module.exports = function (app) {
     var form01 = require('../controller/accidentIncidentAppController') //Matt is working on the Front/Back End Connection
     app.route('/fvsra/accidentIncidentReport')
         .get(form01.list_all_accidentIncidentReports)
+        .post(form01.createAccidentIncidentReport)
     app.route('/fvsra/accidentIncidentReport/:accident_incident_id')
         .get(form01.read_a_accidentIncidentReport)
         .delete(form01.deleteAccidentIncidentReport)
