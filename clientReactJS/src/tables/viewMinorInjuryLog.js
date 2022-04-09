@@ -9,7 +9,7 @@ const viewMinorInjuryLog = () => {
 
     const handleDelete = async (e, minor_injury_id) => {
         e.preventDefault();
-        const result = await confirm("Are you sure?");
+        const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
             fetch('http://127.0.0.1:5000/fvsra/minorInjuryLog/' + minor_injury_id, {
                 method: 'DELETE'
