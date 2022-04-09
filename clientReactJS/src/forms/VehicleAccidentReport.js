@@ -17,6 +17,7 @@ const VehicleReport = () => {
   const [NameOfLocation2_6, setNameOfLocation2_6] = useState('');
   const [DamageThirdParty2_7, setDamageThirdParty2_7] = useState('');
   const [StreetAddress2_7, setStreetAddress2_7] = useState('');
+  const [CityIncidentLocation2_7, setCityIncidentLocation2_7] = useState("")
   const [StateIncidentLocation2_7, setStateIncidentLocation2_7] = useState('');
   const [ZipCode2_7, setZipCode2_7] = useState('');
   const [LocationProperty2_8, setLocationProperty2_8] = useState('');
