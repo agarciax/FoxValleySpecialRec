@@ -29,9 +29,6 @@ const LoginPage = () => {
     }
   ];
 
-
-
-
   //Error Messages
   const errors = {
     uname: "Invalid Username",

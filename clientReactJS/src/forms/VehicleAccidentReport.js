@@ -10,7 +10,25 @@ const VehicleReport = () => {
   const [DateIncident2_2, setDateIncident2_2] = useState('');
   const [TimeIncident2_2, setTimeIncident2_2] = useState('');
   const [Name2_3, setName2_3] = useState('');
-  const [Name2_322, setName222_3] = useState('');
+  const [Title2_3, setTitle2_3] = useState('');
+  const [Business_Phone2_4, setBusiness_Phone2_4] = useState('');
+  const [Business_Email2_4, setBusiness_Email2_4] = useState('');
+  const [Incident_Occur2_5, setIncident_Occur2_5] = useState('');
+  const [NameOfLocation2_6, setNameOfLocation2_6] = useState('');
+  const [DamageThirdParty2_7, setDamageThirdParty2_7] = useState('');
+  const [StreetAddress2_7, setStreetAddress2_7] = useState('');
+  const [StateIncidentLocation2_7, setStateIncidentLocation2_7] = useState('');
+  const [ZipCode2_7, setZipCode2_7] = useState('');
+  const [LocationProperty2_8, setLocationProperty2_8] = useState('');
+  const [PrimaryLocation2_9, setPrimaryLocation2_9] = useState('');
+  const [VehicleOccupied2_10, setVehicleOccupied2_10] = useState('');
+  const [AgencyDriverLast2_11, setAgencyDriverLast2_11] = useState('');
+
+
+
+
+
+
     return ( 
       <div>
       <div className="entire-page">
@@ -87,7 +105,7 @@ const VehicleReport = () => {
                 <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Title of person completing report</p>
-                <div className="endInput"><input type="text" id="Title-2-3" name="Title-2-3" /></div>
+                <div className="endInput"><input type="text" id="Title-2-3" name="Title-2-3" value={Title2_3} onChange={(e) => setTitle2_3(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '21pt'}}>
@@ -96,12 +114,12 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Business phone</p>
-                <input type="tel" id="Business_phone2-4" name="phone2-4" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                <input type="tel" id="Business_phone2-4" name="phone2-4" placeholder="000-000-0000" required value={Business_Phone2_4} onChange={(e) => setBusiness_Phone2_4(e.target.value)} />
               </td><td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                 <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Business email</p>
-                <div className="endInput"><input type="text" id="Business_email2-4" name="Business_email2-4" /></div>
+                <div className="endInput"><input type="text" id="Business_email2-4" name="Business_email2-4" value={Business_Email2_4} onChange={(e) => setBusiness_Email2_4(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '25pt'}}>
@@ -115,7 +133,7 @@ const VehicleReport = () => {
             <tr style={{height: '20pt'}}>
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td colSpan={3} style={{width: '526pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p>
-                <div className="endInput"><input type="text" id="Incident_Occur2-5" name="Incident_Occur2-5" /></div>
+                <div className="endInput"><input type="text" id="Incident_Occur2-5" name="Incident_Occur2-5" value={Incident_Occur2_5} onChange={(e) => setIncident_Occur2_5(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '20pt'}}>
@@ -136,7 +154,7 @@ const VehicleReport = () => {
               </td>
               <td colSpan={3} style={{borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Name of the location (street/road/highway) or nearest intersection where the incident occurred.
                 </p>
-                <div className="endInput"><input type="text" id="NameOfLocation2-6" name="NameOfLocation2-6" /></div>
+                <div className="endInput"><input type="text" id="NameOfLocation2-6" name="NameOfLocation2-6" value={NameOfLocation2_6} onChange={(e) => setNameOfLocation2_6(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '19pt'}}>
@@ -151,7 +169,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Yes</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Yes" id="DamageThirdParty2-7" name="DamageThirdParty2-7" />
+                    <input type="radio" defaultValue="Yes" id="DamageThirdParty2-7" name="DamageThirdParty2-7" value={DamageThirdParty2_7} onChange={(e) => setDamageThirdParty2_7(e.target.value)}/>
                   </div>
                 </div>
                 {/*                <p class="s3" style="text-indent: 0pt;line-height: 10pt;text-align: right;">Yes <div class="centerInput"><input type="checkbox" id="horns" name="horns"></div></p>*/}
@@ -161,13 +179,13 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">No</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="No" id="DamageThirdParty2-7" name="DamageThirdParty2-7" />
+                      <input type="radio" defaultValue="No" id="DamageThirdParty2-7" name="DamageThirdParty2-7" value={DamageThirdParty2_7} onChange={(e) => setDamageThirdParty2_7(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
                     <div className="s3-right">Unknown</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Unknown" id="DamageThirdParty2-7" name="DamageThirdParty2-7" />
+                      <input type="radio" defaultValue="Unknown" id="DamageThirdParty2-7" name="DamageThirdParty2-7" value={DamageThirdParty2_7} onChange={(e) => setDamageThirdParty2_7(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -176,22 +194,22 @@ const VehicleReport = () => {
             <tr style={{height: '32pt'}}>
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Street address</p>
-                <div className="endInput"><input type="text" id="StreetAddress2-7" name="StreetAddress2-7" /></div>
+                <div className="endInput"><input type="text" id="StreetAddress2-7" name="StreetAddress2-7" value={StreetAddress2_7} onChange={(e) => setStreetAddress2_7(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '27pt'}}>
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>City</p>
-                <div className="endInput"><input type="text" id="CityIncidentLocation2-7" name="CityIncidentLocation2-7" /></div>
+                <div className="endInput"><input type="text" id="CityIncidentLocation2-7" name="CityIncidentLocation2-7" value={CityIncidentLocation2_7} onChange={(e) => setCityIncidentLocation2_7(e.target.value)}/></div>
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>State</p>
-                <div className="endInput"><input type="text" id="StateIncidentLocation2-7" name="StateIncidentLocation2-7" /></div>
+                <div className="endInput"><input type="text" id="StateIncidentLocation2-7" name="StateIncidentLocation2-7" value={StateIncidentLocation2_7} onChange={(e) => setStateIncidentLocation2_7(e.target.value)}/></div>
               </td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Zip code</p>
-                <input type="tel" id="ZipCode2-7" name="ZipCode2-7" placeholder="00000" pattern="[0-9]{5}" required />
+                <input type="tel" id="ZipCode2-7" name="ZipCode2-7" placeholder="00000" pattern="[0-9]{5}" required value={ZipCode2_7} onChange={(e) => setZipCode2_7(e.target.value)}/>
               </td>
             </tr>
             <tr style={{height: '5pt'}}>
@@ -211,11 +229,11 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3">
                     Offsite (non-agency owned)
-                    <input type="radio" defaultValue="Unknown" id="location-property2-8" name="location-property2-8" />
+                    <input type="radio" defaultValue="Unknown" id="location-property2-8" name="location-property2-8" value={LocationProperty2_8} onChange={(e) => setLocationProperty2_8(e.target.value)}/>
                   </div>
                   <div className="s3">
                     On agency property
-                    <input type="radio" defaultValue="Unknown" id="location-property2-8" name="location-property2-8" />
+                    <input type="radio" defaultValue="Unknown" id="location-property2-8" name="location-property2-8" value={LocationProperty2_8} onChange={(e) => setLocationProperty2_8(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -230,7 +248,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Highway/roadway</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Highway/roadway" id="PrimaryLocation2-9" name="DamageThirdParty" />
+                    <input type="radio" defaultValue="Highway/roadway" id="PrimaryLocation2-9" name="DamageThirdParty" value={PrimaryLocation2_9} onChange={(e) => setPrimaryLocation2_9(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -239,13 +257,13 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Parking Lot</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Parking Lot" id="PrimaryLocation2-9" name="DamageThirdParty" />
+                      <input type="radio" defaultValue="Parking Lot" id="PrimaryLocation2-9" name="DamageThirdParty" value={PrimaryLocation2_9} onChange={(e) => setPrimaryLocation2_9(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
                     <div className="s3-right">Other</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Other" id="PrimaryLocation2-9" name="DamageThirdParty" />
+                      <input type="radio" defaultValue="Other" id="PrimaryLocation2-9" name="DamageThirdParty" value={PrimaryLocation2_9} onChange={(e) => setPrimaryLocation2_9(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -261,7 +279,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Yes</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Yes" id="VehicleOccupied2-10" name="VehicleOccupied2-10" />
+                    <input type="radio" defaultValue="Yes" id="VehicleOccupied2-10" name="VehicleOccupied2-10" value={VehicleOccupied2_10} onChange={(e) => setVehicleOccupied2_10(e.target.value)}/>
                   </div>
                 </div>
               </td>
@@ -270,13 +288,13 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">No</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="No" id="VehicleOccupied2-10" name="VehicleOccupied2-10" />
+                      <input type="radio" defaultValue="No" id="VehicleOccupied2-10" name="VehicleOccupied2-10" value={VehicleOccupied2_10} onChange={(e) => setVehicleOccupied2_10(e.target.value)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
                     <div className="s3-right">Unknown</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Unknown" id="VehicleOccupied2-10" name="VehicleOccupied2-10" />
+                      <input type="radio" defaultValue="Unknown" id="VehicleOccupied2-10" name="VehicleOccupied2-10" value={VehicleOccupied2_10} onChange={(e) => setVehicleOccupied2_10(e.target.value)}/>
                     </div>
                   </div>
                 </div>
@@ -288,11 +306,11 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '283pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Agency driver last name</p>
-                <div className="endInput"><input type="text" id="AgencyDriverLast2-11" name="AgencyDriverLast2-11" /></div>
+                <div className="endInput"><input type="text" id="AgencyDriverLast2-11" name="AgencyDriverLast2-11" value={AgencyDriverLast2_11} onChange={(e) => setAgencyDriverLast2_11(e.target.value)}/></div>
               </td>
               <td colSpan={3} style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>First name</p>
-                <div className="endInput"><input type="text" id="AgencyDriverFirst2-11" name="AgencyDriverFirst2-11" /></div>
+                <div className="endInput"><input type="text" id="AgencyDriverFirst2-11" name="AgencyDriverFirst2-11" value={AgencyDriverLast2_11} onChange={(e) => setAgencyDriverLast2_11(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '36pt'}}>
