@@ -126,7 +126,8 @@ const VehicleReport = () => {
   const [agencyDirection2_23, setAgencyDirection2_23] = useState('');
   const [otherDirection2_23, setOtherDirection2_23] = useState('');
   const [weather2_24, setWeather2_24] = useState('');
-  
+  const [diagramImg, setDiagramImg] = useState('');
+
 
   const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
 
@@ -2246,7 +2247,10 @@ const VehicleReport = () => {
                 25
               </td>
               <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Accident Diagram</p>
-                {/*                ToDo: Add image upload ability*/}
+                <div className="inputGrid">
+                  <div>Upload img file of the diagram -></div>
+                  <input type="file" id="img" name="img" accept="image/*" value={diagramImg} onChange={(e) => setDiagramImg(e.target.value)}/>
+                </div>
               </td>
             </tr>
           </tbody></table>
