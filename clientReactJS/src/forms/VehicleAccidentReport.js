@@ -5,7 +5,7 @@ import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 const VehicleReport = () => {
-  const [AgencyName2_1, setAgencyName2_1] = useState('');
+  const [AgencyName2_1, setAgencyName2_1] = useState('Fox Valley Special Recreation Association');
   const [TodaysDate2_1, setTodaysDate2_1] = useState('');
   const [DateIncident2_2, setDateIncident2_2] = useState('');
   const [TimeIncident2_2, setTimeIncident2_2] = useState('');
@@ -15,7 +15,7 @@ const VehicleReport = () => {
   const [Business_Email2_4, setBusiness_Email2_4] = useState('');
   const [Incident_Occur2_5, setIncident_Occur2_5] = useState('');
   const [NameOfLocation2_6, setNameOfLocation2_6] = useState('');
-  const [DamageThirdParty2_7, setDamageThirdParty2_7] = useState('');
+  const [AddressIncidentLocation, setAddressIncidentLocation] = useState('');
   const [StreetAddress2_7, setStreetAddress2_7] = useState('');
   const [CityIncidentLocation2_7, setCityIncidentLocation2_7] = useState("")
   const [StateIncidentLocation2_7, setStateIncidentLocation2_7] = useState('');
@@ -24,6 +24,7 @@ const VehicleReport = () => {
   const [PrimaryLocation2_9, setPrimaryLocation2_9] = useState('');
   const [VehicleOccupied2_10, setVehicleOccupied2_10] = useState('');
   const [AgencyDriverLast2_11, setAgencyDriverLast2_11] = useState('');
+  const [AgencyDriverFirst2_11, setAgencyDriverFirst2_11] = useState('');
   const [Address2_11, setAddress2_11] = useState('');
   const [City2_11, setCity2_11] = useState('');
   const [State2_11, setState2_11] = useState('');
@@ -44,7 +45,8 @@ const VehicleReport = () => {
   const [area2_14, setArea2_14] = useState('');
   const [estimate2_15, setEstimate2_15] = useState('');
   const [trailorInvolved2_16, setTrailorInvolved2_16] = useState('');
-  const [agencyVIN2_16, setAgencyVIN2_16] = useState('');
+  const [year2_16, setYear2_16] = useState("");
+
   const [make2_16, setMake2_16] = useState('');
   const [model2_16, setModel2_16] = useState('');
   const [license2_16, setLicense2_16] = useState('');
@@ -126,14 +128,155 @@ const VehicleReport = () => {
   const [agencyDirection2_23, setAgencyDirection2_23] = useState('');
   const [otherDirection2_23, setOtherDirection2_23] = useState('');
   const [weather2_24, setWeather2_24] = useState('');
+  const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
 
 
+  const handleSubmit = (e) => { //Handles the onSubmit action of the log
+    e.preventDefault();
+
+    let propertyLossReportObj = {
+      "Name_of_the_Agency": AgencyName2_1,
+      "Todays_Date": TodaysDate2_1,
+      "Date_of_Incident": DateIncident2_2,
+      "Time_Of_Incident": TimeIncident2_2,
+      "Name_of_the_person_Completing_the_report": Name2_3,
+      "Title_Of_Person_Completing_the_report": Title2_3,
+      "Business_Phone": Business_Phone2_4,
+      "Business_Email": Business_Email2_4,
+      "How_did_the_incident_Occur": Incident_Occur2_5,
+      "Name_of_the_location": NameOfLocation2_6,
+      "Address_Incident_Location": AddressIncidentLocation,
+      "Incident_Street_Address": StreetAddress2_7,
+      "Incident_City": CityIncidentLocation2_7,
+      "Incident_State": StateIncidentLocation2_7,
+      "Incident_Zip_Code": ZipCode2_7,
+      "Incident_Location": LocationProperty2_8,
+      "Primary_Location": PrimaryLocation2_9,
+      "Was_the_agency_vehicle_Occupied": VehicleOccupied2_10,
+      "Agency_Driver_Last_Name": AgencyDriverLast2_11,
+      "Agency_Driver_First_Name": AgencyDriverFirst2_11,
+      "Agency_Driver_Address": Address2_11,
+      "Agency_Driver_City": City2_11,
+      "Agency_Driver_State": State2_11,
+      "Agency_Driver_Zip_Code": ZipCode2_11,
+      "Agency_Driver_Home_Phone_Number": HomePhone2_11,
+      "Agency_Driver_Work_Phone_Number": WorkPhone2_11,
+      "Agency_driver_Cell_phone": cellPhone2_11,
+      "Agency_driver_Email_Address": email2_11,
+      "is_this_driver_an_employee": employee2_11,
+      "if_yes_enter_job_title": jobTitle2_11,
+      "Identify_type_of_driver": employementStatus2_11,
+      "Agency_vehicle_VIN": agencyVIN2_12,
+      "Agency_vehicle_Make": make2_12,
+      "Agency_vehicle_Model": model2_12,
+      "Agency_vehicle_License_Number": license2_12,
+      "Is_this_vehicle_drivable": vehicleDriveable2_13,
+      "If_no_provide_current_location_of_vehicle": locationVehicle2_13,
+      "Area_of_damage": area2_14,
+      "Estimated_repair_cost": estimate2_15,
+      "was_a_trailer_involved": trailorInvolved2_16,
+      "Trailer_year": year2_16,
+      "Trailer_Make": make2_16,
+      "Trailer_Model": model2_16,
+      "Trailer_license_Number": license2_16,
+      "Trailer_area_of_damage": trailerArea2_16,
+      "Current_Location_of_trailer": trailerLocation2_16,
+      "Estimated_repair_cost_of_trailer": estimatedRepair2_16,
+      "Has_a_police_agency_conducted_an_investigation": policeConduct2_17,
+      "What_police_agency_investigated_the_incident": policeAgency2_17,
+      "Police_report_number": policeNumber2_17,
+      "Was_the_agency_driver_ticketed_arrested_or_cited_for_violation": agencyDriverViolation2_18,
+      "If_yes_provide_details_of_the_ticket_arrest_or_violation": details2_18,
+      "How_was_the_person_involved_in_the_accident": involement2_19,
+      "Last_Name_Or_BusinessName": lastNameBuisness2_19,
+      "First_name_not_necessary_for_business": firstNameBuisness2_19,
+      "Claimant_Address": address2_19,
+      "Claimant_City": city2_19,
+      "Claimant_state": state2_19,
+      "Claimant_zip_code": zipCode2_19,
+      "Claimant_Home_phone_number": homePhone2_19,
+      "Claimant_work_phone_number": workPhone2_19,
+      "Claimant_Cell_phone_number": cellPhone2_19,
+      "Claimant_vehicle_make": vehicleMake2_19,
+      "Claimant_Model": vehicleModel2_19,
+      "Claimant_vehicle_year": vehicleYear2_19,
+      "Claimant_Area_of_damage": areaDamage2_19,
+      "Claimant_is_vehicle_drivable": vehicleDriveable2_19,
+      "Claimant_If_no_current_location_of_vehicle": locationVehicle2_19,
+      "Claimant_Extent_of_damage": damageExtent2_19,
+      "Claimant_Describe_the_property_damage_other_than_vehicle": propertyDamage2_19,
+      "Claimant_Extent_of_damage_to_property_other_than_vehicle": damageExtentNonVehicle2_19,
+      "Claimant_Age_of_injured_person": ageInjured2_19,
+      "Claimant_Sex_of_injured_person": gender2_19,
+      "Claimant_Was_the_injured_person_transported_by_paramedics": paramedics2_19,
+      "Claimant_If_yes_where_was_the_injured_person_taken": locationTaken2_19,
+      "Claimant_Do_you_expect_the_injured_person_to_file_a_claim": claim2_19,
+      "Claimant_Describe_the_injury": describeInjury2_19,
+      "How_was_the_person_involved_in_the_accident2": involement2_19_2,
+      "Additional_claimaint_information_Last_name_or_business_name": lastNameBuisness2_19_2,
+      "First_name_not_necessary_for_business_form_three": firstNameBuisness2_19_2,
+      "Address_form_3": address2_19_2,
+      "city_form_3": city2_19_2,
+      "state_form_3": state2_19_2,
+      "zip_code_form_3": zipCode2_19_2,
+      "Home_phone_number_form_3": homePhone2_19_2,
+      "cell_phone_number_form_3": cellPhone2_19_2,
+      "work_phone_number_form_3": workPhone2_19_2,
+      "vehicle_make_form_3": vehicleMake2_19_2,
+      "vehicle_model_form_3": vehicleModel2_19_2,
+      "vehicle_year_form_3": vehicleYear2_19_2,
+      "Area_of_damage_form_3": areaDamage2_19_2,
+      "Is_vehicle_driveable_form_3": vehicleDriveable2_19_2,
+      "If_no_current_location_of_vehicle_form_3": locationVehicle2_19_2,
+      "Extent_of_damage_form_3": damageExtent2_19_2,
+      "Describe_the_property_damage_other_than_vehicle_form_3": propertyDamage2_19_2,
+      "Extent_of_damage_to_property_other_than_vehicle_form_3": damageExtentNonVehicle2_19_2,
+      "Age_of_injured_person_form_4": ageInjured2_19_2,
+      "Sex_of_injured_person_form_3": gender2_19_2,
+      "Was_the_injured_person_transported_by_paramedics_form_4": paramedics2_19_2,
+      "If_yes_where_was_the_injured_person_taken_form_4": locationTaken2_19_2,
+      "Do_you_expect_the_injured_person_to_file_a_claim_form_4": claim2_19_2,
+      "Describe_the_injury_form_4": describeInjury2_19_2,
+      "Witness_Last_name": lastName2_20,
+      "Witness_first_name": firstName2_20,
+      "Witness_Address": address2_20,
+      "Witness_city": city2_20,
+      "Witness_state": state2_20,
+      "Witness_Zip_code": zipCode2_20,
+      "Witness_Home_phone_number": homePhone2_20,
+      "Witness_work_phone_number":workPhone2_20,
+      "Witness_cell_phone_number": cellPhone2_20,
+      "Witness_to_accident": witness2_20,
+      "Witness_Relation_to_injured_person_or_property_owner": relation2_20,
+      "Witness_Did_witness_make_any_statements": statements2_20,
+      "Witness_If_yes_what_did_witness_said": say2_20,
+      "Where_was_witness_when_the_accident_occurred": where2_20,
+      "Was_the_driver_of_the_agency_vehicle_conducting_agency_business": driver_2_21,
+      "What_street_was_the_agency_driver_on_form_4": agencyStreet2_22,
+      "What_street_was_the_other_driver_driving_on": otherStreet2_22,
+      "What_direction_was_the_agency_driver_traveling": agencyDirection2_23,
+      "What_direction_was_the_other_driver_traveling": otherDirection2_23,
+      "Weather_condition": weather2_24
+    }
+
+    fetch('http://127.0.0.1:5000/fvsra/vehicleAccidentReport', {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(propertyLossReportObj)
+    }).then(() => {
+      alert("Report has been submitted!")
+      navigate(-1) //Redirects page
+
+    })
+
+  }
 
 
 
 
     return ( 
       <div>
+        <form onSubmit={handleSubmit}>
       <div className="entire-page">
         <div className="top-space" />
         <div className="page-head">
@@ -272,7 +415,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Yes</div>
                   <div className="centerInput">
-                    <input type="radio" defaultValue="Yes" id="DamageThirdParty2-7" name="DamageThirdParty2-7" value={DamageThirdParty2_7} onChange={(e) => setDamageThirdParty2_7(e.target.value)}/>
+                    <input type="radio" defaultValue="Yes" id="AddressIncidentLocation" name="AddressIncidentLocation" value={"Yes"} onClick={(e) => setAddressIncidentLocation("Yes")}/>
                   </div>
                 </div>
                 {/*                <p class="s3" style="text-indent: 0pt;line-height: 10pt;text-align: right;">Yes <div class="centerInput"><input type="checkbox" id="horns" name="horns"></div></p>*/}
@@ -282,13 +425,13 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">No</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="No" id="DamageThirdParty2-7" name="DamageThirdParty2-7" value={DamageThirdParty2_7} onChange={(e) => setDamageThirdParty2_7(e.target.value)}/>
+                      <input type="radio" defaultValue="No" id="AddressIncidentLocation" name="AddressIncidentLocation" value={"No"} onClick={(e) => setAddressIncidentLocation("No")}/>
                     </div>
                   </div>
                   <div className="inputGrid">
                     <div className="s3-right">Unknown</div>
                     <div className="centerInput">
-                      <input type="radio" defaultValue="Unknown" id="DamageThirdParty2-7" name="DamageThirdParty2-7" value={DamageThirdParty2_7} onChange={(e) => setDamageThirdParty2_7(e.target.value)}/>
+                      <input type="radio" defaultValue="Unknown" id="AddressIncidentLocation" name="AddressIncidentLocation" value={"Unknown"} onClick={(e) => setAddressIncidentLocation("Unknown")}/>
                     </div>
                   </div>
                 </div>
@@ -413,7 +556,7 @@ const VehicleReport = () => {
               </td>
               <td colSpan={3} style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>First name</p>
-                <div className="endInput"><input type="text" id="AgencyDriverFirst2-11" name="AgencyDriverFirst2-11" value={AgencyDriverLast2_11} onChange={(e) => setAgencyDriverLast2_11(e.target.value)}/></div>
+                <div className="endInput"><input type="text" id="AgencyDriverFirst2-11" name="AgencyDriverFirst2-11" value={AgencyDriverLast2_11} onChange={(e) => setAgencyDriverFirst2_11(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '36pt'}}>
@@ -427,7 +570,7 @@ const VehicleReport = () => {
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>City</p>
-                <div className="endInput"><input type="text" id="City2-11" name="City2-11" /> value={City2_11} onChange={(e) => setCity2_11(e.target.value)}</div>
+                <div className="endInput"><input type="text" id="City2-11" name="City2-11" value={City2_11} onChange={(e) => setCity2_11(e.target.value)} /> </div>
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>State</p>
@@ -755,7 +898,7 @@ const VehicleReport = () => {
                 <div className="inputGrid4">
                   <div className="s3">
                     Trailor year
-                    <div className="endInput"><input type="text" id="AgencyVIN2-16" name="AgencyVIN2-16" value={agencyVIN2_16} onChange={(e) => setAgencyVIN2_16(e.target.value)}/></div>                  </div>
+                    <div className="endInput"><input type="text" id="Year2-16" name="Year2-16" value={year2_16} onChange={(e) => setYear2_16(e.target.value)}/></div>                  </div>
                   <div className="s3">
                     Make
                     <div className="endInput"><input type="text" id="Make2-16" name="Make2-16" value={make2_16} onChange={(e) => setMake2_16(e.target.value)}/></div>
@@ -2235,8 +2378,10 @@ const VehicleReport = () => {
               </td>
             </tr>
           </tbody></table>
+        <button type={"submit"}>Submit</button>
         <div className="bottom-space" />
       </div>
+        </form>
     </div>
      );
 }
