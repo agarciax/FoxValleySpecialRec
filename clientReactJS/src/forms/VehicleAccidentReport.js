@@ -270,7 +270,8 @@ const VehicleReport = () => {
       "What_street_was_the_other_driver_driving_on": otherStreet2_22,
       "What_direction_was_the_agency_driver_traveling": agencyDirection2_23,
       "What_direction_was_the_other_driver_traveling": otherDirection2_23,
-      "Weather_condition": weather2_24
+      "Weather_condition": weather2_24,
+      "diagramImg": diagramImg
     }
 
     fetch('http://127.0.0.1:5000/fvsra/vehicleAccidentReport', {
