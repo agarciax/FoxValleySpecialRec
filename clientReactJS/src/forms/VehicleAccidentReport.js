@@ -83,7 +83,18 @@ const VehicleReport = () => {
   const [locationTaken2_19, setLocationTaken2_19] = useState('');
   const [claim2_19, setClaim2_19] = useState('');
   const [describeInjury2_19, setDescribeInjury2_19] = useState('');
+
   const [involement2_19_2, setInvolement2_19_2] = useState('');
+
+  const [involement2_19_2_1, setInvolement2_19_2_1] = useState('');
+  const [involement2_19_2_2, setInvolement2_19_2_2] = useState('');
+  const [involement2_19_2_3, setInvolement2_19_2_3] = useState('');
+  const [involement2_19_2_4, setInvolement2_19_2_4] = useState('');
+  const [involement2_19_2_5, setInvolement2_19_2_5] = useState('');
+  const [involement2_19_2_6, setInvolement2_19_2_6] = useState('');
+  const [involement2_19_2_7, setInvolement2_19_2_7] = useState('');
+
+
   const [lastNameBuisness2_19_2, setLastNameBuisness2_19_2] = useState('');
   const [firstNameBuisness2_19_2, setFirstNameBuisness2_19_2] = useState('');
   const [address2_19_2, setAddress2_19_2] = useState('');
@@ -131,6 +142,7 @@ const VehicleReport = () => {
   const [diagramImg, setDiagramImg] = useState('');
 
   const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
+  
 
 
   const handleSubmit = (e) => { //Handles the onSubmit action of the log
@@ -323,7 +335,7 @@ const VehicleReport = () => {
                 <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Today’s date</p>
-                <input type="date" id="Todays_Date2-1" name="Todays_Date2-1" defaultValue min="2021-01-01" max="2050-01-01" value={TodaysDate2_1} onChange={(e) => setTodaysDate2_1(e.target.value)} />
+                <input type="date" id="Todays_Date2-1" name="Todays_Date2-1" defaultValue min="2021-01-01" max="2050-01-01" value={TodaysDate2_1} onChange={(e) => setTodaysDate2_1(e.target.value)} required />
               </td>
             </tr>
             <tr style={{height: '22pt'}}>
@@ -332,7 +344,7 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Date of incident (mm/dd/yyyy)</p>
-                <input type="date" id="Date_of_Incident2-2" name="Date_of_Incident2-2" defaultValue min="2021-01-01" max="2050-01-01" value={DateIncident2_2} onChange={(e) => setDateIncident2_2(e.target.value)}/>
+                <input type="date" id="Date_of_Incident2-2" name="Date_of_Incident2-2" defaultValue min="2021-01-01" max="2050-01-01" value={DateIncident2_2} required onChange={(e) => setDateIncident2_2(e.target.value)}/>
               </td>
               <td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '2pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                 <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
@@ -348,12 +360,12 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Name of person completing the report</p>
-                <input type="text" id="Name-2-3" name="Name-2-3" value={Name2_3} onChange={(e) => setName2_3(e.target.value)}/>
+                <input type="text" id="Name-2-3" name="Name-2-3" value={Name2_3} required onChange={(e) => setName2_3(e.target.value)}/>
               </td><td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                 <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Title of person completing report</p>
-                <div className="endInput"><input type="text" id="Title-2-3" name="Title-2-3" value={Title2_3} onChange={(e) => setTitle2_3(e.target.value)}/></div>
+                <div className="endInput"><input type="text" id="Title-2-3" name="Title-2-3" value={Title2_3} required onChange={(e) => setTitle2_3(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '21pt'}}>
@@ -362,12 +374,12 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Business phone</p>
-                <input type="tel" id="Business_phone2-4" name="phone2-4" placeholder="000-000-0000" required value={Business_Phone2_4} onChange={(e) => setBusiness_Phone2_4(e.target.value)} />
+                <input type="tel" id="Business_phone2-4" name="phone2-4" placeholder="000-000-0000" required value={Business_Phone2_4} onChange={(e) => setBusiness_Phone2_4(e.target.value)} required />
               </td><td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                 <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Business email</p>
-                <div className="endInput"><input type="text" id="Business_email2-4" name="Business_email2-4" value={Business_Email2_4} onChange={(e) => setBusiness_Email2_4(e.target.value)}/></div>
+                <div className="endInput"><input type="text" id="Business_email2-4" name="Business_email2-4" value={Business_Email2_4} required onChange={(e) => setBusiness_Email2_4(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '25pt'}}>
@@ -381,7 +393,7 @@ const VehicleReport = () => {
             <tr style={{height: '20pt'}}>
               <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
               <td colSpan={3} style={{width: '526pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p>
-                <div className="endInput"><input type="text" id="Incident_Occur2-5" name="Incident_Occur2-5" value={Incident_Occur2_5} onChange={(e) => setIncident_Occur2_5(e.target.value)}/></div>
+                <div className="endInput"><input type="text" id="Incident_Occur2-5" name="Incident_Occur2-5" value={Incident_Occur2_5} required onChange={(e) => setIncident_Occur2_5(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '20pt'}}>
@@ -402,7 +414,7 @@ const VehicleReport = () => {
               </td>
               <td colSpan={3} style={{borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Name of the location (street/road/highway) or nearest intersection where the incident occurred.
                 </p>
-                <div className="endInput"><input type="text" id="NameOfLocation2-6" name="NameOfLocation2-6" value={NameOfLocation2_6} onChange={(e) => setNameOfLocation2_6(e.target.value)}/></div>
+                <div className="endInput"><input type="text" id="NameOfLocation2-6" name="NameOfLocation2-6" value={NameOfLocation2_6} required onChange={(e) => setNameOfLocation2_6(e.target.value)}/></div>
               </td>
             </tr>
             <tr style={{height: '19pt'}}>
@@ -457,7 +469,7 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{textIndent: '0pt', textAlign: 'left'}}>Zip code</p>
-                <input type="tel" id="ZipCode2-7" name="ZipCode2-7" placeholder="00000" pattern="[0-9]{5}" required value={ZipCode2_7} onChange={(e) => setZipCode2_7(e.target.value)}/>
+                <input type="tel" id="ZipCode2-7" name="ZipCode2-7" placeholder="00000" pattern="[0-9]{5}" value={ZipCode2_7} onChange={(e) => setZipCode2_7(e.target.value)}/>
               </td>
             </tr>
             <tr style={{height: '5pt'}}>
@@ -580,7 +592,7 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Zip code</p>
-                <input type="tel" id="ZipCode2-11" name="ZipCode2-11" placeholder="00000" pattern="[0-9]{5}" required value={ZipCode2_11} onChange={(e) => setZipCode2_11(e.target.value)}/>
+                <input type="tel" id="ZipCode2-11" name="ZipCode2-11" placeholder="00000" pattern="[0-9]{5}" value={ZipCode2_11} onChange={(e) => setZipCode2_11(e.target.value)}/>
               </td>
             </tr>
             <tr style={{height: '29pt'}}>
@@ -1051,7 +1063,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Driver of other vehicle</div>
                   <div className="centerInput">
-                    <input type="checkbox" defaultValue="Driver" id="Involement2-19" name="Involement2-19" value={involement2_19} onChange={(e) => setInvolement2_19(e.target.value)}/>
+                    <input type="checkbox" defaultValue="Driver" id="Involement2-19" name="Involement2-19" value={"Driver"} onClick={() => setInvolement2_19("Driver")}/>
                   </div>
                 </div>
               </td>
@@ -1060,7 +1072,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Owner of other vehicle</div>
                     <div className="centerInput">
-                      <input type="checkbox" defaultValue="Owner of other vehicle" id="Involement2-19" name="Involement2-19" value={involement2_19} onChange={(e) => setInvolement2_19(e.target.value)}/>
+                      <input type="checkbox" defaultValue="Owner of other vehicle" id="Involement2-19" name="Involement2-19" value={"Owner of other vehicle"} onClick={() => setInvolement2_19("Owner of other vehicle")}/>
                     </div>
                   </div>
                   <div className="inputGrid">
@@ -1158,7 +1170,7 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Zip code</p>
-                <input type="tel" id="ZipCode2-19" name="ZipCode2-19" placeholder="00000" pattern="[0-9]{5}" required value={zipCode2_19} onChange={(e) => setZipCode2_19(e.target.value)}/>
+                <input type="tel" id="ZipCode2-19" name="ZipCode2-19" placeholder="00000" pattern="[0-9]{5}" value={zipCode2_19} onChange={(e) => setZipCode2_19(e.target.value)}/>
               </td>
             </tr>
             <tr style={{height: '29pt'}}>
@@ -1497,7 +1509,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Driver of other vehicle</div>
                   <div className="centerInput">
-                    <input type="checkbox" defaultValue="Driver" id="Involement2-19-2" name="Involement2-19-2" value={involement2_19_2} onChange={(e) => setInvolement2_19_2(e.target.value)}/>
+                    <input type="checkbox" defaultValue="Driver" id="Involement2-19-2" name="Involement2-19-2" value={"Y"} onClick={() => setInvolement2_19_2_1("Y")}/>
                   </div>
                 </div>
               </td>
@@ -1604,7 +1616,7 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Zip code</p>
-                <input type="tel" id="ZipCode2-19-2" name="ZipCode2-19-2" placeholder="00000" pattern="[0-9]{5}" required value={zipCode2_19_2} onChange={(e) => setZipCode2_19_2(e.target.value)}/>
+                <input type="tel" id="ZipCode2-19-2" name="ZipCode2-19-2" placeholder="00000" pattern="[0-9]{5}" value={zipCode2_19_2} onChange={(e) => setZipCode2_19_2(e.target.value)}/>
               </td>
             </tr>
             <tr style={{height: '29pt'}}>
@@ -1956,7 +1968,7 @@ const VehicleReport = () => {
               </td>
               <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                 <p className="s3" style={{paddingTop: '1pt', textIndent: '0pt', textAlign: 'left'}}>Zip code</p>
-                <input type="tel" id="ZipCode2-20" name="ZipCode2-20" placeholder="00000" pattern="[0-9]{5}" required value={zipCode2_20} onChange={(e) => setZipCode2_20(e.target.value)}/>
+                <input type="tel" id="ZipCode2-20" name="ZipCode2-20" placeholder="00000" pattern="[0-9]{5}" value={zipCode2_20} onChange={(e) => setZipCode2_20(e.target.value)}/>
               </td>
             </tr>
             <tr style={{height: '29pt'}}>
