@@ -139,7 +139,7 @@ const VehicleReport = () => {
   const [agencyDirection2_23, setAgencyDirection2_23] = useState('');
   const [otherDirection2_23, setOtherDirection2_23] = useState('');
   const [weather2_24, setWeather2_24] = useState('');
-  const [diagramImg, setDiagramImg] = useState('');
+  const [diagramImg, setDiagramImg] = useState([]);
 
   const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
   
@@ -278,7 +278,8 @@ const VehicleReport = () => {
       "What_street_was_the_other_driver_driving_on": otherStreet2_22,
       "What_direction_was_the_agency_driver_traveling": agencyDirection2_23,
       "What_direction_was_the_other_driver_traveling": otherDirection2_23,
-      "Weather_condition": weather2_24
+      "Weather_condition": weather2_24,
+      "diagramImg": diagramImg
     }
 
     fetch('http://127.0.0.1:5000/fvsra/vehicleAccidentReport', {
@@ -2398,7 +2399,7 @@ const VehicleReport = () => {
               <td colSpan={3} style={{width: '526pt', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}><p className="s3" style={{paddingTop: '4pt', textIndent: '0pt', textAlign: 'left'}}>Accident Diagram</p>
                 <div className="inputGrid">
                   <div>Upload img file of the diagram -></div>
-                  <input type="file" id="img" name="img" accept="image/*" value={diagramImg} onChange={(e) => setDiagramImg(e.target.value)}/>
+                  <input type="file" id="img" name="img" accept="image/*" value={diagramImg} onChange={(e) => setDiagramImg((e.target.value).blob())}/>
                 </div>
               </td>
             </tr>
@@ -2410,5 +2411,5 @@ const VehicleReport = () => {
     </div>
      );
 }
- 
+
 export default VehicleReport;
