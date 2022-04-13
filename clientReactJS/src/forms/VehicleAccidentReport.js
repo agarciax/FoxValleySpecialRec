@@ -287,8 +287,8 @@ const VehicleReport = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(propertyLossReportObj)
     }).then(() => {
-      alert("Report has been submitted!")
-      navigate(-1) //Redirects page
+
+      navigate("/submitted") //Redirects page
 
     })
 

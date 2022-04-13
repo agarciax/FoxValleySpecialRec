@@ -56,8 +56,7 @@ const NotificationReport = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(NotificationReportObj)
     }).then(() => {
-      alert("Report has been submitted!")
-      navigate(-1) //Redirects page
+      navigate("/submitted") //Redirects page
     })
 
   }

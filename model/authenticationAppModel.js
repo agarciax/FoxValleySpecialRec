@@ -2,7 +2,7 @@
 var sql = require('./db.js');
 //Task object constructor
 var LoginInfo = function (LoginPage) {
-    this.userID = LoginPage.userID;
+    this.user_id = LoginPage.user_id;
     this.username = LoginPage.username;
     this.password = LoginPage.password;
 
@@ -41,7 +41,7 @@ LoginInfo.createLoginInfo = function (newIncident, result) {
         }
     });
 };
-LoginInfo.remove = function (login_id, result) {
+LoginInfo.remove = function (user_id, result) {
     sql.query("DELETE FROM Login_Info WHERE user_id = ?", user_id, function (err, res) {
         if (err) {
             console.log("error: ", err);
