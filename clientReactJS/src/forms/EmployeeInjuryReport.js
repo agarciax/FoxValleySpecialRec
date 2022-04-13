@@ -417,13 +417,16 @@ const  EmployeeInjury = () => {
               </tr>
               <tr style={{height: '29pt'}}>
                 <td bgcolor="#24418E" style={{width: '14pt'}}><p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
+
                 <td style={{width: '283pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="ERF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Home phone #</p>
                   <input className="ERF_Input"  type="tel" id="Home_phone" value={employeeHomePhone} onChange={(e) => setEmployeeHomePhone(e.target.value)} name="phone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
                 </td>
+
                 <td style={{width: '283pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderLeftStyle: 'none', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20'}}>
                   <p className="ERF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Work phone #</p>
-                  <input className="ERF_Input"  type="tel" id="Work_phone" value={setEmployeeWorkPhone} onChange={(e) => setEmployeeHomePhone(e.target.value)} name="phone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                  <input className="ERF_Input"  type="tel" id="Work_phone" value={employeeWorkPhone} onChange={(e) => setEmployeeWorkPhone(e.target.value)} name="phone" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+
                 </td>
                 <td style={{width: '202pt', borderTopStyle: 'none', borderTopWidth: '1pt', borderTopColor: '#231F20', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#231F20', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
                   <p className="ERF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Cell phone #</p>
@@ -681,7 +684,7 @@ const  EmployeeInjury = () => {
                   <div className="ERF_inputGrid">
                     <div className="ERF_s3-right">Yes</div>
                     <div className="ERF_centerInput">
-                      <input className="ERF_Input"  type="radio" defaultValue="Yes" id="PremisesYes" value={premises} onChange={(e) => setPremises(e.target.value)} name="Premises" />
+                      <input className="ERF_Input"  type="radio" defaultValue="Yes" id="PremisesYes" value={premises} onChange={(e) => setPremises(e.target.value)} name="AgencyPremises" />
                     </div>
                   </div>
                 </td>
@@ -690,13 +693,13 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">No</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="No" id="PremisesNo" value={premises} onChange={(e) => setPremises(e.target.value)} name="PremisesNo" />
+                        <input className="ERF_Input"  type="radio" defaultValue="No" id="PremisesNo" value={premises} onChange={(e) => setPremises(e.target.value)} name="AgencyPremises" />
                       </div>
                     </div>
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Unknown</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="PremisesUnknown" value={premises} onChange={(e) => setPremises(e.target.value)} name="PremisesUnknown" defaultChecked />
+                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="PremisesUnknown" value={premises} onChange={(e) => setPremises(e.target.value)} name="AgencyPremises" defaultChecked />
                       </div>
                     </div>
                   </div>
@@ -711,13 +714,13 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Injury</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="Injury" id="Injury" value={injuryIllness} onChange={(e) => setInjuryIllness(e.target.value)} name="Injury" />
+                        <input className="ERF_Input"  type="radio" defaultValue="Injury" id="Injury" value={injuryIllness} onChange={(e) => setInjuryIllness(e.target.value)} name="InjuryOrIllness" />
                       </div>
                     </div>
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Illness</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="Illness" id="Illness" value={injuryIllness} onChange={(e) => setInjuryIllness(e.target.value)} name="Illness" defaultChecked />
+                        <input className="ERF_Input"  type="radio" defaultValue="Illness" id="Illness" value={injuryIllness} onChange={(e) => setInjuryIllness(e.target.value)} name="InjuryOrIllness" defaultChecked />
                       </div>
                     </div>
                   </div>
@@ -738,14 +741,16 @@ const  EmployeeInjury = () => {
                 </td>
               </tr>
               <tr style={{height: '22pt'}}>
-                <td className="ERF_blue-boxes">16</td>
+                <td className="ERF_blue-boxes">
+                  16
+                </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p className="ERF_s3" style={{textIndent: '0pt', lineHeight: '10pt', textAlign: 'left'}}>Did the injured employee seek medical attention?</p></td>
                 <td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <div className="ERF_inputGrid">
                     <div className="ERF_s3-right">Yes</div>
                     <div className="ERF_centerInput">
-                      <input className="ERF_Input"  type="radio" defaultValue="Yes" id="MedicalYes" value={medical} onChange={(e) => setMedical(e.target.value)} name="MedicalYes" />
+                      <input className="ERF_Input"  type="radio" defaultValue="Yes" id="MedicalYes" value={medical} onChange={(e) => setMedical(e.target.value)} name="MedicalAttention" />
                     </div>
                   </div>
                 </td>
@@ -754,13 +759,13 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">No</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="No" id="MedicalNo" value={medical} onChange={(e) => setMedical(e.target.value)} name="MedicalNo" />
+                        <input className="ERF_Input"  type="radio" defaultValue="No" id="MedicalNo" value={medical} onChange={(e) => setMedical(e.target.value)} name="MedicalAttention" />
                       </div>
                     </div>
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Unknown</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="MedicalUnknown" value={medical} onChange={(e) => setMedical(e.target.value)} name="MedicalUnknown" defaultChecked />
+                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="MedicalUnknown" value={medical} onChange={(e) => setMedical(e.target.value)} name="MedicalAttention" defaultChecked />
                       </div>
                     </div>
                   </div>
@@ -774,7 +779,7 @@ const  EmployeeInjury = () => {
                   <div className="ERF_inputGrid">
                     <div className="ERF_s3-right">Yes</div>
                     <div className="ERF_centerInput">
-                      <input className="ERF_Input"  type="radio" defaultValue="Yes" id="TreatmentYes" value={treatment} onChange={(e) => setTreatment(e.target.value)} name="TreatmentYes" />
+                      <input className="ERF_Input"  type="radio" defaultValue="Yes" id="TreatmentYes" value={treatment} onChange={(e) => setTreatment(e.target.value)} name="MedicalTreatment" />
                     </div>
                   </div>
                 </td>
@@ -783,13 +788,13 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">No</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="No" id="TreatmentNo" value={treatment} onChange={(e) => setTreatment(e.target.value)} name="TreatmentNo"  />
+                        <input className="ERF_Input"  type="radio" defaultValue="No" id="TreatmentNo" value={treatment} onChange={(e) => setTreatment(e.target.value)} name="MedicalTreatment"  />
                       </div>
                     </div>
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Unknown</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="TreatmentUnknown" value={treatment} onChange={(e) => setTreatment(e.target.value)} name="TreatmentUnknown"  />
+                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="TreatmentUnknown" value={treatment} onChange={(e) => setTreatment(e.target.value)} name="MedicalTreatment"  />
                       </div>
                     </div>
                   </div>
@@ -803,7 +808,7 @@ const  EmployeeInjury = () => {
                   <div className="ERF_inputGrid">
                     <div className="ERF_s3-right">Yes</div>
                     <div className="ERF_centerInput">
-                      <input className="ERF_Input"  type="radio" defaultValue="Yes" id="emergencyRoomYes" value={emergencyRoom} onChange={(e) => setEmergencyRoom(e.target.value)} name="emergencyRoomYes" />
+                      <input className="ERF_Input"  type="radio" defaultValue="Yes" id="emergencyRoomYes" value={emergencyRoom} onChange={(e) => setEmergencyRoom(e.target.value)} name="EmergencyRoomTreated" />
                     </div>
                   </div>
                 </td>
@@ -812,13 +817,13 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">No</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="No" id="emergencyRoomNo" value={emergencyRoom} onChange={(e) => setEmergencyRoom(e.target.value)} name="emergencyRoomNo" /> />
+                        <input className="ERF_Input"  type="radio" defaultValue="No" id="emergencyRoomNo" value={emergencyRoom} onChange={(e) => setEmergencyRoom(e.target.value)} name="EmergencyRoomTreated" />
                       </div>
                     </div>
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Unknown</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="emergencyRoomUnknown" value={emergencyRoom} onChange={(e) => setEmergencyRoom(e.target.value)} name="emergencyRoomUnknown" /> />
+                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="emergencyRoomUnknown" value={emergencyRoom} onChange={(e) => setEmergencyRoom(e.target.value)} name="EmergencyRoomTreated" />
                       </div>
                     </div>
                   </div>
@@ -841,13 +846,13 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">No</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="No" id="HospitalizedNo" value={hospitalized} onChange={(e) => setHospitalized(e.target.value)} name="HospitalizedNo" />
+                        <input className="ERF_Input"  type="radio" defaultValue="No" id="HospitalizedNo" value={hospitalized} onChange={(e) => setHospitalized(e.target.value)} name="Hospitalized" />
                       </div>
                     </div>
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Unknown</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="HospitalizedUnknown" value={hospitalized} onChange={(e) => setHospitalized(e.target.value)} name="HospitalizedUnknown"  />
+                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="HospitalizedUnknown" value={hospitalized} onChange={(e) => setHospitalized(e.target.value)} name="Hospitalized"  />
                       </div>
                     </div>
                   </div>
