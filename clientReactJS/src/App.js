@@ -37,6 +37,43 @@ function App() {
                   </PrivateRoute>
                 }
             />
+            <Route
+                path="/form/viewMinorInjury"
+                element={
+                  <PrivateRoute>
+                    <ViewMinorInjury />
+                  </PrivateRoute>
+                }
+            />
+
+            <Route
+                path="/form/viewPropertyLossReport"
+                element={
+                  <PrivateRoute>
+                    <ViewPropertyLoss />
+                  </PrivateRoute>
+                }
+            />
+
+            <Route
+                path="/form/viewAccidentIncidentReport"
+                element={
+                  <PrivateRoute>
+                    <ViewAccidentIncident />
+                  </PrivateRoute>
+                }
+            />
+
+            <Route
+                path="/form/viewNotificationOfInjuryToEmployerReport"
+                element={
+                  <PrivateRoute>
+                    <ViewNotificationOfInjuryToEmployer />
+                  </PrivateRoute>
+                }
+            />
+
+
           </Routes>
 
           <Routes>
@@ -57,18 +94,7 @@ function App() {
           <Routes>
             <Route path="/form/VehicleReport" element={<VehicleReport />} />
           </Routes>
-          <Routes>
-            <Route path="/form/viewMinorInjury" element={<ViewMinorInjury />} />
-          </Routes>
-          <Routes>
-            <Route path={"/form/viewPropertyLossReport"} element={<ViewPropertyLoss />}/>
-          </Routes>
-          <Routes>
-            <Route path={"/form/viewNotificationOfInjuryToEmployerReport"} element={<ViewNotificationOfInjuryToEmployer />} />
-          </Routes>
-          <Routes>
-            <Route path={"/form/viewAccidentIncidentReport"} element={<ViewAccidentIncident />} />
-          </Routes>
+
         </div>
       </div>
     </BrowserRouter>
