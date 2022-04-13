@@ -12,6 +12,7 @@ var VehicleAccident = function (vehicleAccident) {
     this.Business_Email = vehicleAccident.Business_Email;
     this.How_did_the_incident_Occur = vehicleAccident.How_did_the_incident_Occur;
     this.Name_of_the_location = vehicleAccident.Name_of_the_location;
+    this.Address_Incident_Location = vehicleAccident.Address_Incident_Location;
     this.Incident_Street_Address = vehicleAccident.Incident_Street_Address;
     this.Incident_City = vehicleAccident.Incident_City;
     this.Incident_State = vehicleAccident.Incident_State;

@@ -8,7 +8,6 @@ const Admin = () => {
 
     const handleLogout = () => {
         localStorage.clear();
-        window.location.pathname = "/Login";
     };
 
 
@@ -20,7 +19,7 @@ const Admin = () => {
 
         <div className="AD_container-login100" style={{backgroundImage: `url(${background})`}}>
           
-          <Link to="/Login"> 
+          <Link to="/FoxValleySpecialRec">
           <button className="LogoutButton"  onClick={handleLogout}>
             Log Out
           </button>

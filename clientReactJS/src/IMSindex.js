@@ -6,10 +6,13 @@ import background from "./images/bg-01.jpg";
  import "./fonts/iconic/css/material-design-iconic-font.min.css"
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import UseFetch from "./UseFetch";
 
 const LoginPage = () => {
+    const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/');
 
-  // React States
+
+    // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -25,6 +28,7 @@ const LoginPage = () => {
       password: "test"
     }
   ];
+
   //Error Messages
   const errors = {
     uname: "Invalid Username",
@@ -35,17 +39,27 @@ const LoginPage = () => {
     //Prevent page reload
     event.preventDefault();
 
-    var { uname, pass } = document.forms[0];
+
+      // User Login info
+      const db = [];
+      for (let i = 0; i < logs.length; i++) {
+          db.push({username : logs[i].username, password : logs[i].password});
+      }
+
+      var { uname, pass } = document.forms[0];
+
 
     // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
+    const userData = db.find((user) => user.username === uname.value);
 
     // Compare user info
     if (userData) {
       if (userData.password !== pass.value) {
-        // Invalid password
+
+          // Invalid password
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
+          //Authenticates users and redirects once user and pass has been matched
         setIsSubmitted(true);
         localStorage.setItem("isAuthenticated", "true");
         window.location.href = "/admin";
@@ -104,6 +118,8 @@ const LoginPage = () => {
   );
 
   return (
+
+
       <div className="limiter">
         <div className="container-login100" style={{backgroundImage: `url(${background})`}}>
           <div className="wrap-login101">

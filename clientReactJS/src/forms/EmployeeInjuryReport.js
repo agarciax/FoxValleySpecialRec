@@ -143,8 +143,9 @@ const  EmployeeInjury = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(EmployeeInjuryReportObj)
     }).then(() => {
-      alert("Log has been reported.")
-      navigate('/login') //Redirects page
+      alert("Report has been submitted!")
+      navigate(-1) //Redirects page
+
     })
 
   }
@@ -595,7 +596,7 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Intern</div>
                       <div className="ERF_centerInput">
-                        <input className="ERF_Input" defaultValue="Intern" id="Employee_Intern" value={employeeStatus} onChange={(e) => setEmployeeStatus(e.target.value)} name="Employee_Intern" />
+                        <input className="ERF_Input" type="radio" defaultValue="Intern" id="Employee_Intern" value={employeeStatus} onChange={(e) => setEmployeeStatus(e.target.value)} name="Employee_Intern" />
                       </div>
                     </div>
                     <div className="ERF_inputGrid">
@@ -699,7 +700,11 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Unknown</div>
                       <div className="ERF_centerInput">
+{/*<<<<<<< HEAD*/}
                         <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="PremisesUnknown" value={premises} onChange={(e) => setPremises(e.target.value)} name="AgencyPremises" defaultChecked />
+{/*=======*/}
+                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="PremisesUnknown" value={premises} onChange={(e) => setPremises(e.target.value)} name="PremisesUnknown" />
+{/*>>>>>>> 8a3b63728945101cf669dec17b37da9c4f86de27*/}
                       </div>
                     </div>
                   </div>
@@ -720,7 +725,11 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Illness</div>
                       <div className="ERF_centerInput">
+{/*<<<<<<< HEAD*/}
                         <input className="ERF_Input"  type="radio" defaultValue="Illness" id="Illness" value={injuryIllness} onChange={(e) => setInjuryIllness(e.target.value)} name="InjuryOrIllness" defaultChecked />
+{/*=======*/}
+                        <input className="ERF_Input"  type="radio" defaultValue="Illness" id="Illness" value={injuryIllness} onChange={(e) => setInjuryIllness(e.target.value)} name="Illness" />
+{/*>>>>>>> 8a3b63728945101cf669dec17b37da9c4f86de27*/}
                       </div>
                     </div>
                   </div>
@@ -765,7 +774,11 @@ const  EmployeeInjury = () => {
                     <div className="ERF_inputGrid">
                       <div className="ERF_s3-right">Unknown</div>
                       <div className="ERF_centerInput">
+{/*<<<<<<< HEAD*/}
                         <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="MedicalUnknown" value={medical} onChange={(e) => setMedical(e.target.value)} name="MedicalAttention" defaultChecked />
+{/*=======*/}
+                        <input className="ERF_Input"  type="radio" defaultValue="Unknown" id="MedicalUnknown" value={medical} onChange={(e) => setMedical(e.target.value)} name="MedicalUnknown" />
+{/*>>>>>>> 8a3b63728945101cf669dec17b37da9c4f86de27*/}
                       </div>
                     </div>
                   </div>

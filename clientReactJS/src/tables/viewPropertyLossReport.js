@@ -14,7 +14,7 @@ const viewPropertyLossReport = () => {
 
     const handleDelete = async (e, property_loss_id) => {
         e.preventDefault();
-        const result = await confirm("Are you sure?");
+        const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
             fetch('http://127.0.0.1:5000/fvsra/propertyLossReport/' + property_loss_id, {
                 method: 'DELETE'
