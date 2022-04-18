@@ -8,11 +8,12 @@ const viewPropertyLossReport = () => {
     const { data: reports, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/vehicleAccidentReport');
     let header = ["Vehicle Accident ID", "Agency Name", "Today's Date", "Date Of Incident", "Time Of Incident", "Name Of Person Completing The Report", "Title Of Person Completing The Report", "Business Phone",
     "Business Email", "How Did The Incident Occur?", "Name Of The Location", "Is there an address for incident location?", "Incident Street address", "Incident City", "Incident Zip Code", "Incident Location",
-    , "Was The Agency Vehicle Occupied?" ,"Agency Driver Last Name", "Agency Driver First Name", "Agency Address", "Agency City", "Agency State", "Agency Zip Code", "Agency Home Phone #", "Agency Work Phone #",
+    "Was The Agency Vehicle Occupied?", "Agency Driver Last Name", "Agency Driver First Name", "Agency Address", "Agency City", "Agency State", "Agency Zip Code", "Agency Home Phone #", "Agency Work Phone #",
     "Agency Cell Phone #", "Agency Email", "Is This Driver An Employee?", "Job Title Of Employee", "Type Of Driver", "Agency Vehicle VIN", "Agency Vehicle Make", "Agency Vehicle Model", "Agency Vehicle License #",
     "Is This Vehicle Drivable?", "Current Location Of Vehicle", "Area Of Damage", "Estimated Repair Cost", "Was A Trailer Involved?", "Trailer Year", "Trailer Make", "Trailer Model", "Trailer Licence #",
     "Trailer Area Of Damage", "Current Location Of Trailer", "Estimated Repair Cost Of Trailer", "Has A Police Agency Investigated The Incident", "What Police Agency?", "Police Report #", "Agency Address",
-    "Was The Agency Driver Ticketed/Arrested/Cited For Violation?", "Details Of Ticketed/Arrested/Cited For Violation", "\t Claimant Info \t", ];
+    "Was The Agency Driver Ticketed/Arrested/Cited For Violation?", "Details Of Ticketed/Arrested/Cited For Violation", "\t Claimant Info \t",
+    "How Was The Person Involved In The Accident?"];
 
     const handleDelete = async (e, vehicle_accident_id) => {
         e.preventDefault();

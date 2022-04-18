@@ -98,6 +98,9 @@
 .AD_item4 { grid-area: right; }
 .AD_item5 { grid-area: footer; }
 
+.SET_item2 { grid-area: main; }
+
+
 .AD_grid-container {
   display: grid;
   grid-template-areas:
@@ -197,6 +200,12 @@ button:hover .AD_dropdown-content{
   display: block;
   background: transparent;
 }
+
+.SET_item2:hover .AD_dropdown-content {
+  display: block;
+  background: transparent;
+}
+
 .AD_item3:hover .AD_dropdown-content {
   background: transparent;
   display: block;}
@@ -693,6 +702,5 @@ iframe {
     opacity: 1;
   }
 }
-
 
 

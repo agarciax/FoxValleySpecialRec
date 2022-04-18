@@ -11,7 +11,6 @@ import UseFetch from "./UseFetch";
 const LoginPage = () => {
     const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/');
 
-
     // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);

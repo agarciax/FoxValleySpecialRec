@@ -56,7 +56,7 @@ const Admin = () => {
             <div className="AD_item4">
               <button  className="AD_wrap-login100">Security</button>
               <div id="myDropdown3" className="AD_dropdown-content">
-                <a href="#home">Settings</a>
+                <a href="/admin/settings">Settings</a>
                 <a href="#about">Notifications</a>
               </div>
             </div>

@@ -86,13 +86,13 @@ const VehicleReport = () => {
 
   const [involement2_19_2, setInvolement2_19_2] = useState('');
 
-  const [involement2_19_2_1, setInvolement2_19_2_1] = useState('');
-  const [involement2_19_2_2, setInvolement2_19_2_2] = useState('');
-  const [involement2_19_2_3, setInvolement2_19_2_3] = useState('');
-  const [involement2_19_2_4, setInvolement2_19_2_4] = useState('');
-  const [involement2_19_2_5, setInvolement2_19_2_5] = useState('');
-  const [involement2_19_2_6, setInvolement2_19_2_6] = useState('');
-  const [involement2_19_2_7, setInvolement2_19_2_7] = useState('');
+  const [involement2_19_2_1, setInvolement2_19_2_1] = useState(false);
+  const [involement2_19_2_2, setInvolement2_19_2_2] = useState(false);
+  const [involement2_19_2_3, setInvolement2_19_2_3] = useState(false);
+  const [involement2_19_2_4, setInvolement2_19_2_4] = useState(false);
+  const [involement2_19_2_5, setInvolement2_19_2_5] = useState(false);
+  const [involement2_19_2_6, setInvolement2_19_2_6] = useState(false);
+  const [involement2_19_2_7, setInvolement2_19_2_7] = useState(false);
 
 
   const [lastNameBuisness2_19_2, setLastNameBuisness2_19_2] = useState('');
@@ -226,7 +226,15 @@ const VehicleReport = () => {
       "Claimant_If_yes_where_was_the_injured_person_taken": locationTaken2_19,
       "Claimant_Do_you_expect_the_injured_person_to_file_a_claim": claim2_19,
       "Claimant_Describe_the_injury": describeInjury2_19,
-      "How_was_the_person_involved_in_the_accident2": involement2_19_2,
+
+      "How_was_the_person_involved_in_the_accident2_1": involement2_19_2_1,
+      "How_was_the_person_involved_in_the_accident2_2": involement2_19_2_2,
+      "How_was_the_person_involved_in_the_accident2_3": involement2_19_2_3,
+      "How_was_the_person_involved_in_the_accident2_4": involement2_19_2_4,
+      "How_was_the_person_involved_in_the_accident2_5": involement2_19_2_5,
+      "How_was_the_person_involved_in_the_accident2_6": involement2_19_2_6,
+      "How_was_the_person_involved_in_the_accident2_7": involement2_19_2_7,
+
       "Additional_claimaint_information_Last_name_or_business_name": lastNameBuisness2_19_2,
       "First_name_not_necessary_for_business_form_three": firstNameBuisness2_19_2,
       "Address_form_3": address2_19_2,
@@ -279,8 +287,8 @@ const VehicleReport = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(propertyLossReportObj)
     }).then(() => {
-      alert("Report has been submitted!")
-      navigate(-1) //Redirects page
+
+      navigate("/submitted") //Redirects page
 
     })
 
@@ -1064,7 +1072,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Driver of other vehicle</div>
                   <div className="centerInput">
-                    <input type="checkbox" defaultValue="Driver" id="Involement2-19" name="Involement2-19" value={"Driver"} onClick={() => setInvolement2_19("Driver")}/>
+                    <input type="checkbox" defaultValue="Driver" id="Involement2-19-1" name="Involement2-19-1" onClick={e => setInvolement2_19_2_1(!involement2_19_2_1)}/>
                   </div>
                 </div>
               </td>
@@ -1073,13 +1081,13 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Owner of other vehicle</div>
                     <div className="centerInput">
-                      <input type="checkbox" defaultValue="Owner of other vehicle" id="Involement2-19" name="Involement2-19" value={"Owner of other vehicle"} onClick={() => setInvolement2_19("Owner of other vehicle")}/>
+                      <input type="checkbox" defaultValue="Owner of other vehicle" id="Involement2-19-2" name="Involement2-19-2" onClick={e => setInvolement2_19_2_2(!involement2_19_2_2)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
                     <div className="s3-right">Pedestrian</div>
                     <div className="centerInput">
-                      <input type="checkbox" defaultValue="Pedestrian" id="Involement2-19" name="Involement2-19" value={involement2_19} onChange={(e) => setInvolement2_19(e.target.value)}/>
+                      <input type="checkbox" defaultValue="Pedestrian" id="Involement2-19" name="Involement2-19" onClick={e => setInvolement2_19_2_3(!involement2_19_2_3)}/>
                     </div>
                   </div>
                 </div>
@@ -1094,7 +1102,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Injured Person</div>
                   <div className="centerInput">
-                    <input type="checkbox" defaultValue="Injured Person" id="Involement2-19" name="Involement2-19" value={involement2_19} onChange={(e) => setInvolement2_19(e.target.value)}/>
+                    <input type="checkbox" defaultValue="Injured Person" id="Involement2-19" name="Involement2-19" onClick={e => setInvolement2_19_2_4(!involement2_19_2_4)}/>
                   </div>
                 </div>
               </td>
@@ -1103,7 +1111,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Passenger of agency vehicle</div>
                     <div className="centerInput">
-                      <input type="checkbox" defaultValue="Passenger of agency vehicle" id="Involement2-19" name="Involement2-19" value={involement2_19} onChange={(e) => setInvolement2_19(e.target.value)}/>
+                      <input type="checkbox" defaultValue="Passenger of agency vehicle" id="Involement2-19" name="Involement2-19" onClick={e => setInvolement2_19_2_5(!involement2_19_2_5)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
@@ -1120,7 +1128,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Owner of involved property</div>
                   <div className="centerInput">
-                    <input type="checkbox" defaultValue="Owner of involved property" id="Involement2-19" name="Involement2-19" value={involement2_19} onChange={(e) => setInvolement2_19(e.target.value)}/>
+                    <input type="checkbox" defaultValue="Owner of involved property" id="Involement2-19" name="Involement2-19" onClick={e => setInvolement2_19_2_6(!involement2_19_2_6)}/>
                   </div>
                 </div>
               </td>
@@ -1129,7 +1137,7 @@ const VehicleReport = () => {
                   <div className="inputGrid">
                     <div className="s3-right">Passenger of other vehicle</div>
                     <div className="centerInput">
-                      <input type="checkbox" defaultValue="Passenger of other vehicle" id="Involement2-19" name="Involement2-19" value={involement2_19} onChange={(e) => setInvolement2_19(e.target.value)}/>
+                      <input type="checkbox" defaultValue="Passenger of other vehicle" id="Involement2-19" name="Involement2-19" onClick={e => setInvolement2_19_2_7(!involement2_19_2_7)}/>
                     </div>
                   </div>
                   <div className="inputGrid">
@@ -1510,7 +1518,7 @@ const VehicleReport = () => {
                 <div className="inputGrid">
                   <div className="s3-right">Driver of other vehicle</div>
                   <div className="centerInput">
-                    <input type="checkbox" defaultValue="Driver" id="Involement2-19-2" name="Involement2-19-2" value={"Y"} onClick={() => setInvolement2_19_2_1("Y")}/>
+                    <input type="checkbox" defaultValue="Driver" id="Involement2-19-2-1" name="Involement2-19-2-1" onClick={e => setInvolement2_19_2_1(!involement2_19_2_1)}/>
                   </div>
                 </div>
               </td>
