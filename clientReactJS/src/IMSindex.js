@@ -7,6 +7,7 @@ import background from "./images/bg-01.jpg";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import UseFetch from "./UseFetch";
+import bcrypt from "bcryptjs";
 
 const LoginPage = () => {
     const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/');
@@ -53,7 +54,7 @@ const LoginPage = () => {
 
     // Compare user info
     if (userData) {
-      if (userData.password !== pass.value) {
+      if (!bcrypt.compareSync(pass.value, userData.password)) {
 
           // Invalid password
         setErrorMessages({ name: "pass", message: errors.pass });
