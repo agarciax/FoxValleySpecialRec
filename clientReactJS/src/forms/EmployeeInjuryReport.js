@@ -193,7 +193,7 @@ const  EmployeeInjury = () => {
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                   <p className="ERF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Agency name</p>
-                  <input className="ERF_Input"  type="text" id="Agency_Name"  value={agencyName} onChange={(e) => setAgencyName(e.target.value)}  name="Agency_Name"  />
+                  <input className="ERF_Input"  type="text" id="Agency_name"  value={agencyName} onChange={(e) => setAgencyName(e.target.value)}  name="Agency_Name"  />
                 </td>
                 <td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '2pt', borderBottomColor: '#24418E'}}>
                   <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
@@ -224,7 +224,7 @@ const  EmployeeInjury = () => {
                 </td>
                 <td style={{width: '283pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderLeftStyle: 'solid', borderLeftWidth: '1pt', borderLeftColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p className="ERF_s3" style={{textIndent: '0pt', textAlign: 'left'}}>Name of person completing the report</p>
-                  <input className="ERF_Input"  type="text" id="Name_of_person_completing_the_report" value={name} onChange={(e) => setName(e.target.value)}  name="Name_of_person_completing_the_report" />
+                  <input className="ERF_Input"  type="text" id="Name_of_person_completing_report" value={name} onChange={(e) => setName(e.target.value)}  name="Name_of_person_completing_the_report" />
                 </td><td style={{width: '41pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E'}}>
                   <p style={{textIndent: '0pt', textAlign: 'left'}}><br /></p></td>
                 <td style={{width: '202pt', borderTopStyle: 'solid', borderTopWidth: '1pt', borderTopColor: '#24418E', borderBottomStyle: 'solid', borderBottomWidth: '1pt', borderBottomColor: '#24418E', borderRightStyle: 'solid', borderRightWidth: '2pt', borderRightColor: '#24418E'}}>
