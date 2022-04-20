@@ -20,6 +20,7 @@ import ViewNotificationOfInjuryToEmployer from "./tables/viewNotificationOfInjur
 import ViewAccidentIncident from "./tables/viewAccidentIncidentReport";
 
 
+
 function App() {
   return (
    <div>
@@ -44,58 +45,21 @@ function App() {
             </Routes>
 
           <Routes>
-            <Route
-                path="/admin"
-                element={
-                  <PrivateRoute>
-                    <Admin />
-                  </PrivateRoute>
-                }
-            />
-              <Route
-                  path="/admin/settings"
-                  element={
-                      <PrivateRoute>
-                          <Settings/>
-                      </PrivateRoute>
-                  }
-              />
-            <Route
-                path="/form/viewMinorInjury"
-                element={
-                  <PrivateRoute>
-                    <ViewMinorInjury />
-                  </PrivateRoute>
-                }
-            />
+              <Route path="/admin" element={ <PrivateRoute> <Admin /> </PrivateRoute>}/>
 
-            <Route
-                path="/form/viewPropertyLossReport"
-                element={
-                  <PrivateRoute>
-                    <ViewPropertyLoss />
-                  </PrivateRoute>
-                }
-            />
+              <Route path="/admin/settings" element={ <PrivateRoute> <Settings/> </PrivateRoute> }/>
 
-            <Route
-                path="/form/viewAccidentIncidentReport"
-                element={
-                  <PrivateRoute>
-                    <ViewAccidentIncident />
-                  </PrivateRoute>
-                }
-            />
+              <Route path="/form/viewMinorInjury" element={ <PrivateRoute> <ViewMinorInjury /></PrivateRoute> }/>
 
-            <Route
-                path="/form/viewNotificationOfInjuryToEmployerReport"
-                element={
-                  <PrivateRoute>
-                    <ViewNotificationOfInjuryToEmployer />
-                  </PrivateRoute>
-                }
-            />
+              <Route path="/form/viewPropertyLossReport"  element={ <PrivateRoute> <ViewPropertyLoss /> </PrivateRoute> } />
 
+              <Route path="/form/viewAccidentIncidentReport" element={ <PrivateRoute> <ViewAccidentIncident /> </PrivateRoute> } />
+
+              <Route path="/form/viewNotificationOfInjuryToEmployerReport" element={ <PrivateRoute> <ViewNotificationOfInjuryToEmployer /> </PrivateRoute> } />
+
+              <Route path="/admin/settings/deleteAdmin" element={<PrivateRoute> <DeleteAdmin/> </PrivateRoute>} />
+
+              <Route path="/admin/settings/createAdmin" element={<PrivateRoute> <CreateAdmin/> </PrivateRoute>} />
 
           </Routes>
 

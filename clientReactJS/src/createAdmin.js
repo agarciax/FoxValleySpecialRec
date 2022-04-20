@@ -4,12 +4,15 @@ import logo from "./forms/PDRMA Form 03 Property Loss Report_files/Image_001.jpg
 import React, {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import background from "./images/bg-01.jpg";
+import bcrypt from 'bcryptjs';
 
+const salt = bcrypt.genSaltSync(3)
 
 const CreateAdmin = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const hashedPassword = bcrypt.hashSync(password, salt) ;
 
     const navigate = useNavigate() //Like going back and forward in "history"/back from the previous or next page
 
@@ -19,7 +22,7 @@ const CreateAdmin = () => {
 
         let minorInjuryLogObj = {
             "username": username,
-            "password": password,
+            "password": hashedPassword,
         }
 
         fetch('http://127.0.0.1:5000/', {
