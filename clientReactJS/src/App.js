@@ -12,13 +12,14 @@ import CreateAdmin from "./createAdmin";
 import Settings from "./Settings";
 import ViewMinorInjury from './tables/viewMinorInjuryLog';
 import ViewPropertyLoss from './tables/viewPropertyLossReport';
+import ViewVehicleAccident from './tables/viewVehicleAccidentReport';
 import PrivateRoute from "./PrivateRoute";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './App.css';
 import SubmissionPage from "./SubmissionPage";
 import ViewNotificationOfInjuryToEmployer from "./tables/viewNotificationOfInjuryToEmployerReport";
 import ViewAccidentIncident from "./tables/viewAccidentIncidentReport";
-
+import ViewEmployeeInjury from "./tables/viewEmployeeInjuryReport"
 
 
 function App() {
@@ -51,9 +52,13 @@ function App() {
 
               <Route path="/form/viewMinorInjury" element={ <PrivateRoute> <ViewMinorInjury /></PrivateRoute> }/>
 
+              <Route path="/form/viewVehicleAccidentReport" element={<PrivateRoute> <ViewVehicleAccident /> </PrivateRoute>} />
+
               <Route path="/form/viewPropertyLossReport"  element={ <PrivateRoute> <ViewPropertyLoss /> </PrivateRoute> } />
 
               <Route path="/form/viewAccidentIncidentReport" element={ <PrivateRoute> <ViewAccidentIncident /> </PrivateRoute> } />
+
+              <Route path="/form/viewEmployeeInjuryReport" element={ <PrivateRoute> <ViewEmployeeInjury /> </PrivateRoute> } />
 
               <Route path="/form/viewNotificationOfInjuryToEmployerReport" element={ <PrivateRoute> <ViewNotificationOfInjuryToEmployer /> </PrivateRoute> } />
 

@@ -1,5 +1,5 @@
 'use strict';
-const form04E = require("../controller/notificationOfInjuryToEmployerReportAppController");
+
 module.exports = function (app) {
     var minorLogList = require('../controller/minorLogAppController'); //Finished W/ Front/Back End Connection
     app.route('/fvsra/minorInjuryLog')

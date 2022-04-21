@@ -45,10 +45,10 @@ const Admin = () => {
               <button className="AD_wrap-login100">View Forms</button>
               <div id="myDropdown2" className="AD_dropdown-content">
                   <a href="/form/viewMinorInjury"> Minor Injury Log</a>
-                <a href="#home">Accident/Incident 01</a>
-                <a href="#about">Vehicle Accident 02</a>
+                <a href="/form/viewAccidentIncidentReport">Accident/Incident 01</a>
+                <a href="/form/viewVehicleAccidentReport">Vehicle Accident 02</a>
                 <a href="/form/viewPropertyLossReport">Property Loss 03</a>
-                <a href="#about">Employee Injury 04</a>
+                <a href="/form/viewEmployeeInjuryReport">Employee Injury 04</a>
                 <a href="/form/viewNotificationOfInjuryToEmployerReport">Employee Injury 04E</a>
               </div>
             </div>

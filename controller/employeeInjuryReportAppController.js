@@ -1,5 +1,5 @@
 'use strict';
-var employeeIncident = require('../model/notificationOfInjuryToEmployerReportAppModel.js');
+var employeeIncident = require('../model/employeeInjuryAppModel.js');
 
 exports.list_all_employeeInjuryReports = function (req, res) {
     console.log("LIST ALL EMPLOYEE INJURY REPORTS");
