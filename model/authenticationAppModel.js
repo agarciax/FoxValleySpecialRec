@@ -21,6 +21,7 @@ LoginInfo.getLoginID = function (user_id, result) {
 };
 LoginInfo.getAllLoginInfos = function (result) {
     sql.query("Select * from Login_Info", function (err, res) {
+
         if (err) {
             console.log("error: ", err);
             result(null, err);
