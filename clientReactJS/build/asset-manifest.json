@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/FoxValleySpecialRec/static/css/main.989c1e05.css",
-    "main.js": "/FoxValleySpecialRec/static/js/main.d82baed5.js",
+    "main.css": "/FoxValleySpecialRec/static/css/main.7a6371b3.css",
+    "main.js": "/FoxValleySpecialRec/static/js/main.2a48c476.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/FoxValleySpecialRec/static/media/fontawesome-webfont.6878d55e3615ccf40c38.svg",
     "static/media/fontawesome-webfont.eot": "/FoxValleySpecialRec/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/FoxValleySpecialRec/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
@@ -17,11 +17,11 @@
     "static/media/Material-Design-Iconic-Font.woff?v=2.2.0": "/FoxValleySpecialRec/static/media/Material-Design-Iconic-Font.bd9b02bf1131d90bfe22.woff",
     "static/media/Material-Design-Iconic-Font.woff2?v=2.2.0": "/FoxValleySpecialRec/static/media/Material-Design-Iconic-Font.6ee80f4bf5d3f92f3bf7.woff2",
     "index.html": "/FoxValleySpecialRec/index.html",
-    "main.989c1e05.css.map": "/FoxValleySpecialRec/static/css/main.989c1e05.css.map",
-    "main.d82baed5.js.map": "/FoxValleySpecialRec/static/js/main.d82baed5.js.map"
+    "main.7a6371b3.css.map": "/FoxValleySpecialRec/static/css/main.7a6371b3.css.map",
+    "main.2a48c476.js.map": "/FoxValleySpecialRec/static/js/main.2a48c476.js.map"
   },
   "entrypoints": [
-    "static/css/main.989c1e05.css",
-    "static/js/main.d82baed5.js"
+    "static/css/main.7a6371b3.css",
+    "static/js/main.2a48c476.js"
   ]
 }

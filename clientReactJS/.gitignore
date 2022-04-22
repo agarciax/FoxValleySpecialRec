@@ -3,8 +3,6 @@
 # dependencies
 /.pnp
 .pnp.js
-/node_modules/
-/clientReactJs/node_modules/
 
 
 # testing
