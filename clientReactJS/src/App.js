@@ -41,9 +41,6 @@ function App() {
             <Routes>
                 <Route path="/admin/settings/createAdmin" element={<CreateAdmin />} />
             </Routes>
-            <Routes>
-                <Route path="/admin/settings/deleteAdmin" element={<DeleteAdmin />} />
-            </Routes>
 
           <Routes>
               <Route path="/admin" element={ <PrivateRoute> <Admin /> </PrivateRoute>}/>
