@@ -23,7 +23,7 @@ const SubmissionPage = () => {
                 <div className="greenUnderline">Form Submitted</div>
               </span>
                         <div className="container-login100-form-btn">
-                            <Link to="/Employee">
+                            <Link to="/">
                             <button className="custombutton">
                                 Home Page
                             </button>

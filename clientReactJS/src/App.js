@@ -35,7 +35,7 @@ function App() {
                 <Route path="/submitted" element={<SubmissionPage />} />
             </Routes>
           <Routes>
-            <Route path="/FoxValleySpecialRec" element={<LoginPage />} />
+            <Route path="/" element={<LoginPage />} />
           </Routes>
 
             <Routes>
