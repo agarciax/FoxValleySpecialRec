@@ -5,7 +5,7 @@ import moment from "moment";
 
 const viewAccidentIncidentReport = () => {
 
-    const { data: reports, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/accidentIncidentReport');
+    const { data: reports, isPending, error} = UseFetch('https://api.foxvalleyspecialrec.com/fvsra/accidentIncidentReport');
 
     let header = ["Accident Incident ID", "Agency Name", "Today's Date", "Date Of Incident", "Time Of Incident", "Name Of Person Completing The Report", "Title Of Person Completing The Report", "Business Phone",
         "Business Email", "How did the incident occur?", "Name of the location", "Is there an address for incident location?", "Street address", "City", "State", "Zip Code", "Location", "Primary location", "\t Bodily Injury \t",

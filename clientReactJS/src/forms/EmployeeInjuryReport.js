@@ -138,7 +138,7 @@ const  EmployeeInjury = () => {
 
 
 
-    fetch('http://127.0.0.1:5000/fvsra/EmployeeInjuryReport', {
+    fetch('https://api.foxvalleyspecialrec.com/fvsra/EmployeeInjuryReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(EmployeeInjuryReportObj)

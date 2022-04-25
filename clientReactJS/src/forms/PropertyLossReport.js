@@ -77,7 +77,7 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
       "Were_Criminal_Charges": wereCriminalCharges
     }
 
-    fetch('http://127.0.0.1:5000/fvsra/propertyLossReport', {
+    fetch('https://api.foxvalleyspecialrec.com/fvsra/propertyLossReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(propertyLossReportObj)

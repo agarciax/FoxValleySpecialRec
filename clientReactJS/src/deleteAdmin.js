@@ -4,13 +4,13 @@ import { confirm } from "react-confirm-box";
 
 const DeleteAdmin = () => {
 
-    const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/auth');
+    const { data: logs, isPending, error} = UseFetch('https://api.foxvalleyspecialrec.com/fvsra/auth');
 
     const handleDelete = async (e, user_id) => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('http://127.0.0.1:5000/fvsra/auth' + user_id, {
+            fetch('https://api.foxvalleyspecialrec.com/fvsra/auth' + user_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Account:" + user_id + " Deleted");

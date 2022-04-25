@@ -5,7 +5,7 @@ import { confirm } from "react-confirm-box";
 
 const viewMinorInjuryLog = () => {
 
-    const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/minorInjuryLog');
+    const { data: logs, isPending, error} = UseFetch('https://api.foxvalleyspecialrec.com/fvsra/minorInjuryLog');
 
     const handleDelete = async (e, minor_injury_id) => {
         e.preventDefault();

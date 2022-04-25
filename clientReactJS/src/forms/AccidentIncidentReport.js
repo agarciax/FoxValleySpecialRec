@@ -138,7 +138,7 @@ const AccidentReport = () => {
       "Where_was_witness_when_the_accident" : WitnessLocationDuringIncident
     }
 
-    fetch('http://127.0.0.1:5000/fvsra/accidentIncidentReport', {
+    fetch('https://api.foxvalleyspecialrec.com/fvsra/accidentIncidentReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(accidentReportObj)

@@ -293,7 +293,7 @@ const VehicleReport = () => {
       "diagramImg": diagramImg
     }
 
-    fetch('http://127.0.0.1:5000/fvsra/vehicleAccidentReport', {
+    fetch('https://api.foxvalleyspecialrec.com/fvsra/vehicleAccidentReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(propertyLossReportObj)

@@ -51,7 +51,7 @@ const NotificationReport = () => {
       "Signature_Date":dateSignature
     }
 
-    fetch('http://127.0.0.1:5000/fvsra/notificationOfInjuryToEmployerReport', {
+    fetch('https://api.foxvalleyspecialrec.com/fvsra/notificationOfInjuryToEmployerReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(NotificationReportObj)
