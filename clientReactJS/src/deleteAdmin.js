@@ -10,7 +10,7 @@ const DeleteAdmin = () => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('http://127.0.0.1:5000/' + user_id, {
+            fetch('http://127.0.0.1:5000/fvsra/auth' + user_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Account:" + user_id + " Deleted");
