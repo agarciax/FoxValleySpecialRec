@@ -4,7 +4,7 @@ import { confirm } from "react-confirm-box";
 
 const DeleteAdmin = () => {
 
-    const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000');
+    const { data: logs, isPending, error} = UseFetch('http://127.0.0.1:5000/fvsra/auth');
 
     const handleDelete = async (e, user_id) => {
         e.preventDefault();
