@@ -1,7 +1,8 @@
+require("dotenv").config();
 const express = require('express'),
     app = express(),
     bodyParser = require('body-parser');
-port = process.env.PORT || 5000;
+port = process.env.DB_PORT;
 
 let cors = require('cors')
 app.use(cors()) // Use this after the variable declaration
@@ -9,10 +10,10 @@ app.use(cors()) // Use this after the variable declaration
 const mysql = require('mysql');
 // connection configurations
 const mc = mysql.createConnection({
-    host: '45.55.136.114',
-    user: 'Cuaderno_F2021',
-    password: 'F00dTruck!',
-    database: 'Cuaderno_F2021'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
 });
 
 // connect to database
