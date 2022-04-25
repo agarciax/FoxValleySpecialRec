@@ -51,10 +51,10 @@ module.exports = function (app) {
         .delete(form04E.deleteNotificationOfInjuryReport) //Not Tested
 
     var login = require('../controller/authenticationAppController')
-    app.route('/')
+    app.route('/fvsra/auth')
         .get(login.list_all_users) //Not Tested
         .post(login.createLoginInfo) //Not Tested
-    app.route('/:user_id')
+    app.route('/fvsra/auth/:user_id')
         .get(login.read_loginInfo) //Not Tested
         .delete(login.deleteLoginInfo) //Not Tested
 
