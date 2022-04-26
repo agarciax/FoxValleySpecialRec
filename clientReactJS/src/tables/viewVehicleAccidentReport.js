@@ -28,7 +28,7 @@ const viewVehicleAccidentReport = () => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('http://127.0.0.1:5000/fvsra/vehicleAccidentReport/' + vehicle_accident_id, {
+            fetch('https://api.foxvalleyspecialrec.com/fvsra/vehicleAccidentReport/' + vehicle_accident_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Vehicle Accident Report #" + vehicle_accident_id + " Deleted");

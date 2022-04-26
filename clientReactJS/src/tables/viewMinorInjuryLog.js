@@ -11,7 +11,7 @@ const viewMinorInjuryLog = () => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('http://127.0.0.1:5000/fvsra/minorInjuryLog/' + minor_injury_id, {
+            fetch('https://api.foxvalleyspecialrec.com/fvsra/minorInjuryLog/' + minor_injury_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Minor Injury Entry:" + minor_injury_id + " Deleted");

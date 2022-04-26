@@ -16,7 +16,7 @@ const viewPropertyLossReport = () => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('http://127.0.0.1:5000/fvsra/propertyLossReport/' + property_loss_id, {
+            fetch('https://api.foxvalleyspecialrec.com/fvsra/propertyLossReport/' + property_loss_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Property Loss Entry:" + property_loss_id + " Deleted");

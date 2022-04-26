@@ -18,7 +18,7 @@ const viewEmployeeInjuryReport = () => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('http://127.0.0.1:5000/fvsra/notificationOfInjuryToEmployerReport/' + employee_injury_id, {
+            fetch('https://api.foxvalleyspecialrec.com/fvsra/notificationOfInjuryToEmployerReport/' + employee_injury_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Employee Injury Report #" + employee_injury_id + " Deleted");
