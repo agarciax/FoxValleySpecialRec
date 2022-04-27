@@ -10,7 +10,7 @@ const DeleteAdmin = () => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('https://api.foxvalleyspecialrec.com/fvsra/auth' + user_id, {
+            fetch('https://api.foxvalleyspecialrec.com/fvsra/auth/' + user_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Account:" + user_id + " Deleted");
