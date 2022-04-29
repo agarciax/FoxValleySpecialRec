@@ -24,7 +24,7 @@ var NotificationOfInjury = function (notificationOfInjury) {
     this.Signature_Date = notificationOfInjury.Signature_Date
 
 };
-NotificationOfInjury.getNotificationOfInjuryByID = function (minor_injury_id, result) {
+NotificationOfInjury.getNotificationOfInjuryByID = function (employee_injury_id, result) {
     //sql.query("Select minor_injury_id, injury_date, injury_time, name_of_injured, injury_location, treatment, how_injury_occurred, facility_where_injury_occurred, full_name_of_staff from Minor_Injury_Log where minor_injury_id = ? ", minor_injury_id, function (err, res) {
     sql.query("Select * from Notification_of_Injury_to_Employer_Report WHERE employee_injury_id = ? ", employee_injury_id, function (err, res) {
         if (err) {
@@ -57,7 +57,7 @@ NotificationOfInjury.createNotificationOfInjury = function (newNotification, res
         }
     });
 };
-NotificationOfInjury.remove = function (minor_injury_id, result) {
+NotificationOfInjury.remove = function (employee_injury_id, result) {
     sql.query("DELETE FROM Notification_of_Injury_to_Employer_Report WHERE employee_injury_id = ?", employee_injury_id, function (err, res) {
         if (err) {
             console.log("error: ", err);
