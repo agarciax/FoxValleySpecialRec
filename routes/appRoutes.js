@@ -44,10 +44,10 @@ module.exports = function (app) {
 
     var form04E = require('../controller/notificationOfInjuryToEmployerReportAppController')
     app.route('/fvsra/notificationOfInjuryToEmployerReport')
-        .get(form04E.list_all_notificationOfInjurys) //Not Tested
+        .get(form04E.list_all_notificationOfInjurys)
         .post(form04E.createNotificationOfInjuryReport) //Not Tested
     app.route('/fvsra/notificationOfInjuryToEmployerReport/:employee_injury_id')
-        .get(form04E.read_a_notificationOfInjury) //Not Tested
+        .get(form04E.read_a_notificationOfInjury)
         .delete(form04E.deleteNotificationOfInjuryReport) //Not Tested
 
     var login = require('../controller/authenticationAppController')
