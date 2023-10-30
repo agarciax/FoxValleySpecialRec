@@ -77,7 +77,7 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
       "Were_Criminal_Charges": wereCriminalCharges
     }
 
-    fetch('https://api.foxvalleyspecialrec.com/fvsra/propertyLossReport', {
+    fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/propertyLossReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(propertyLossReportObj)

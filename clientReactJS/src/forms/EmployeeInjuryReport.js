@@ -138,7 +138,7 @@ const  EmployeeInjury = () => {
 
 
 
-    fetch('https://api.foxvalleyspecialrec.com/fvsra/EmployeeInjuryReport', {
+    fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/EmployeeInjuryReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(EmployeeInjuryReportObj)

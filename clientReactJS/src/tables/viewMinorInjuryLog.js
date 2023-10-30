@@ -5,13 +5,13 @@ import { confirm } from "react-confirm-box";
 
 const viewMinorInjuryLog = () => {
 
-    const { data: logs, isPending, error} = UseFetch('https://api.foxvalleyspecialrec.com/fvsra/minorInjuryLog');
+    const { data: logs, isPending, error} = UseFetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/minorInjuryLog');
 
     const handleDelete = async (e, minor_injury_id) => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('https://api.foxvalleyspecialrec.com/fvsra/minorInjuryLog/' + minor_injury_id, {
+            fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/minorInjuryLog/' + minor_injury_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Minor Injury Entry:" + minor_injury_id + " Deleted");

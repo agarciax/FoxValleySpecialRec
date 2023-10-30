@@ -25,7 +25,7 @@ const CreateAdmin = () => {
             "password": hashedPassword,
         }
 
-        fetch('https://api.foxvalleyspecialrec.com/fvsra/auth', {
+        fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/auth', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(minorInjuryLogObj)

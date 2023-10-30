@@ -10,7 +10,7 @@ import UseFetch from "./UseFetch";
 import bcrypt from "bcryptjs";
 
 const LoginPage = () => {
-    const { data: logs, isPending, error} = UseFetch('https://api.foxvalleyspecialrec.com/fvsra/auth');
+    const { data: logs, isPending, error} = UseFetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/auth');
 
     // React States
   const [errorMessages, setErrorMessages] = useState({});

@@ -5,7 +5,7 @@ import {confirm} from "react-confirm-box";
 
 const viewEmployeeInjuryReport = () => {
 
-    const { data: reports, isPending, error} = UseFetch('https://api.foxvalleyspecialrec.com/fvsra/employeeInjuryReport');
+    const { data: reports, isPending, error} = UseFetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/employeeInjuryReport');
     let header = ["Employee Injury ID", "Agency Name", "Today's Date", "Date of Incident", "Time Of Incident", "Name Of Person Completing the Report", "Title of person completing Report", "Business Phone",
         "Business Email", "Incident Occur and what property was damaged", "Name of location", "Street Address Incident Location", "State Incident Location","City Incident Location", "Incident Zip Code", "Location Damage",
     "Primary Location", "Employer FEIN", "Employer Workdays", "Employee Doing", "Incident Details", "Employee Last Name", "Employee First Name", "Employee Street Address", "Employee City", "Employee State",
@@ -18,7 +18,7 @@ const viewEmployeeInjuryReport = () => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('https://api.foxvalleyspecialrec.com/fvsra/notificationOfInjuryToEmployerReport/' + employee_injury_id, {
+            fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/notificationOfInjuryToEmployerReport/' + employee_injury_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Employee Injury Report #" + employee_injury_id + " Deleted");

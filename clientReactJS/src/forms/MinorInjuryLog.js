@@ -31,7 +31,7 @@ const navigate = useNavigate() //Like going back and forward in "history"/back f
       "full_name_of_staff": staffName
     }
 
-    fetch('https://api.foxvalleyspecialrec.com/fvsra/minorInjuryLog', {
+    fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT+ '/fvsra/minorInjuryLog', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(minorInjuryLogObj)

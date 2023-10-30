@@ -138,7 +138,7 @@ const AccidentReport = () => {
       "Where_was_witness_when_the_accident" : WitnessLocationDuringIncident
     }
 
-    fetch('https://api.foxvalleyspecialrec.com/fvsra/accidentIncidentReport', {
+    fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/accidentIncidentReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(accidentReportObj)

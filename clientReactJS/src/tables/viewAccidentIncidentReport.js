@@ -5,7 +5,7 @@ import moment from "moment";
 
 const viewAccidentIncidentReport = () => {
 
-    const { data: reports, isPending, error} = UseFetch('https://api.foxvalleyspecialrec.com/fvsra/accidentIncidentReport');
+    const { data: reports, isPending, error} = UseFetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/accidentIncidentReport');
 
     let header = ["Accident Incident ID", "Agency Name", "Today's Date", "Date Of Incident", "Time Of Incident", "Name Of Person Completing The Report", "Title Of Person Completing The Report", "Business Phone",
         "Business Email", "How did the incident occur?", "Name of the location", "Is there an address for incident location?", "Street address", "City", "State", "Zip Code", "Location", "Primary location", "\t Bodily Injury \t",
@@ -20,7 +20,7 @@ const viewAccidentIncidentReport = () => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('https://api.foxvalleyspecialrec.com/fvsra/accidentIncidentReport/' + accident_incident_id, {
+            fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/accidentIncidentReport/' + accident_incident_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Accident/Incident Report #" + accident_incident_id + " Deleted");

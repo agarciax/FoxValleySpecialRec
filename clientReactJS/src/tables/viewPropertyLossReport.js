@@ -5,7 +5,7 @@ import {confirm} from "react-confirm-box";
 
 const viewPropertyLossReport = () => {
 
-    const { data: reports, isPending, error} = UseFetch('https://api.foxvalleyspecialrec.com/fvsra/propertyLossReport');
+    const { data: reports, isPending, error} = UseFetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/propertyLossReport');
     let header = ["Property Loss ID", "Agency Name", "Today's Date", "Date Of Incident", "Time Of Incident", "Name Of Person Completing The Report", "Title Of Person Completing The Report", "Business Phone",
     "Incident Description And Property Damage", "Name Of Location", "Business Email", "Street Address Incident Location", "City Incident Location", "State Incident Location", "Zip Code Incident Location",
     "Location", "Primary Location", "Estimate Of Loss", "Contact Person Of Facility", "Contact Email Of Facility", "Contact Phone Of Facility", "Was Damage Caused By 3rd Party", "Person Responsible Name",
@@ -16,7 +16,7 @@ const viewPropertyLossReport = () => {
         e.preventDefault();
         const result = await confirm("Are you sure? This action cannot be undone.");
         if (result) {
-            fetch('https://api.foxvalleyspecialrec.com/fvsra/propertyLossReport/' + property_loss_id, {
+            fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/propertyLossReport/' + property_loss_id, {
                 method: 'DELETE'
             }).then(() => {
                 alert("Property Loss Entry:" + property_loss_id + " Deleted");

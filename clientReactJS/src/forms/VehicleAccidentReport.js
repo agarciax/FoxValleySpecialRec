@@ -293,7 +293,7 @@ const VehicleReport = () => {
       "diagramImg": diagramImg
     }
 
-    fetch('https://api.foxvalleyspecialrec.com/fvsra/vehicleAccidentReport', {
+    fetch(process.env.REACT_APP_FOX_VALLEY_SPECIAL_REC_ENDPOINT + '/fvsra/vehicleAccidentReport', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(propertyLossReportObj)
